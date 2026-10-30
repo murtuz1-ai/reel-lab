@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/*
+ * «Матовое стекло» (Reel Lab, по мотивам Selene из TSCaps, MIT).
+ *
+ * Капсула из матового стекла: видео за ней размыто по-настоящему (движок
+ * подкладывает кадр в .tscaps-video-frame-layer). Сверху — светлый блик и
+ * тонкая грань, снизу — мягкая тень. Капсула мягко проявляется, слова ещё не
+ * прозвучавшие приглушены и «загораются», когда звучат; активное слово
+ * чуть приподнимается и светится акцентным цветом.
+ */
+.segment {
+  rotate: var(--tscaps-rotation, 0deg);
+  font-family: var(--tscaps-font-family, "Montserrat");
+  font-weight: var(--tscaps-font-weight, 600);
+  font-style: var(--tscaps-font-style, normal);
+  text-align: var(--tscaps-text-align, center);
+  font-size: calc(var(--tscaps-font-size, 3.5cqh) * var(--tscaps-font-size-scale, 1));
+  letter-spacing: var(--tscaps-letter-spacing, 0.005em);
+  line-height: 1.24;
+  text-transform: var(--tscaps-text-transform, none);
+  position: relative;
+  isolation: isolate;
+  display: inline-block;
+  padding: 0.5em 1em 0.54em;
+  border-radius: var(--tscaps-corner-radius, 1.15em);
+  overflow: hidden;
+  box-shadow:
+    0 0.5em 1.4em -0.4em rgba(0, 0, 0, 0.45),
+    0 0.08em 0.2em rgba(0, 0, 0, 0.18);
+  animation:
+    glass-in 0.42s var(--on-segment-starts) cubic-bezier(0.2, 0.85, 0.25, 1) both,
+    glass-out 0.28s calc(var(--on-segment-ends) - 0.28s) cubic-bezier(0.6, 0, 0.8, 0.4) forwards;
+}
+
+@keyframes glass-in {
+  0% { opacity: 0; transform: translateY(0.28em) scale(0.94); filter: blur(0.08em); }
+  60% { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+
+@keyframes glass-out {
+  0% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(-0.18em) scale(0.97); }
+}
+
+.tscaps-video-frame-layer {
+  filter: blur(var(--tscaps-blur-amount, 0.9cqh)) saturate(var(--tscaps-saturation, 1.45)) brightness(0.92);
+  transform: scale(1.06);
+  z-index: -3;
+}
+
+/* Тонировка стекла и мягкий свет сверху. */
+.segment::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 90% at 18% -10%, rgba(255, 255, 255, calc(var(--tscaps-highlight-opacity, 0.38) * 0.9)) 0%, rgba(255, 255, 255, 0) 55%),
+    linear-gradient(180deg,
+      rgba(255, 255, 255, calc(var(--tscaps-tint-opacity, 0.14) * 1.5)) 0%,
+      rgba(255, 255, 255, var(--tscaps-tint-opacity, 0.14)) 48%,
+      rgba(20, 24, 32, calc(var(--tscaps-tint-opacity, 0.14) * 0.9)) 100%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Грань стекла: светлая сверху, тёмная снизу. */
+.segment::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0.045em 0 rgba(255, 255, 255, var(--tscaps-border-opacity, 0.5)),
+    inset 0 -0.045em 0 rgba(0, 0, 0, 0.16),
+    inset 0 0 0 0.03em rgba(255, 255, 255, calc(var(--tscaps-border-opacity, 0.5) * 0.45));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.line {
+  display: block;
+}
+
+.line + .line {
+  margin-top: var(--tscaps-line-spacing, 0.06em);
+}
+
+.word {
+  display: inline-block;
+  margin: 0 var(--tscaps-word-spacing, 0.11em);
+  color: var(--tscaps-primary-color, #ffffff);
+  text-shadow: 0 0.04em 0.16em rgba(0, 0, 0, 0.35);
+  animation: glass-word-on 0.3s var(--on-word-being-narrated-starts) ease-out both;
+}
+
+/* Ещё не прозвучавшие слова приглушены, прозвучавшие — в полную яркость. */
+@keyframes glass-word-on {
+  0% { opacity: var(--tscaps-dim-opacity, 0.52); }
+  100% { opacity: 1; }
+}
+
+.word-being-narrated {
+  color: var(--tscaps-highlight-color, #ffffff);
+  text-shadow:
+    0 0 0.45em color-mix(in srgb, var(--tscaps-highlight-color, #ffffff) 55%, transparent),
+    0 0.04em 0.16em rgba(0, 0, 0, 0.3);
+  animation:
+    glass-word-on 0.3s var(--on-word-being-narrated-starts) ease-out both,
+    glass-word-lift var(--word-being-narrated-duration, 0.3s) var(--on-word-being-narrated-starts) cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+@keyframes glass-word-lift {
+  0% { transform: translateY(0) scale(1); }
+  35% { transform: translateY(-0.06em) scale(1.06); }
+  100% { transform: translateY(-0.02em) scale(1.02); }
+}
+
+.emphasis, .accent, .entity {
+  font-weight: var(--tscaps-tag-bold, 800);
+  font-family: var(--tscaps-tag-font-family, var(--tscaps-font-family, "Montserrat"));
+  color: var(--tscaps-highlight-color, #ffffff);
+}

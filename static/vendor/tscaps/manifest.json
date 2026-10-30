@@ -1,0 +1,435 @@
+{
+  "format_version": 1,
+  "source": {
+    "repo": "https://github.com/francozanardi/tscaps",
+    "excluded": [
+      "apps/studio (AGPL-3.0)",
+      "template loki (font asset not included)"
+    ],
+    "license": "MIT",
+    "source_path": "templates",
+    "commit": "26611a3d609a1409e674128147ed5e06673bd7e8"
+  },
+  "rendering": {
+    "type": "browser-webcodecs",
+    "note": "Шаблоны CSS требуют MIT engine; серверный FFmpeg-рендер их сам по себе не повторит."
+  },
+  "templates": [
+    {
+      "id": "gild",
+      "label_ru": "Золотой акцент",
+      "group_ru": "По вашему референсу",
+      "note_ru": "Слова проявляются по одному, ключевое слово — крупно золотым ар-деко",
+      "source_name": "Gild (Reel Lab)",
+      "source_category": "reel-lab",
+      "font_stack": "montserrat",
+      "layout": {
+        "verticalAlign": "bottom",
+        "verticalOffset": 0.8
+      },
+      "style_controls": [
+        {
+          "id": "primary-color",
+          "label": "Text",
+          "type": "color",
+          "default": "#ffffff",
+          "group": "style"
+        },
+        {
+          "id": "highlight-color",
+          "label": "Accent",
+          "type": "color",
+          "default": "#eddd55",
+          "group": "style"
+        }
+      ],
+      "accent_font": true,
+      "auto_keywords": true
+    },
+    {
+      "id": "rush",
+      "label_ru": "Вылет с размытием",
+      "group_ru": "По вашему референсу",
+      "note_ru": "Слова влетают со смазом движения, на выходе — рывок",
+      "source_name": "Rush (Reel Lab)",
+      "source_category": "reel-lab",
+      "source_description": "Reel Lab original style after the user's reference 035336.",
+      "font_stack": "anton",
+      "layout": {
+        "verticalAlign": "bottom",
+        "verticalOffset": 0.8
+      },
+      "style_controls": [
+        {
+          "id": "primary-color",
+          "label": "Text",
+          "type": "color",
+          "default": "#ffffff",
+          "group": "style"
+        },
+        {
+          "id": "highlight-color",
+          "label": "Accent",
+          "type": "color",
+          "default": "#e6ff1f",
+          "group": "style"
+        }
+      ]
+    },
+    {
+      "id": "stardust",
+      "label_ru": "Звёздная пыль",
+      "group_ru": "Новинка",
+      "note_ru": "Буквы слетаются из пространства и собираются в слово под голос",
+      "source_name": "Stardust (Reel Lab)",
+      "source_category": "reel-lab",
+      "font_stack": "unbounded",
+      "layout": {
+        "verticalAlign": "bottom",
+        "verticalOffset": 0.8
+      },
+      "style_controls": [
+        {
+          "id": "primary-color",
+          "label": "Text",
+          "type": "color",
+          "default": "#ffffff",
+          "group": "style"
+        },
+        {
+          "id": "highlight-color",
+          "label": "Accent",
+          "type": "color",
+          "default": "#8fd8ff",
+          "group": "style"
+        }
+      ],
+      "rendering": {
+        "splitWordsIntoLetters": true
+      }
+    },
+    {
+      "id": "neon",
+      "label_ru": "Неоновая вывеска",
+      "group_ru": "Новинка",
+      "note_ru": "Слова зажигаются с мерцанием, как неоновые трубки",
+      "source_name": "Neon (Reel Lab)",
+      "source_category": "reel-lab",
+      "font_stack": "jura",
+      "layout": {
+        "verticalAlign": "bottom",
+        "verticalOffset": 0.8
+      },
+      "style_controls": [
+        {
+          "id": "primary-color",
+          "label": "Text",
+          "type": "color",
+          "default": "#ffffff",
+          "group": "style"
+        },
+        {
+          "id": "highlight-color",
+          "label": "Accent",
+          "type": "color",
+          "default": "#ff3fc9",
+          "group": "style"
+        }
+      ]
+    },
+    {
+      "id": "chrome",
+      "label_ru": "Хром 3D",
+      "group_ru": "Новинка",
+      "note_ru": "Металлические слова поднимаются в 3D, по ним проходит блик",
+      "source_name": "Chrome (Reel Lab)",
+      "source_category": "reel-lab",
+      "font_stack": "dela",
+      "layout": {
+        "verticalAlign": "bottom",
+        "verticalOffset": 0.8
+      },
+      "style_controls": [
+        {
+          "id": "primary-color",
+          "label": "Text",
+          "type": "color",
+          "default": "#ffffff",
+          "group": "style"
+        },
+        {
+          "id": "highlight-color",
+          "label": "Accent",
+          "type": "color",
+          "default": "#f6cf5a",
+          "group": "style"
+        }
+      ]
+    },
+    {
+      "id": "enzo",
+      "label_ru": "Редакционный",
+      "group_ru": "Объяснения",
+      "note_ru": "Крупный рубленый шрифт, выделенные слова — с засечками",
+      "source_name": "Enzo",
+      "source_category": "modern",
+      "source_description": "Heavy Inter sans in natural casing with a crisp upward shadow; emphasized words and names switch to a larger italic EB Garamond serif with a glowing accent. Polished, editorial-meets-creator look for explainers and storytelling.",
+      "font_stack": "inter",
+      "layout": {
+        "verticalAlign": "bottom",
+        "verticalOffset": 0.72,
+        "horizontalAlign": "center",
+        "horizontalOffset": 0.5
+      },
+      "variants": null,
+      "style_controls": [
+        {
+          "id": "primary-color",
+          "label": "Text",
+          "type": "color",
+          "default": "#ffffff",
+          "group": "style",
+          "subgroup": "colors"
+        },
+        {
+          "id": "tag-color",
+          "label": "Accent",
+          "type": "color",
+          "default": "#ffffff",
+          "group": "style",
+          "subgroup": "colors",
+          "legend": "Colour of the lifted words, and of the halo around them."
+        },
+        {
+          "id": "shadow-color",
+          "default": "#333333"
+        },
+        {
+          "id": "outline-color",
+          "label": "Outline",
+          "type": "color",
+          "default": "#000000",
+          "group": "style",
+          "subgroup": "colors"
+        },
+        {
+          "id": "outline-thickness",
+          "label": "Outline thickness",
+          "type": "float",
+          "default": 0,
+          "min": 0,
+          "max": 0.3,
+          "step": 0.01,
+          "unit": "em",
+          "group": "style",
+          "subgroup": "appearance"
+        },
+        {
+          "id": "tag-font-family",
+          "label": "Accent font",
+          "type": "font",
+          "default": "eb-garamond",
+          "group": "style",
+          "subgroup": "appearance",
+          "legend": "Face the punch word and the proper nouns switch to."
+        },
+        {
+          "id": "tag-font-weight",
+          "label": "Accent weight",
+          "type": "integer",
+          "default": 400,
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "group": "style",
+          "subgroup": "appearance"
+        },
+        {
+          "id": "tag-font-scale",
+          "label": "Accent size",
+          "type": "float",
+          "default": 1.4,
+          "min": 1,
+          "max": 1.6,
+          "step": 0.05,
+          "group": "style",
+          "subgroup": "appearance",
+          "legend": "How much larger the lifted words render; the ones that also change face take the full amount."
+        }
+      ],
+      "has_external_asset": false,
+      "bundled_files": [
+        "animations.build.json",
+        "style.build.css",
+        "template.json"
+      ]
+    },
+    {
+      "id": "selene",
+      "label_ru": "Матовое стекло",
+      "group_ru": "Чисто",
+      "note_ru": "Текст в капсуле из матового стекла: видео за ней размыто по-настоящему",
+      "source_name": "Selene",
+      "source_category": "modern",
+      "source_description": "Clean Montserrat sans on one line inside a translucent frosted-glass capsule that blurs the footage behind it. Soft, premium look that stays legible over busy video.",
+      "font_stack": "montserrat",
+      "layout": {
+        "verticalAlign": "top",
+        "verticalOffset": 0.78
+      },
+      "variants": [
+        {
+          "label": "White",
+          "overrides": {
+            "primary-color": "#ffffff",
+            "highlight-color": "#ffffff"
+          }
+        },
+        {
+          "label": "Sand",
+          "overrides": {
+            "primary-color": "#ffe6a8",
+            "highlight-color": "#ffe6a8"
+          }
+        },
+        {
+          "label": "Ice",
+          "overrides": {
+            "primary-color": "#b8e6ff",
+            "highlight-color": "#b8e6ff"
+          }
+        },
+        {
+          "label": "Sage",
+          "overrides": {
+            "primary-color": "#bdf5c4",
+            "highlight-color": "#bdf5c4"
+          }
+        },
+        {
+          "label": "Rose",
+          "overrides": {
+            "primary-color": "#ffc4e0",
+            "highlight-color": "#ffc4e0"
+          }
+        }
+      ],
+      "style_controls": [
+        {
+          "id": "primary-color",
+          "label": "Text",
+          "type": "color",
+          "default": "#ffffff",
+          "group": "style",
+          "subgroup": "colors"
+        },
+        {
+          "id": "highlight-color",
+          "label": "Active word",
+          "type": "color",
+          "default": "#ffe7a3",
+          "group": "style",
+          "subgroup": "colors"
+        },
+        {
+          "id": "tag-font-family",
+          "label": "Accent font",
+          "type": "font",
+          "default": "montserrat",
+          "group": "style",
+          "subgroup": "appearance",
+          "legend": "Used for tagged words."
+        },
+        {
+          "id": "tag-bold",
+          "label": "Bold accents",
+          "type": "toggle",
+          "default": true,
+          "valueOn": "900",
+          "valueOff": "inherit",
+          "group": "style",
+          "subgroup": "appearance"
+        },
+        {
+          "id": "blur-amount",
+          "label": "Glass blur",
+          "type": "float",
+          "default": 0.7,
+          "min": 0,
+          "max": 3,
+          "step": 0.1,
+          "unit": "cqh",
+          "group": "style",
+          "subgroup": "appearance"
+        },
+        {
+          "id": "tint-opacity",
+          "label": "Tint strength",
+          "type": "float",
+          "default": 0.12,
+          "min": 0,
+          "max": 0.4,
+          "step": 0.02,
+          "group": "style",
+          "subgroup": "appearance"
+        },
+        {
+          "id": "highlight-opacity",
+          "label": "Top highlight",
+          "type": "float",
+          "default": 0.4,
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "group": "style",
+          "subgroup": "appearance"
+        },
+        {
+          "id": "corner-radius",
+          "label": "Corner radius",
+          "type": "float",
+          "default": 2.0,
+          "min": 0,
+          "max": 2,
+          "step": 0.05,
+          "unit": "em",
+          "group": "style",
+          "subgroup": "appearance"
+        },
+        {
+          "id": "border-opacity",
+          "label": "Edge border",
+          "type": "float",
+          "default": 0.22,
+          "min": 0,
+          "max": 1,
+          "step": 0.05,
+          "group": "style",
+          "subgroup": "appearance"
+        },
+        {
+          "id": "saturation",
+          "label": "Color boost",
+          "type": "float",
+          "default": 1.5,
+          "min": 0.5,
+          "max": 2.5,
+          "step": 0.1,
+          "group": "style",
+          "subgroup": "appearance"
+        }
+      ],
+      "has_external_asset": false,
+      "bundled_files": [
+        "style.build.css",
+        "template.json"
+      ],
+      "rendering": {
+        "videoFrame": {
+          "required": true,
+          "jpegQuality": 0.82
+        }
+      }
+    }
+  ]
+}

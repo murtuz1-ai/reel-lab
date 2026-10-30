@@ -1,0 +1,18 @@
+# Окончания строк: скрипты Linux — LF (иначе bash на сервере не запустит), файлы Windows — CRLF.
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.cmd text eol=crlf
+settings.example.txt text eol=crlf
+*.png binary
+*.jpg binary
+*.mp4 binary
+*.wasm binary
+*.woff binary
+*.woff2 binary
+*.flac binary
+*.wav binary
+*.mp3 binary
+*.task binary
+*.tflite binary
+*.rnnn binary

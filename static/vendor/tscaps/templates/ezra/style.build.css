@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+.segment {
+  rotate: var(--tscaps-rotation, 0deg);
+  font-family: var(--tscaps-font-family, "Inter Variable");
+  font-weight: var(--tscaps-font-weight, 400);
+  font-style: var(--tscaps-font-style, normal);
+  text-align: var(--tscaps-text-align, left);
+  font-size: calc(var(--tscaps-font-size, 3.6cqh) * var(--tscaps-font-size-scale, 1));
+  letter-spacing: var(--tscaps-letter-spacing, 0em);
+  line-height: 1.1;
+  text-transform: var(--tscaps-text-transform, none);
+  color: var(--tscaps-primary-color, #f5f0d0);
+  max-width: 88cqw;
+}
+
+.line {
+  display: block;
+  white-space: normal;
+  width: fit-content;
+}
+
+.first-line-in-segment:not(.last-line-in-segment) {
+  margin-bottom: var(--tscaps-line-spacing, 0.1em);
+}
+
+.first-line-in-segment + .line + .line {
+  margin-top: var(--tscaps-line-spacing, 0.1em);
+}
+
+.word {
+  display: inline-block;
+  margin: 0 var(--tscaps-word-spacing, 0.08em);
+  text-decoration: var(--tscaps-text-decoration, none);
+  text-shadow: 0 var(--tscaps-shadow-distance, 0.03em) var(--tscaps-shadow-blur, 0.25em) var(--tscaps-shadow-color, #000000), 0 0 0.5em rgb(0, 0, 0, calc(var(--tscaps-contrast-shadow, 0.25) * 0.85));
+  transform-origin: 0% 100%;
+  --entrance-scale: 1.05;
+  --entrance-fade: 0;
+  --entrance-duration: 0.12s;
+  animation: tscaps-scale-in var(--entrance-duration) var(--on-word-being-narrated-starts) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes tscaps-scale-in {
+  0% {
+    opacity: var(--entrance-fade);
+    transform: scale(var(--entrance-scale));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.first-line-in-segment + .line {
+  font-family: var(--tscaps-big-word-font-family, "Playfair Display Variable");
+  font-weight: 800;
+  font-style: var(--tscaps-big-word-italic, normal);
+  line-height: 0.9;
+  text-box: trim-both cap alphabetic;
+  font-size: clamp(1.2em, 86cqw / var(--line-width-em, 6), 2.1em);
+}
+
+.first-line-in-segment + .line > .word {
+  --entrance-slide: -100cqw;
+  --entrance-fade: 0;
+  --entrance-duration: 0.12s;
+  --entrance-duration-scale: 1.67;
+  animation: tscaps-slide-in calc(var(--entrance-duration) * var(--entrance-duration-scale)) var(--on-word-being-narrated-starts) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes tscaps-slide-in {
+  from {
+    opacity: var(--entrance-fade);
+    transform: translateX(var(--entrance-slide));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.first-line-in-segment + .line + .line {
+  margin-left: max(0px, clamp(1.2em, 86cqw / var(--previous-line-width-em, 6), 2.1em) * var(--previous-line-width-em, 0) - var(--line-width-em, 0) * 1em);
+}

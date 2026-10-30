@@ -1,0 +1,11 @@
+[
+  {
+    "id": "sol-entrance",
+    "element": "segment",
+    "values": {},
+    "keyframes": [
+      "tscaps-sol-rise-in",
+      "tscaps-sol-pop-in"
+    ]
+  }
+]

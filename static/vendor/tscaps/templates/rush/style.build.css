@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/*
+ * «Вылет с размытием» — собственный стиль Reel Lab по референсу
+ * «Запись 2026-10-23 035336»: слова влетают с размытием движения
+ * (первая строка справа, вторая слева), блок стоит ровно и
+ * «успокаивается», в конце фраза уходит рывком со смазом.
+ * Время появления каждого слова берётся из распознавания.
+ */
+.segment {
+  font-family: var(--tscaps-font-family, "Anton");
+  font-weight: var(--tscaps-font-weight, 700);
+  font-size: calc(var(--tscaps-font-size, 6.6cqh) * var(--tscaps-font-size-scale, 1));
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--tscaps-primary-color, #ffffff);
+  rotate: var(--tscaps-rotation, 0deg);
+  filter: drop-shadow(0 0.05em 0.12em rgba(0, 0, 0, 0.6));
+  animation:
+    rush-settle 0.7s var(--on-segment-starts) cubic-bezier(0.16, 1, 0.3, 1) both,
+    rush-out 0.26s calc(var(--on-segment-ends) - 0.26s) cubic-bezier(0.7, 0, 0.84, 0) forwards;
+}
+
+@keyframes rush-settle {
+  0% { transform: scale(1.14); }
+  100% { transform: scale(1); }
+}
+
+@keyframes rush-out {
+  0% { transform: translateX(0) scaleX(1); opacity: 1; }
+  100% { transform: translateX(-1.1em) scaleX(1.35); opacity: 0; }
+}
+
+.line { display: block; }
+
+.line:first-child { color: var(--tscaps-highlight-color, #e6ff1f); }
+
+.line + .line {
+  margin-top: 0.06em;
+  font-size: 0.64em;
+  letter-spacing: 0.03em;
+  color: var(--tscaps-primary-color, #ffffff);
+}
+
+.word {
+  display: inline-block;
+  margin: 0 0.07em;
+  animation: rush-in-right var(--tscaps-rush-duration, 0.62s) var(--on-word-being-narrated-starts) linear both;
+}
+
+.line + .line .word { animation-name: rush-in-left; }
+
+.emphasis, .accent, .entity {
+  color: var(--tscaps-highlight-color, #e6ff1f);
+}
+
+.line:first-child .emphasis { color: var(--tscaps-primary-color, #ffffff); }
+
+/*
+ * Смаз движения: пять копий буквы позади направления полёта, которые гаснут
+ * вместе со скоростью. Полёт занимает ~45% времени (около 7 кадров при
+ * 30 к/с), затем лёгкий перелёт и посадка.
+ */
+@keyframes rush-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2.6em) scaleX(1.5);
+    filter: blur(0.025em);
+    text-shadow:
+      0.1em 0 0 color-mix(in srgb, currentColor 50%, transparent),
+      0.21em 0 0 color-mix(in srgb, currentColor 38%, transparent),
+      0.34em 0 0 color-mix(in srgb, currentColor 26%, transparent),
+      0.5em 0 0 color-mix(in srgb, currentColor 15%, transparent),
+      0.68em 0 0 color-mix(in srgb, currentColor 7%, transparent);
+    animation-timing-function: cubic-bezier(0.3, 0.55, 0.42, 1);
+  }
+  12% { opacity: 1; }
+  50% {
+    transform: translateX(-0.07em) scaleX(0.97);
+    filter: blur(0);
+    text-shadow:
+      0.02em 0 0 color-mix(in srgb, currentColor 18%, transparent),
+      0.04em 0 0 color-mix(in srgb, currentColor 9%, transparent),
+      0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
+  }
+  72% { transform: translateX(0.02em) scaleX(1.005); text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent; }
+  100% { opacity: 1; transform: none; filter: none; text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent; }
+}
+
+@keyframes rush-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-2.6em) scaleX(1.5);
+    filter: blur(0.025em);
+    text-shadow:
+      -0.1em 0 0 color-mix(in srgb, currentColor 50%, transparent),
+      -0.21em 0 0 color-mix(in srgb, currentColor 38%, transparent),
+      -0.34em 0 0 color-mix(in srgb, currentColor 26%, transparent),
+      -0.5em 0 0 color-mix(in srgb, currentColor 15%, transparent),
+      -0.68em 0 0 color-mix(in srgb, currentColor 7%, transparent);
+    animation-timing-function: cubic-bezier(0.3, 0.55, 0.42, 1);
+  }
+  12% { opacity: 1; }
+  50% {
+    transform: translateX(0.07em) scaleX(0.97);
+    filter: blur(0);
+    text-shadow:
+      -0.02em 0 0 color-mix(in srgb, currentColor 18%, transparent),
+      -0.04em 0 0 color-mix(in srgb, currentColor 9%, transparent),
+      0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
+  }
+  72% { transform: translateX(-0.02em) scaleX(1.005); text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent; }
+  100% { opacity: 1; transform: none; filter: none; text-shadow: 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent; }
+}

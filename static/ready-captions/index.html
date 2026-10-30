@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#141218">
+  <title>Reel Lab — студия субтитров</title>
+  <link rel="stylesheet" href="./fonts.css">
+  <link rel="stylesheet" href="./fonts-extra.css">
+  <link rel="stylesheet" href="./fonts-arabic.css">
+  <link rel="stylesheet" href="./styles.css?v=49">
+</head>
+<body>
+  <div class="app">
+    <header class="bar">
+      <a class="brand" href="/bot" aria-label="Reel Lab — студия субтитров">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Reel Lab</span>
+        <span class="brand-sub">студия субтитров</span>
+      </a>
+      <div class="mode-switch" role="group" aria-label="Режим студии">
+        <button type="button" data-mode="simple" class="is-active">Просто</button>
+        <button type="button" data-mode="pro">Профи</button>
+      </div>
+      <button id="fileChip" class="file-chip" type="button" title="Выбрать другое видео">
+        <span class="file-chip-dot" aria-hidden="true"></span>
+        <span id="fileChipText">Видео не выбрано</span>
+      </button>
+      <button id="accountChip" class="account-chip" type="button" title="Тариф и оплата" hidden>
+        <span class="account-dot" aria-hidden="true"></span>
+        <span id="accountText"><span class="account-long">Бесплатно</span><span class="account-short">2/2</span></span>
+      </button>
+      <button id="draftButton" class="ai-chip draft-chip" type="button" title="Черновики: продолжить монтаж с того же места" hidden>
+        <svg class="draft-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h4"/></svg>
+        <span class="draft-label">Черновик</span>
+        <span id="draftCount" class="draft-count" hidden></span>
+      </button>
+      <button id="aiKeyButton" class="ai-chip" type="button" title="Ключ ИИ для картинок">
+        <span class="ai-chip-dot" aria-hidden="true"></span>
+        <span id="aiKeyText">Ключ ИИ</span>
+      </button>
+      <button id="assistantButton" class="ai-chip assistant-chip" type="button" title="ИИ-помощник: разберёт чужой ролик и ответит на вопросы о монтаже">
+        <span class="assistant-spark" aria-hidden="true">✦</span>
+        <span class="assistant-label">Помощник</span>
+      </button>
+      <button id="exportButton" class="btn btn-primary" type="button" disabled>Собрать видео</button>
+    </header>
+
+    <div id="browserWarning" class="notice notice-warn" hidden>
+      Этот браузер не умеет собирать MP4. Открой студию в последней версии Chrome или Edge.
+    </div>
+
+    <main class="studio">
+      <section class="stage-col" aria-label="Предпросмотр">
+        <div class="stage">
+          <div id="screen" class="screen is-empty">
+            <div id="montageMedia" class="montage-host" aria-hidden="true"></div>
+            <video id="video" playsinline preload="auto"></video>
+            <canvas id="fxCanvas" class="fx-layer" hidden></canvas>
+            <canvas id="twCanvas" class="tw-canvas" hidden></canvas>
+            <div id="captionHost" class="caption-host"></div>
+            <canvas id="personCanvas" class="fx-layer" hidden></canvas>
+            <canvas id="postCanvas" class="fx-layer" hidden></canvas>
+            <div id="safeOverlay" class="safe-overlay" hidden aria-hidden="true"></div>
+            <label id="dropZone" class="drop" for="videoInput">
+              <span class="drop-icon" aria-hidden="true"></span>
+              <span class="drop-title">Перетащи видео сюда</span>
+              <span class="drop-text">или нажми, чтобы выбрать файл. Ролик до 10 минут</span>
+            </label>
+            <button id="demoButton" class="demo-btn" type="button"><span class="demo-long">Нет видео под рукой? </span>Открыть пример</button>
+            <button id="assistantEmpty" class="assistant-empty" type="button">✦ <span class="ae-long">Понравился чужой ролик? Разбери его и сделай похожий</span><span class="ae-short">Разобрать чужой ролик</span></button>
+            <div id="screenHint" class="screen-hint" hidden></div>
+            <div id="aiBadge" class="ai-badge" hidden><span class="ai-spark" aria-hidden="true"></span><span id="aiBadgeText">ИИ подбирает картинки…</span></div>
+            <div id="loadingVeil" class="loading-veil" hidden><span></span></div>
+          </div>
+          <!-- Отметки строк своего текста под музыку: окно поверх сцены, а не внутри кадра — кадр бывает узким. -->
+          <div id="lyricsTap" class="lyrics-tap" hidden>
+            <p id="lyricsTapLine" class="lyrics-tap-line" dir="auto"></p>
+            <p id="lyricsTapCount" class="lyrics-tap-count"></p>
+            <div class="lyrics-tap-actions">
+              <button id="lyricsTapNext" class="btn btn-primary" type="button">Строка началась ▶</button>
+              <button id="lyricsTapDone" class="btn btn-ghost" type="button">Готово</button>
+              <button id="lyricsTapCancel" class="link-btn" type="button">Отмена</button>
+            </div>
+          </div>
+          <!-- Черновик: маленькое окошко в углу сцены, кадр им не закрыт. -->
+          <div id="resumeBox" class="resume" role="region" aria-label="Черновик" hidden>
+            <span class="resume-title"><span class="resume-icon" aria-hidden="true"></span><span class="resume-label">Черновик</span></span>
+            <div class="resume-copy">
+              <p id="resumeName" class="resume-name"></p>
+              <p id="resumeMeta" class="resume-meta"></p>
+              <p id="resumeNote" class="resume-note" hidden></p>
+            </div>
+            <div class="resume-actions">
+              <button id="resumeGo" class="btn btn-primary" type="button">Продолжить</button>
+              <button id="resumeMore" class="link-btn" type="button" hidden>Все проекты</button>
+            </div>
+            <button id="resumeClose" class="resume-close" type="button" aria-label="Скрыть черновик" title="Скрыть">×</button>
+          </div>
+        </div>
+
+        <div class="transport" id="transport">
+          <button id="playButton" class="play" type="button" aria-label="Смотреть" disabled>
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/></svg>
+          </button>
+          <div class="clock"><span id="timeNow">0:00</span><span class="clock-sep">/</span><span id="timeTotal">0:00</span></div>
+          <div class="history-btns" role="group" aria-label="Отмена действий">
+            <button id="undoButton" class="icon-btn history-btn" type="button" title="Отменить (Ctrl+Z)" aria-label="Отменить" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg></button>
+            <button id="redoButton" class="icon-btn history-btn" type="button" title="Вернуть (Ctrl+Shift+Z)" aria-label="Вернуть" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 14l5-5-5-5"/><path d="M20 9H9a5 5 0 0 0 0 10h3"/></svg></button>
+          </div>
+          <div id="ribbon" class="ribbon" role="slider" tabindex="0" aria-label="Время ролика" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="ribbonTrack" class="ribbon-track"></div>
+            <div id="playhead" class="playhead"></div>
+          </div>
+          <button id="safeToggle" class="icon-btn safe-toggle" type="button" aria-pressed="false" title="Безопасные зоны: где TikTok, Reels и Shorts закрывают видео кнопками и подписью">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M6 6.5h12M6 16.5h12M15 9v6"/></svg>
+          </button>
+          <button id="soundToggle" class="icon-btn" type="button" aria-pressed="true" title="Звуки в предпросмотре">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+          </button>
+          <button id="montageToggle" class="montage-toggle" type="button" aria-pressed="false" title="Лента монтажа: резать, вставлять видео, править склейки" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="7" r="2.5"/><circle cx="6.5" cy="17" r="2.5"/><path d="M8.6 8.4L20 16M8.6 15.6L20 8"/></svg>
+            <span>Монтаж</span>
+          </button>
+        </div>
+
+        <section id="timelinePanel" class="timeline" aria-label="Лента монтажа" hidden>
+          <div class="tl-top">
+          <div id="tlDockStart" class="tl-dock tl-dock-start"></div>
+          <div class="tl-bar" role="toolbar" aria-label="Монтаж">
+            <button type="button" class="tl-btn tl-wide tl-add" data-tl="insert" title="Вставить другое видео между кусками там, где бегунок"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Видео между</span></button>
+            <button type="button" class="tl-btn tl-wide tl-add" data-tl="overlay" title="Положить видео поверх: голос продолжает звучать"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="10" rx="2"/><rect x="8" y="9" width="13" height="10" rx="2"/></svg><span>Поверх</span></button>
+            <button type="button" class="tl-btn tl-wide tl-add tl-audio" data-tl="audio" title="Положить музыку или звук там, где бегунок (подойдёт и видео — возьмётся его звук)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><span>Музыка<span class="tl-long"> / звук</span></span></button>
+            <button type="button" class="tl-btn tl-wide tl-add tl-audio" data-tl="beatMontage" title="Собрать ролик из нескольких видео в долю музыки"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><path d="M14 9l3-1"/></svg><span>Под музыку</span></button>
+            <button type="button" class="tl-btn tl-wide tl-fx" data-tl="beatFit" title="Поставить концы вставок и видео поверх точно в доли музыки" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M9 20V4M14 20v-8M19 20V7"/></svg><span>В бит</span></button>
+            <button type="button" class="tl-btn tl-wide" data-tl="split" title="Разрезать кусок там, где бегунок (S)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><path d="M8 7l-3 5 3 5M16 7l3 5-3 5"/></svg><span>Разрезать</span></button>
+            <button type="button" class="tl-btn tl-wide tl-danger" data-tl="remove" title="Удалить выделенное (Delete)" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"/></svg><span data-tl-label>Удалить</span></button>
+            <button type="button" class="tl-btn tl-wide tl-good" data-tl="restore" title="Вернуть вырезанный кусок" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 3-6.2"/><path d="M4 4v5h5"/></svg><span data-tl-label>Вернуть кусок</span></button>
+            <button type="button" class="tl-btn tl-wide" data-tl="fit" title="Как вписать видео в кадр" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><rect x="4" y="8" width="16" height="8"/></svg><span data-tl-label>Целиком</span></button>
+            <button type="button" class="tl-btn tl-wide tl-fx" data-tl="zoomAdd" title="Добавить зум на слово под бегунком"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M11 8v6M8 11h6M16 16l4 4"/></svg><span>Зум</span></button>
+            <button type="button" class="tl-btn tl-wide tl-fx" data-tl="zoomPower" title="Сила зума: нажми, чтобы сменить" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 15v5h-5M15 4h5v5M9 20H4v-5"/></svg><span data-tl-label>Зум ×1.13</span></button>
+            <button type="button" class="tl-btn tl-wide tl-fx" data-tl="hookEdit" title="Изменить текст хука" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/></svg><span>Изменить текст</span></button>
+            <button type="button" class="tl-btn tl-wide tl-fx" data-tl="picAgain" title="Нарисовать другую картинку" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><span>Другая картинка</span></button>
+            <label id="tlVolume" class="tl-volume" title="Громкость выделенного звука" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+              <input id="tlVolumeInput" type="range" min="0" max="150" step="5" value="100" aria-label="Громкость звука">
+              <output id="tlVolumeValue">100%</output>
+            </label>
+            <button type="button" class="tl-btn tl-wide" data-tl="duck" title="Делать музыку тише, когда говорят" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 3 10 2-5h7"/></svg><span data-tl-label>Тише под голос</span></button>
+            <button type="button" class="tl-btn tl-wide" data-tl="sound" title="Звук этого видео" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6"/></svg><span data-tl-label>Звук</span></button>
+            <span class="tl-grow" aria-hidden="true"></span>
+            <button type="button" class="tl-btn" data-tl="zoomOut" title="Мельче" aria-label="Мельче"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M8 11h6M16 16l4 4"/></svg></button>
+            <button type="button" class="tl-btn" data-tl="zoomIn" title="Крупнее" aria-label="Крупнее"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M8 11h6M11 8v6M16 16l4 4"/></svg></button>
+          </div>
+          <div id="tlDockEnd" class="tl-dock tl-dock-end"></div>
+          </div>
+          <div class="tl-context">
+          <div id="tlTransitions" class="tl-transitions" hidden>
+            <span id="tlTransitionsLabel" class="tl-tr-label">Переход между видео:</span>
+            <div id="tlTransitionChips" class="tl-tr-chips" role="radiogroup" aria-label="Переход"></div>
+            <select id="tlTransitionSelect" class="tl-select" aria-label="Переход"></select>
+          </div>
+          <div id="tlSpeed" class="tl-transitions tl-speed" hidden>
+            <span id="tlSpeedLabel" class="tl-tr-label">Скорость:</span>
+            <div id="tlSpeedChips" class="tl-tr-chips" role="radiogroup" aria-label="Скорость"></div>
+            <select id="tlSpeedSelect" class="tl-select" aria-label="Скорость"></select>
+          </div>
+          </div>
+          <div id="tlHost" class="tl-host"></div>
+          <div class="tl-foot">
+            <p id="tlNote" class="tl-note">Тяни ленту — перемотка. Нажми на кусок — выделишь его, края выделенного тянутся. Слово под лентой — выделить и вырезать.</p>
+            <span id="tlInfo" class="tl-info"></span>
+          </div>
+          <input id="clipInput" class="native-input" type="file" accept="video/*,.mp4,.mov,.m4v,.webm,.mkv" multiple tabindex="-1">
+          <input id="audioInput" class="native-input" type="file" accept="audio/*,video/*,.mp3,.m4a,.wav,.ogg,.oga,.opus,.flac,.aac,.mp4,.mov,.webm,.mkv" tabindex="-1">
+        </section>
+
+        <div id="exportPanel" class="export" hidden>
+          <div class="export-progress">
+            <div class="export-row"><span id="exportLabel">Готовлю сборку…</span><span id="exportPercent">0%</span></div>
+            <div class="meter"><span id="exportFill"></span></div>
+          </div>
+          <div id="exportResult" class="export-result" hidden>
+            <div class="export-result-copy">
+              <b id="resultTitle">Видео готово</b>
+              <span id="resultMeta"></span>
+            </div>
+            <button id="resultWatch" class="btn btn-ghost" type="button">Посмотреть</button>
+            <a id="downloadButton" class="btn btn-primary" href="#" download>Скачать MP4</a>
+          </div>
+          <div id="exportError" class="notice notice-error" hidden></div>
+        </div>
+      </section>
+
+      <aside class="inspector" aria-label="Настройки">
+        <!-- Простой режим: четыре шага -->
+        <div id="simplePanel" class="simple" hidden>
+          <section class="step" id="stepSource">
+            <header class="step-head">
+              <span class="step-num">1</span>
+              <div class="step-title"><h2>Видео и текст</h2><p id="stepSourceNote">Загрузи ролик — текст распознается сам</p></div>
+              <span class="step-check" aria-hidden="true"></span>
+            </header>
+            <div class="field speech-lang">
+              <label for="simpleSpeechLang">На каком языке говорят в видео <span class="field-hint">субтитры будут на этом языке</span></label>
+              <select id="simpleSpeechLang" data-speech-lang aria-label="Язык речи в видео"></select>
+            </div>
+            <div class="step-actions" id="simpleSourceActions">
+              <button id="simplePick" class="btn btn-primary" type="button">Выбрать видео</button>
+              <button id="simpleDemo" class="btn btn-ghost" type="button">Открыть пример</button>
+            </div>
+            <p class="note projects-link"><button id="projectsOpen" class="link-btn" type="button" hidden>Черновики — продолжить монтаж</button></p>
+            <div id="simpleProgress" class="transcription" hidden>
+              <div class="export-row"><span id="simpleProgressLabel">Распознаю речь…</span></div>
+              <div class="meter"><span id="simpleProgressFill"></span></div>
+            </div>
+            <div id="simpleNoText" class="step-actions" hidden>
+              <button id="simpleLyrics" class="btn btn-primary" type="button">✍ Вставить свой текст</button>
+              <button id="simpleTranscribe" class="btn btn-ghost" type="button">Распознать речь</button>
+            </div>
+            <p id="simpleNoTextMore" class="note" hidden><button id="simpleSrtEmpty" class="link-btn" type="button">загрузить файл субтитров (SRT)</button></p>
+            <p id="simpleTextReady" class="note" hidden>
+              <span id="simpleTextCount"></span> ·
+              <button id="simpleEditText" class="link-btn" type="button">поправить текст</button> ·
+              <button id="simpleLyricsEdit" class="link-btn" type="button">свой текст</button> ·
+              <button id="simpleSrt" class="link-btn" type="button">свои субтитры</button> ·
+              <button id="simpleTranslate" class="link-btn" type="button">добавить перевод</button>
+            </p>
+          </section>
+
+          <section class="step" id="stepPreset">
+            <header class="step-head">
+              <span class="step-num">2</span>
+              <div class="step-title"><h2>Готовый монтаж</h2><p>Стиль, цвет, зум и звуки под формат ролика — одним нажатием</p></div>
+              <span class="step-check" aria-hidden="true"></span>
+            </header>
+            <div id="presetStrip" class="preset-strip" role="list" aria-label="Готовые монтажи"></div>
+            <p id="presetNote" class="note" hidden></p>
+          </section>
+
+          <section class="step" id="stepStyle">
+            <header class="step-head">
+              <span class="step-num">3</span>
+              <div class="step-title"><h2>Стиль субтитров</h2><p>Или выбери только стиль — он сразу появится на видео</p></div>
+              <span class="step-check" aria-hidden="true"></span>
+            </header>
+            <div id="simpleStyleGrid" class="style-strip"></div>
+            <div id="simpleSound" class="simple-sound" hidden>
+              <span class="simple-sound-label">Звук</span>
+              <div id="simpleKits" class="kits kits-compact" role="group" aria-label="Звук к субтитрам"></div>
+              <div class="simple-music">
+                <span class="simple-sound-label">Музыка</span>
+                <button id="simpleMusic" class="schip schip-more" type="button">＋ Добавить музыку</button>
+              </div>
+            </div>
+            <button id="simpleTune" class="link-btn" type="button">Цвет, шрифт и размер →</button>
+          </section>
+
+          <section class="step step-magic" id="stepMagic">
+            <header class="step-head">
+              <span class="step-num">✦</span>
+              <div class="step-title"><h2>ИИ-монтаж</h2><p>Паузы, зум, свет, хук и звук — одним нажатием</p></div>
+            </header>
+            <button id="magicRun" class="btn btn-magic btn-wide" type="button" disabled>✦ Сделать красиво</button>
+            <div id="magicChips" class="magic-chips"></div>
+            <p id="magicNote" class="note" hidden></p>
+            <div id="aiReport" class="ai-report" hidden></div>
+            <button id="simpleTimeline" class="link-btn" type="button" disabled>Поправить монтаж на ленте: вырезать, вставить видео →</button>
+            <button id="simpleBeat" class="link-btn" type="button" disabled>♪ Собрать под музыку из нескольких видео →</button>
+          </section>
+
+          <section class="step" id="simpleTransitions" hidden>
+            <header class="step-head">
+              <span class="step-num">⇄</span>
+              <div class="step-title"><h2>Переходы</h2><p>Между видео — плавно, а не обрывком. Нажми — переход сразу проиграется</p></div>
+            </header>
+            <div id="simpleTransitionChips" class="tl-tr-chips simple-transition-chips" role="radiogroup" aria-label="Переход между видео"></div>
+          </section>
+
+          <section class="step" id="simpleAtmo" hidden>
+            <header class="step-head">
+              <span class="step-num">☀</span>
+              <div class="step-title"><h2>Атмосфера</h2><p>Плёнка, засветы, кинополосы — как в кино. Нажми, чтобы попробовать</p></div>
+            </header>
+            <div id="simpleAtmoChips" class="tl-tr-chips simple-transition-chips" role="radiogroup" aria-label="Атмосфера"></div>
+          </section>
+
+          <section class="step" id="stepExport">
+            <header class="step-head">
+              <span class="step-num">4</span>
+              <div class="step-title"><h2>Готово</h2><p id="stepExportNote">Собери ролик и скачай его</p></div>
+            </header>
+            <div class="field simple-sig">
+              <label for="simpleSig">Подпись на видео <span class="field-hint">ник или канал, можно оставить пустым</span></label>
+              <input id="simpleSig" type="text" maxlength="40" placeholder="@твой_ник" autocomplete="off" spellcheck="false">
+            </div>
+            <button id="simpleExport" class="btn btn-primary btn-wide" type="button" disabled>Собрать видео</button>
+            <p class="note">Хочешь тонкую настройку — включи режим <button id="simplePro" class="link-btn" type="button">«Профи»</button>.</p>
+          </section>
+        </div>
+
+        <nav class="tabs" role="tablist">
+          <button class="tab is-active" role="tab" type="button" data-tab="text" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M12 6v13M9 19h6"/></svg><span>Текст</span></button>
+          <button class="tab" role="tab" type="button" data-tab="style" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.3L19.5 10l-5.3 2.2L12 17.5l-2.2-5.3L4.5 10l5.3-1.7z"/></svg><span>Стиль</span></button>
+          <button class="tab" role="tab" type="button" data-tab="tune" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg><span>Настройка</span></button>
+          <button class="tab" role="tab" type="button" data-tab="edit" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="7" r="2.5"/><circle cx="6.5" cy="17" r="2.5"/><path d="M8.6 8.4L20 16M8.6 15.6L20 8"/></svg><span>Монтаж</span></button>
+          <button class="tab" role="tab" type="button" data-tab="fx" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20L15 9M14 4v3M18 6l-2 2M20 10h-3M9 5l1 2"/></svg><span>Эффекты</span></button>
+          <button class="tab" role="tab" type="button" data-tab="sound" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg><span>Звук</span></button>
+        </nav>
+
+        <!-- Текст -->
+        <section class="panel is-active" data-panel="text" role="tabpanel">
+          <div class="block">
+            <h2 class="block-title">Откуда текст</h2>
+            <div class="field speech-lang">
+              <label for="speechLang">Язык речи в видео <span class="field-hint">субтитры будут на этом языке</span></label>
+              <select id="speechLang" data-speech-lang aria-label="Язык речи в видео"></select>
+              <p id="speechNote" class="note speech-note"></p>
+            </div>
+            <div class="source-actions">
+              <button id="transcribeButton" class="btn btn-primary btn-wide" type="button" disabled>Распознать речь</button>
+              <button id="srtButton" class="btn btn-ghost" type="button">Загрузить SRT или VTT</button>
+              <button id="lyricsButton" class="btn btn-ghost" type="button">✍ Свой текст</button>
+            </div>
+            <div id="transcription" class="transcription" hidden>
+              <div class="export-row"><span id="transcriptionLabel">Готовлю распознавание…</span><button id="cancelTranscription" class="link-btn" type="button">Остановить</button></div>
+              <div class="meter"><span id="transcriptionFill"></span></div>
+            </div>
+            <p id="sourceNote" class="note">Для видео без речи есть <button id="testTextButton" class="link-btn" type="button" disabled>проверочный текст</button>. Нет своего видео — <button id="demoLink" class="link-btn" type="button">открой пример</button>.</p>
+            <p class="note projects-link"><button id="projectsOpenPro" class="link-btn" type="button" hidden>Черновики — продолжить монтаж</button></p>
+          </div>
+
+          <div id="editorBlock" class="block" hidden>
+            <div class="block-head">
+              <h2 class="block-title">Фразы</h2>
+              <span id="editorCounter" class="count"></span>
+            </div>
+            <p id="keywordSummary" class="note">Исправь текст прямо в строке. Нажми на слово под строкой, чтобы выделить его цветом.</p>
+            <div id="cueList" class="cue-list"></div>
+          </div>
+
+          <div id="hookBlock" class="block" hidden>
+            <h2 class="block-title">Хук и описание</h2>
+            <p class="note">ИИ придумает цепляющую фразу на первые секунды ролика, текст поста и хэштеги.</p>
+            <button id="hookRun" class="btn btn-ghost btn-wide" type="button">Придумать хук и описание</button>
+            <p id="hookNote" class="note" hidden></p>
+            <div id="hookResult" class="hook-result" hidden>
+              <div class="field">
+                <label for="hookText">Хук на экране</label>
+                <input id="hookText" type="text" maxlength="90">
+              </div>
+              <label class="toggle"><input id="hookShow" type="checkbox"><span>Показать хук в первые 3 секунды</span></label>
+              <div class="field">
+                <span class="field-label">Описание поста <button class="link-btn" type="button" data-copy="hookDesc">Скопировать</button></span>
+                <p id="hookDesc" class="hook-copy"></p>
+              </div>
+              <div class="field">
+                <span class="field-label">Хэштеги <button class="link-btn" type="button" data-copy="hookTags">Скопировать</button></span>
+                <p id="hookTags" class="hook-copy hook-tags"></p>
+              </div>
+            </div>
+          </div>
+
+          <div id="signatureBlock" class="block">
+            <h2 class="block-title">Подпись поверх видео</h2>
+            <p class="note">Ник или название канала весь ролик в одном месте. На видео её можно перетащить и увеличить за угол. Подпись запомнится для следующих роликов.</p>
+            <label class="toggle"><input id="sigShow" type="checkbox"><span>Показывать подпись</span></label>
+            <div class="field">
+              <label for="sigText">Текст подписи</label>
+              <input id="sigText" type="text" maxlength="40" placeholder="@твой_ник" autocomplete="off" spellcheck="false">
+            </div>
+            <div id="sigOptions" class="sig-options">
+              <div class="field">
+                <span class="field-label">Где</span>
+                <div class="seg seg-wrap" id="sigPlace">
+                  <button type="button" data-place="top">Вверху</button>
+                  <button type="button" data-place="bottom">Внизу</button>
+                  <button type="button" data-place="top-left">↖ Угол</button>
+                  <button type="button" data-place="bottom-right">↘ Угол</button>
+                </div>
+              </div>
+              <div class="field">
+                <span class="field-label">Вид</span>
+                <div class="seg" id="sigLook">
+                  <button type="button" data-look="shadow">С тенью</button>
+                  <button type="button" data-look="box">На плашке</button>
+                  <button type="button" data-look="outline">С обводкой</button>
+                </div>
+              </div>
+              <div class="field">
+                <span class="field-label">Цвет</span>
+                <div id="sigColors" class="sig-colors" role="group" aria-label="Цвет подписи"></div>
+              </div>
+              <div class="field">
+                <label for="sigFont">Шрифт</label>
+                <select id="sigFont"></select>
+              </div>
+              <div class="field">
+                <label for="sigSize">Размер <output id="sigSizeValue">100%</output></label>
+                <input id="sigSize" type="range" min="40" max="350" step="5" value="100">
+              </div>
+              <div class="field">
+                <label for="sigOpacity">Заметность <output id="sigOpacityValue">90%</output></label>
+                <input id="sigOpacity" type="range" min="20" max="100" step="5" value="90">
+              </div>
+            </div>
+          </div>
+
+          <div id="translateBlock" class="block" hidden>
+            <h2 class="block-title">Перевод субтитров</h2>
+            <div class="seg translate-mode" id="translateMode" role="group" aria-label="Как показать перевод">
+              <button type="button" data-tmode="second" class="is-active">Второй строкой</button>
+              <button type="button" data-tmode="replace">Вместо текста</button>
+            </div>
+            <div class="translate-row">
+              <select id="translateLang" aria-label="Язык перевода">
+                <option value="ru">Русский</option>
+                <option value="en">Английский</option>
+                <option value="ar">Арабский</option>
+                <option value="tr">Турецкий</option>
+                <option value="kk">Казахский</option>
+                <option value="ky">Кыргызский</option>
+                <option value="uz">Узбекский</option>
+                <option value="az">Азербайджанский</option>
+                <option value="tg">Таджикский</option>
+                <option value="uk">Украинский</option>
+                <option value="es">Испанский</option>
+                <option value="de">Немецкий</option>
+                <option value="fr">Французский</option>
+                <option value="it">Итальянский</option>
+                <option value="pt">Португальский</option>
+                <option value="pl">Польский</option>
+                <option value="ce">Чеченский</option>
+              </select>
+              <button id="translateRun" class="btn btn-ghost" type="button">Добавить перевод</button>
+            </div>
+            <p id="translateNote" class="note">Перевод появится второй строкой под субтитрами — например, арабский текст и русский перевод.</p>
+            <div id="secondLineOptions" class="sig-options" hidden>
+              <div class="field">
+                <span class="field-label">Вид</span>
+                <div class="seg" id="secondLook">
+                  <button type="button" data-look="shadow">С тенью</button>
+                  <button type="button" data-look="box">На плашке</button>
+                  <button type="button" data-look="outline">С обводкой</button>
+                </div>
+              </div>
+              <div class="field">
+                <span class="field-label">Цвет</span>
+                <div id="secondColors" class="sig-colors" role="group" aria-label="Цвет перевода"></div>
+              </div>
+              <div class="field">
+                <label for="secondFont">Шрифт</label>
+                <select id="secondFont"></select>
+              </div>
+              <div class="field">
+                <label for="secondSize">Размер <output id="secondSizeValue">100%</output></label>
+                <input id="secondSize" type="range" min="50" max="220" step="5" value="100">
+              </div>
+              <p class="note">Строку перевода можно перетащить прямо на видео и увеличить за угол.</p>
+              <button id="secondRemove" class="link-btn" type="button">Убрать перевод</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Стиль -->
+        <section class="panel" data-panel="style" role="tabpanel" hidden>
+          <div class="block">
+            <div class="block-head">
+              <h2 class="block-title">Готовые монтажи</h2>
+              <span id="presetCounter" class="count"></span>
+            </div>
+            <p class="note">Стиль, шрифт, цвет, зум, эффекты и звуки под формат ролика — одним нажатием. Потом всё можно поправить.</p>
+            <div id="presetGrid" class="preset-strip preset-strip-wide" role="list" aria-label="Готовые монтажи"></div>
+            <p id="presetNotePro" class="note" hidden></p>
+          </div>
+          <div class="block">
+            <div class="block-head">
+              <h2 class="block-title">Готовые стили</h2>
+              <span id="styleCounter" class="count"></span>
+            </div>
+            <div id="styleGrid" class="style-grid"></div>
+          </div>
+          <div class="block">
+            <div class="block-head">
+              <h2 class="block-title">Свои стили</h2>
+            </div>
+            <div id="customGrid" class="style-grid"></div>
+          </div>
+        </section>
+
+        <!-- Настройка -->
+        <section class="panel" data-panel="tune" role="tabpanel" hidden>
+          <!-- Слова с картинками -->
+          <div id="picturesBlock" class="block pictures" hidden>
+            <div class="block-head">
+              <h2 class="block-title">Картинки от ИИ</h2>
+              <span id="picturesCount" class="count"></span>
+            </div>
+            <div id="aiNotice" class="ai-notice" hidden>
+              <span>Без ключа работает запасной бесплатный генератор: он медленный и часто успевает нарисовать только 1–2 картинки. С бесплатным ключом Cloudflare — быстро, красиво и около 10 роликов в день.</span>
+              <button id="aiNoticeButton" class="link-btn" type="button">Добавить ключ ИИ</button>
+            </div>
+            <div class="pictures-run">
+              <button id="picturesRun" class="btn btn-primary btn-wide" type="button" disabled>Подобрать картинки</button>
+              <div id="picturesProgress" class="transcription" hidden>
+                <div class="export-row"><span id="picturesLabel">ИИ читает текст…</span><button id="picturesStop" class="link-btn" type="button">Остановить</button></div>
+                <div class="meter"><span id="picturesFill"></span></div>
+              </div>
+              <p id="picturesNote" class="note">ИИ прочитает текст, подсветит главные слова по смыслу и нарисует к ним картинки.</p>
+            </div>
+            <div class="compose-help">
+              <p class="note">Слова и картинки двигаются прямо на видео: поставь на паузу, нажми и тяни. Угол рамки — размер, «Вперёд» — картинка перед текстом, «Вся фраза» — двигать фразу целиком.</p>
+              <button id="layoutReset" class="link-btn" type="button">Вернуть раскладку ИИ</button>
+            </div>
+            <div class="field">
+              <span class="field-label">Сколько картинок</span>
+              <div class="seg" id="picDensitySeg">
+                <button type="button" data-value="low">Мало</button>
+                <button type="button" data-value="medium" class="is-active">Средне</button>
+                <button type="button" data-value="high">Много</button>
+              </div>
+            </div>
+            <div class="field">
+              <span class="field-label">Как нарисовать</span>
+              <div class="seg" id="picLookSeg">
+                <button type="button" data-value="cinema" class="is-active">Кино</button>
+                <button type="button" data-value="art">Арт</button>
+                <button type="button" data-value="3d">3D</button>
+                <button type="button" data-value="neon">Неон</button>
+              </div>
+            </div>
+            <div class="field">
+              <span class="field-label">Как вставить в видео</span>
+              <div class="seg" id="picBlendSeg">
+                <button type="button" data-value="cutout" class="is-active">Вырезать фон</button>
+                <button type="button" data-value="screen">Вплавить светом</button>
+              </div>
+            </div>
+            <div class="field-pair">
+              <div class="field">
+                <label for="picSize">Размер <output id="picSizeValue">36%</output></label>
+                <input id="picSize" type="range" min="18" max="60" step="1" value="36">
+              </div>
+              <div class="field">
+                <label for="picOpacity">Плотность <output id="picOpacityValue">94%</output></label>
+                <input id="picOpacity" type="range" min="30" max="100" step="1" value="94">
+              </div>
+            </div>
+            <div class="field">
+              <span class="field-label">Фраз на экране одновременно</span>
+              <div class="seg" id="picStackSeg">
+                <button type="button" data-value="1">1</button>
+                <button type="button" data-value="2">2</button>
+                <button type="button" data-value="3" class="is-active">3</button>
+              </div>
+            </div>
+            <p class="note">Нажми на слово — сменится его цвет. Картинку на видео можно перетащить мышкой или пальцем.</p>
+            <div id="picturesList" class="pic-list"></div>
+          </div>
+
+          <div class="block">
+            <div class="block-head">
+              <h2 class="block-title" id="tuneTitle">Стиль</h2>
+              <button id="resetTune" class="link-btn" type="button">Как было в стиле</button>
+            </div>
+            <div class="field">
+              <label for="fontSelect">Шрифт</label>
+              <select id="fontSelect"></select>
+            </div>
+            <div class="field" id="accentFontField" hidden>
+              <label for="accentFontSelect">Шрифт ключевого слова</label>
+              <select id="accentFontSelect"></select>
+            </div>
+            <div class="field-pair">
+              <label class="swatch"><input id="primaryColor" type="color" value="#ffffff"><span>Текст</span></label>
+              <label class="swatch"><input id="highlightColor" type="color" value="#f5c982"><span>Акцент</span></label>
+            </div>
+            <div class="field">
+              <label for="sizeScale">Размер <output id="sizeScaleValue">100%</output></label>
+              <input id="sizeScale" type="range" min="60" max="150" step="1" value="100">
+            </div>
+            <div class="field">
+              <span class="field-label">Положение</span>
+              <div class="seg" id="positionSeg">
+                <button type="button" data-position="template" class="is-active">Как в стиле</button>
+                <button type="button" data-position="top">Сверху</button>
+                <button type="button" data-position="center">По центру</button>
+                <button type="button" data-position="bottom">Снизу</button>
+              </div>
+            </div>
+            <div class="field">
+              <label for="heightSlider">Высота на экране <output id="heightValue">78%</output></label>
+              <input id="heightSlider" type="range" min="8" max="92" step="1" value="78">
+            </div>
+            <div class="field" id="phraseLengthField">
+              <span class="field-label">Длина фразы</span>
+              <div class="seg" id="phraseLengthSeg">
+                <button type="button" data-length="short">По 1–3 слова</button>
+                <button type="button" data-length="normal" class="is-active">Обычная</button>
+                <button type="button" data-length="long">Длиннее</button>
+              </div>
+            </div>
+            <div class="field" id="safeField">
+              <span class="field-label">Безопасные зоны</span>
+              <div class="seg seg-wrap" id="safePlatformSeg" role="group" aria-label="Площадка">
+                <button type="button" data-platform="all" class="is-active">Все сразу</button>
+                <button type="button" data-platform="tiktok">TikTok</button>
+                <button type="button" data-platform="reels">Reels</button>
+                <button type="button" data-platform="shorts">Shorts</button>
+              </div>
+              <label class="toggle"><input id="safeKeep" type="checkbox" checked><span>Не пускать субтитры под кнопки и подпись площадки</span></label>
+              <label class="toggle"><input id="safeShow" type="checkbox"><span>Показать зоны на видео</span></label>
+              <p id="safeNote" class="note">Внизу ролика площадки показывают ник и подпись, справа — кнопки. Субтитры там не прочитать.</p>
+            </div>
+          </div>
+
+          <!-- Печатная машинка -->
+          <div id="typewriterBlock" class="block" hidden>
+            <h2 class="block-title">Печатная машинка</h2>
+            <div class="field">
+              <label for="twSpeed">Скорость печати <output id="twSpeedValue">18</output></label>
+              <input id="twSpeed" type="range" min="10" max="30" step="1" value="18">
+            </div>
+            <div class="field">
+              <label for="twSoft">Плавность появления букв <output id="twSoftValue">55%</output></label>
+              <input id="twSoft" type="range" min="0" max="100" step="5" value="55">
+            </div>
+            <div class="field">
+              <span class="field-label">Курсор</span>
+              <div class="seg" id="twCursorSeg">
+                <button type="button" data-value="_" class="is-active">Подчерк _</button>
+                <button type="button" data-value="|">Палочка |</button>
+                <button type="button" data-value="">Без курсора</button>
+              </div>
+            </div>
+            <label class="toggle"><input id="twBlink" type="checkbox" checked><span>Курсор мигает в паузах</span></label>
+            <div class="field">
+              <span class="field-label">Выравнивание</span>
+              <div class="seg" id="twAlignSeg">
+                <button type="button" data-value="left">Слева</button>
+                <button type="button" data-value="center" class="is-active">По центру</button>
+              </div>
+            </div>
+            <div class="field">
+              <span class="field-label">Как исчезает фраза</span>
+              <div class="seg" id="twOutroSeg">
+                <button type="button" data-value="wave" class="is-active">Волной</button>
+                <button type="button" data-value="fade">Растворяется</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Конструктор -->
+          <div id="builderBlock" class="block builder" hidden>
+            <h2 class="block-title">Детали стиля</h2>
+            <p class="note">Начни с заготовки и меняй что хочешь — результат сразу виден на видео.</p>
+            <div id="builderPresets" class="chips"></div>
+            <div id="builderControls" class="builder-controls"></div>
+            <div class="save-row">
+              <input id="builderName" type="text" maxlength="40" placeholder="Название стиля" aria-label="Название стиля">
+              <button id="builderSave" class="btn btn-ghost" type="button">Сохранить</button>
+            </div>
+            <p id="builderSaved" class="note" hidden></p>
+          </div>
+        </section>
+
+        <!-- Монтаж -->
+        <section class="panel" data-panel="edit" role="tabpanel" hidden>
+          <div id="aiReportPro" class="ai-report ai-report-pro" hidden></div>
+
+          <div class="block block-timeline">
+            <h2 class="block-title">Лента монтажа</h2>
+            <p class="note">Режь, вырезай куски, тяни края, вставляй другие видео между кусками и поверх — на ленте под видео, как в CapCut. Любую склейку ИИ там видно и можно вернуть.</p>
+            <button id="openTimeline" class="btn btn-primary btn-wide" type="button" disabled>✂ Открыть ленту под видео</button>
+          </div>
+
+          <div class="block" id="beatBlock">
+            <h2 class="block-title">Под музыку</h2>
+            <p class="note">Несколько видео и трек — студия сама нарежет кадры в долю музыки. Или подгони свои вставки: доли видны на ленте, края клипов к ним «прилипают».</p>
+            <button id="beatOpen" class="btn btn-ghost btn-wide" type="button" disabled>♪ Собрать под музыку</button>
+          </div>
+
+          <div class="block" id="transitionsBlock">
+            <div class="block-head">
+              <h2 class="block-title">Переходы</h2>
+              <span id="transitionsInfo" class="count"></span>
+            </div>
+            <div id="transitionGrid" class="transition-grid" role="radiogroup" aria-label="Переход между видео"></div>
+            <p id="transitionsNote" class="note"></p>
+            <div class="field">
+              <span class="field-label">Скорость перехода</span>
+              <div class="seg" id="transitionSpeedSeg">
+                <button type="button" data-value="fast">Быстро</button>
+                <button type="button" data-value="normal" class="is-active">Обычно</button>
+                <button type="button" data-value="slow">Плавно</button>
+              </div>
+            </div>
+            <label class="toggle"><input id="transitionCuts" type="checkbox"><span>Тот же переход на склейках внутри видео</span></label>
+            <label class="toggle"><input id="transitionEdges" type="checkbox"><span>Плавно начать и закончить ролик (из темноты и в темноту)</span></label>
+          </div>
+
+          <div class="block">
+            <div class="block-head">
+              <h2 class="block-title">Обрезка</h2>
+              <span id="trimInfo" class="count"></span>
+            </div>
+            <div class="trim-row">
+              <button id="trimStartBtn" class="btn btn-ghost" type="button">⟦ Начало здесь</button>
+              <button id="trimEndBtn" class="btn btn-ghost" type="button">Конец здесь ⟧</button>
+            </div>
+            <p class="note">Поставь бегунок на нужное место и нажми кнопку. <button id="trimReset" class="link-btn" type="button">Сбросить обрезку</button></p>
+          </div>
+
+          <div class="block">
+            <div class="block-head">
+              <h2 class="block-title">Умный монтаж</h2>
+              <span id="cutsInfo" class="count"></span>
+            </div>
+            <p class="note">Уберёт паузы, «эээ», повторы и неудачные дубли. Каждую склейку можно вернуть галочкой.</p>
+            <div class="field">
+              <span class="field-label">Насколько плотно</span>
+              <div class="seg" id="cutStrengthSeg">
+                <button type="button" data-value="soft">Мягко</button>
+                <button type="button" data-value="normal" class="is-active">Обычно</button>
+                <button type="button" data-value="hard">Плотно</button>
+              </div>
+            </div>
+            <button id="smartCutRun" class="btn btn-primary btn-wide" type="button" disabled>Найти паузы и лишние слова</button>
+            <p id="smartCutNote" class="note" hidden></p>
+            <div id="cutList" class="cut-list"></div>
+          </div>
+
+          <div id="momentsBlock" class="block">
+            <h2 class="block-title">Лучшие моменты</h2>
+            <p class="note">ИИ найдёт в длинном видео самые сильные куски — каждый можно превратить в отдельный ролик.</p>
+            <div class="field">
+              <span class="field-label">Длина ролика</span>
+              <div class="seg" id="momentLenSeg">
+                <button type="button" data-value="15-30">15–30 с</button>
+                <button type="button" data-value="30-60" class="is-active">30–60 с</button>
+                <button type="button" data-value="60-90">60–90 с</button>
+              </div>
+            </div>
+            <button id="momentsRun" class="btn btn-ghost btn-wide" type="button" disabled>Найти лучшие моменты</button>
+            <p id="momentsNote" class="note" hidden></p>
+            <div id="momentList" class="moment-list"></div>
+          </div>
+
+          <div class="block">
+            <h2 class="block-title">Голос</h2>
+            <label class="toggle"><input id="voiceClean" type="checkbox"><span>Убрать шум нейросетью</span></label>
+            <label class="toggle"><input id="voiceLevel" type="checkbox"><span>Выровнять громкость голоса</span></label>
+            <p class="note">Применяется при сборке ролика. Громкость голоса — во вкладке «Звук».</p>
+          </div>
+        </section>
+
+        <!-- Эффекты -->
+        <section class="panel" data-panel="fx" role="tabpanel" hidden>
+          <div class="block">
+            <div class="block-head">
+              <h2 class="block-title">Цвет</h2>
+              <button id="fxReset" class="link-btn" type="button">Сбросить</button>
+            </div>
+            <div id="lookGrid" class="look-grid"></div>
+            <button id="autoEnhance" class="btn btn-ghost btn-wide" type="button" disabled>✦ Автоулучшение света и цвета</button>
+            <div id="adjustControls" class="adjust-controls"></div>
+          </div>
+
+          <div class="block" id="atmoBlock">
+            <div class="block-head">
+              <h2 class="block-title">Атмосфера</h2>
+              <button id="atmoReset" class="link-btn" type="button">Убрать</button>
+            </div>
+            <p class="note">Как в кино: зерно и пыль плёнки, тёплые засветы, тёмные края, кинополосы. Видно сразу — и в готовом ролике так же.</p>
+            <div id="atmoPresets" class="tl-tr-chips atmo-chips" role="radiogroup" aria-label="Готовая атмосфера"></div>
+            <div id="atmoControls" class="adjust-controls"></div>
+          </div>
+
+          <div class="block">
+            <h2 class="block-title">Камера</h2>
+            <div class="field">
+              <span class="field-label">Автозум на важных словах</span>
+              <div class="seg" id="zoomSeg">
+                <button type="button" data-value="off" class="is-active">Выключен</button>
+                <button type="button" data-value="soft">Мягкий</button>
+                <button type="button" data-value="dynamic">Динамичный</button>
+              </div>
+            </div>
+            <label class="toggle"><input id="followFace" type="checkbox"><span>Зумить на лицо</span></label>
+            <p id="faceNote" class="note" hidden></p>
+            <label class="toggle"><input id="jumpZoom" type="checkbox" checked><span>Зум на склейках, как у блогеров</span></label>
+            <label class="toggle"><input id="fxShake" type="checkbox"><span>Тряска на акцентах</span></label>
+            <label class="toggle"><input id="fxFlash" type="checkbox"><span>Вспышка на склейках</span></label>
+          </div>
+
+          <div class="block">
+            <h2 class="block-title">Улучшение видео</h2>
+            <label class="toggle"><input id="enhanceStabilize" type="checkbox"><span>Убрать тряску (стабилизация)</span></label>
+            <label class="toggle"><input id="enhanceDenoise" type="checkbox"><span>Убрать шум с картинки</span></label>
+            <label class="toggle"><input id="enhanceSharpen" type="checkbox"><span>Добавить чёткости</span></label>
+            <p class="note">Видно в готовом ролике. Сборка займёт чуть больше времени.</p>
+          </div>
+
+          <div class="block">
+            <h2 class="block-title">Текст за человеком</h2>
+            <label class="toggle"><input id="fxBehind" type="checkbox"><span>Прятать субтитры за человеком</span></label>
+            <p id="behindNote" class="note">Нейросеть находит человека на каждом кадре, и буквы уходят за него. Лучше всего смотрится, когда текст стоит на уровне плеч или головы.</p>
+          </div>
+        </section>
+
+        <!-- Звук -->
+        <section class="panel" data-panel="sound" role="tabpanel" hidden>
+          <div class="block">
+            <div class="block-head">
+              <h2 class="block-title">Звуки к субтитрам</h2>
+              <button id="resetSound" class="link-btn" type="button">Как было в стиле</button>
+            </div>
+            <p class="note">Нажми на набор или звук — он сразу прозвучит. В готовый MP4 звуки попадут ровно так же, как в предпросмотре.</p>
+            <div id="soundKits" class="kits" role="group" aria-label="Готовые наборы звуков" hidden></div>
+            <div id="soundLayers" class="sound-layers"></div>
+            <p id="soundNote" class="note note-warn" hidden></p>
+            <button id="openSoundBoard" class="btn btn-ghost btn-wide board-open" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14h3v6H4zM17 14h3v6h-3z"/></svg>
+              <span>Библиотека звуков: послушать, отобрать, добавить свои</span>
+            </button>
+          </div>
+          <div class="block" id="musicBlock">
+            <h2 class="block-title">Музыка на фон</h2>
+            <p class="note">Свой трек или звук из любого видео. Плавно входит, становится тише, когда звучит голос, и уходит в конце.</p>
+            <button id="audioToTimeline" class="btn btn-ghost btn-wide" type="button">♪ Положить музыку или звук в нужное место на ленте</button>
+            <div class="music-pick">
+              <button id="musicChoose" class="btn btn-ghost music-choose" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+                <span id="musicName">Выбрать музыку</span>
+              </button>
+              <button id="musicListen" class="icon-btn music-listen" type="button" aria-label="Послушать музыку" hidden>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+              </button>
+              <button id="musicClear" class="link-btn" type="button" hidden>Убрать</button>
+            </div>
+            <div id="musicControls" class="music-controls" hidden>
+              <div class="field">
+                <label for="musicVolume">Громкость музыки <output id="musicVolumeValue">35%</output></label>
+                <input id="musicVolume" type="range" min="0" max="100" step="1" value="35">
+              </div>
+              <div class="field">
+                <label for="musicDuck">Тише под голос <output id="musicDuckValue">60%</output></label>
+                <input id="musicDuck" type="range" min="0" max="100" step="5" value="60">
+              </div>
+              <div class="field">
+                <label for="musicStart">Начать трек с <output id="musicStartValue">0:00</output></label>
+                <input id="musicStart" type="range" min="0" max="0" step="1" value="0">
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <h2 class="block-title">Голос из видео</h2>
+            <div class="field">
+              <label for="voiceVolume">Громкость голоса <output id="voiceValue">100%</output></label>
+              <input id="voiceVolume" type="range" min="0" max="150" step="5" value="100">
+            </div>
+          </div>
+          <div class="block">
+            <label class="toggle" id="serverRenderField"><input id="serverRender" type="checkbox"><span>Собирать на сервере, как будет в Telegram</span></label>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <input multiple id="videoInput" class="native-input" type="file" accept="video/mp4,video/quicktime,video/webm,video/*">
+  <input id="srtInput" class="native-input" type="file" accept=".srt,.vtt,text/vtt,application/x-subrip">
+
+  <input id="pictureInput" class="native-input" type="file" accept="image/png,image/jpeg,image/webp">
+
+  <dialog id="aiDialog" class="ai-dialog">
+    <form id="aiForm" method="dialog" class="ai-form">
+      <div class="ai-head">
+        <h2>Ключ ИИ</h2>
+        <button class="icon-btn ai-close" type="button" id="aiClose" aria-label="Закрыть">×</button>
+      </div>
+      <p class="note">Картинки рисует нейросеть FLUX, а слова подбирает ИИ-режиссёр в Cloudflare Workers AI. Бесплатно — примерно 10 роликов в день, дальше около цента за ролик. Ключ хранится только на этом компьютере.</p>
+      <ol class="ai-steps">
+        <li>Зарегистрируйся на <b>dash.cloudflare.com</b> — бесплатно, без карты.</li>
+        <li>Открой <b>AI → Workers AI</b> и нажми <b>Use REST API</b>.</li>
+        <li><b>Create a Workers AI API Token</b> → <b>Create API Token</b> → <b>Copy API Token</b>.</li>
+        <li>Там же скопируй <b>Account ID</b>.</li>
+      </ol>
+      <div class="field">
+        <label for="aiAccount">Account ID</label>
+        <input id="aiAccount" type="text" autocomplete="off" spellcheck="false" placeholder="32 знака: цифры и буквы a–f">
+      </div>
+      <div class="field">
+        <label for="aiToken">API Token</label>
+        <div class="ai-token">
+          <input id="aiToken" type="password" autocomplete="off" spellcheck="false" placeholder="Вставь токен">
+          <button id="aiTokenShow" class="btn btn-ghost" type="button">Показать</button>
+        </div>
+      </div>
+      <p id="aiStatus" class="note" role="status"></p>
+      <div class="ai-actions">
+        <button id="aiDelete" class="link-btn" type="button">Удалить ключ</button>
+        <button id="aiSave" class="btn btn-primary" type="button">Сохранить и проверить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="lyricsDialog" class="ai-dialog lyrics-dialog">
+    <form method="dialog" class="ai-form" id="lyricsForm">
+      <div class="ai-head">
+        <h2>Свой текст</h2>
+        <button class="icon-btn ai-close" type="button" id="lyricsClose" aria-label="Закрыть">×</button>
+      </div>
+      <p class="note">Вставь слова нашида или цитату: <b>каждая строка станет отдельной фразой</b> на видео. Подойдёт любой язык, арабский тоже.</p>
+      <textarea id="lyricsText" class="lyrics-text" rows="9" dir="auto" spellcheck="false" placeholder="Первая строка&#10;Вторая строка&#10;Третья строка"></textarea>
+      <details id="lyricsTranslateBox" class="lyrics-translate">
+        <summary>Перевод под строками — необязательно</summary>
+        <p class="note">Каждая строка перевода встанет под строкой текста с тем же номером: например, русский под арабским. Пустая строка — без перевода.</p>
+        <textarea id="lyricsTranslation" class="lyrics-text" rows="6" dir="auto" spellcheck="false" placeholder="Перевод первой строки&#10;Перевод второй строки"></textarea>
+        <p id="lyricsTranslationCount" class="note"></p>
+      </details>
+      <p id="lyricsSpan" class="note"></p>
+      <div class="lyrics-actions">
+        <button id="lyricsTapStart" class="btn btn-primary" type="button">Подогнать под музыку</button>
+        <button id="lyricsSpread" class="btn btn-ghost" type="button">Расставить ровно</button>
+      </div>
+      <p class="note">«Подогнать под музыку»: ролик заиграет, а ты нажимай кнопку (или пробел) в начале каждой строки. «Расставить ровно» — строки сами поделят время, потом можно подогнать.</p>
+    </form>
+  </dialog>
+
+  <dialog id="assistantDialog" class="ai-dialog assistant-dialog" aria-labelledby="assistantTitle">
+    <div class="ai-form assistant-form-wrap">
+      <div class="ai-head">
+        <h2 id="assistantTitle">✦ ИИ-помощник</h2>
+        <button id="assistantKey" class="link-btn assistant-key" type="button">Ключ ИИ</button>
+        <button class="icon-btn ai-close" type="button" id="assistantClose" aria-label="Закрыть">×</button>
+      </div>
+      <div class="seg assistant-tabs" id="assistantTabs" role="tablist">
+        <button type="button" data-tab="analyse" class="is-active" role="tab" aria-selected="true">Разобрать ролик</button>
+        <button type="button" data-tab="ask" role="tab" aria-selected="false">Спросить</button>
+      </div>
+      <section id="assistantAnalyse" class="assistant-pane">
+        <div id="assistantPick" class="assistant-pick">
+          <p class="note">Пришли ролик, который понравился: расскажу, как он сделан — склейки, музыка, цвет, переходы, субтитры. А кнопка «Сделать похожий» настроит студию так же.</p>
+          <button id="assistantChoose" class="btn btn-primary btn-wide" type="button">Выбрать ролик-образец</button>
+          <input id="assistantFile" class="native-input" type="file" accept="video/*,.mp4,.mov,.m4v,.webm,.mkv" tabindex="-1">
+          <p class="note assistant-fine">Образец нужен только для разбора и в твой ролик не попадёт. Можно прислать его и боту в Telegram.</p>
+        </div>
+        <div id="assistantProgress" class="assistant-progress" hidden>
+          <div class="assistant-bar"><span id="assistantBar"></span></div>
+          <p id="assistantPhase" class="note" role="status"></p>
+          <button id="assistantStop" class="link-btn" type="button">Отмена</button>
+        </div>
+        <div id="assistantResult" class="assistant-result" hidden></div>
+        <input id="assistantMine" class="native-input" type="file" accept="video/*,.mp4,.mov,.m4v,.webm,.mkv" tabindex="-1">
+      </section>
+      <section id="assistantAsk" class="assistant-pane" hidden>
+        <div id="assistantChat" class="assistant-chat" aria-live="polite"></div>
+        <div id="assistantChips" class="assistant-chips"></div>
+        <form id="assistantForm" class="assistant-form">
+          <input id="assistantInput" type="text" placeholder="Спроси о монтаже…" maxlength="600" autocomplete="off" enterkeyhint="send">
+          <button class="btn btn-primary" type="submit" aria-label="Спросить">→</button>
+        </form>
+      </section>
+    </div>
+  </dialog>
+
+  <dialog id="beatDialog" class="ai-dialog beat-dialog">
+    <form method="dialog" class="ai-form" id="beatForm">
+      <div class="ai-head">
+        <h2>Собрать под музыку</h2>
+        <button class="icon-btn ai-close" type="button" id="beatClose" aria-label="Закрыть">×</button>
+      </div>
+      <p class="note">Выбери видео и трек — студия нарежет кадры точно в доли музыки и соберёт ролик. Потом любой кадр можно поправить на ленте.</p>
+      <div class="beat-section">
+        <div class="beat-label">Видео <span id="beatClipsCount" class="field-hint"></span></div>
+        <div id="beatClips" class="beat-clips"></div>
+        <button id="beatAddClips" class="btn btn-ghost btn-wide" type="button">＋ Добавить видео</button>
+        <input id="beatClipInput" class="native-input" type="file" accept="video/*,.mp4,.mov,.m4v,.webm,.mkv" multiple tabindex="-1">
+      </div>
+      <div class="beat-section">
+        <div class="beat-label">Музыка</div>
+        <div id="beatMusic" class="beat-music"></div>
+      </div>
+      <div class="field">
+        <span class="field-label">Склейки</span>
+        <div class="seg seg-wrap" id="beatRhythm"></div>
+        <p id="beatRhythmHint" class="note"></p>
+      </div>
+      <div class="field">
+        <span class="field-label">Длина ролика</span>
+        <div class="seg" id="beatLength">
+          <button type="button" data-value="15">15 с</button>
+          <button type="button" data-value="30" class="is-active">30 с</button>
+          <button type="button" data-value="60">60 с</button>
+          <button type="button" data-value="0">Вся музыка</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="field-label">На сильных долях</span>
+        <div class="seg seg-wrap" id="beatAccent">
+          <button type="button" data-value="none" class="is-active">Просто склейка</button>
+          <button type="button" data-value="zoom">Наезд</button>
+          <button type="button" data-value="whip">Свайп</button>
+          <button type="button" data-value="white">Вспышка</button>
+        </div>
+      </div>
+      <label class="toggle"><input id="beatKeepSound" type="checkbox"><span>Оставить звук из видео (тише музыки)</span></label>
+      <p id="beatStatus" class="note" role="status"></p>
+      <button id="beatGo" class="btn btn-primary btn-wide" type="button">♪ Собрать</button>
+    </form>
+  </dialog>
+
+  <dialog id="projectsDialog" class="ai-dialog projects-dialog">
+    <form method="dialog" class="ai-form">
+      <div class="ai-head">
+        <h2>Черновики</h2>
+        <button class="icon-btn ai-close" type="button" id="projectsClose" aria-label="Закрыть">×</button>
+      </div>
+      <p class="note">Студия сама сохраняет монтаж, пока ты работаешь: текст, стиль, вставки, музыку и эффекты. Открой черновик — продолжишь с того же места.</p>
+      <div id="projectsList" class="projects-list"></div>
+    </form>
+  </dialog>
+
+  <dialog id="resultDialog" class="result-dialog">
+    <video id="resultVideo" controls playsinline></video>
+    <form method="dialog"><button class="btn btn-ghost" type="submit">Закрыть</button></form>
+  </dialog>
+
+  <!-- Тарифы и оплата (серверный режим, в Telegram) -->
+  <div id="paywall" class="sheet" role="dialog" aria-modal="true" aria-labelledby="paywallTitle" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel">
+      <button class="sheet-close" type="button" data-close aria-label="Закрыть">×</button>
+      <h2 id="paywallTitle">Тарифы Reel Lab</h2>
+      <p id="paywallReason" class="sheet-reason" hidden></p>
+      <p id="paywallStatus" class="sheet-status"></p>
+      <div id="paywallProducts" class="products"></div>
+      <p class="sheet-note">Все тарифы — без водяного знака, ролики до 3 минут. Бесплатно — 2 ролика в день до 1 минуты, со знаком.
+        Пересобрать тот же ролик в течение суток — бесплатно.</p>
+      <div class="sheet-links">
+        <button id="supportOpen" class="link-btn" type="button">Написать в поддержку</button>
+        <span aria-hidden="true">·</span>
+        <a id="offerLink" class="link-btn" href="/legal/offer">Оферта</a>
+      </div>
+      <div id="supportBox" class="support-box" hidden>
+        <textarea id="supportText" maxlength="2000" rows="3" placeholder="Опиши вопрос — ответ придёт в чат с ботом"></textarea>
+        <div class="support-row"><span id="supportNote" class="note" role="status"></span>
+          <button id="supportSend" class="btn btn-primary" type="button">Отправить</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Студию открыли не из Telegram -->
+  <div id="tgGate" class="tg-gate" hidden>
+    <div class="tg-gate-card">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <h2>Открой студию в Telegram</h2>
+      <p>Reel Lab работает внутри Telegram: так ролик сам придёт в чат, а вход не нужен.</p>
+      <a id="tgGateLink" class="btn btn-primary" href="https://t.me/">Открыть бота</a>
+    </div>
+  </div>
+
+  <script type="module" src="./ready-captions.bundle.js?v=49"></script>
+</body>
+</html>

@@ -1,0 +1,5056 @@
+{
+ "format": 3,
+ "sample_rate": 48000,
+ "groups": {
+  "typing": "Печать букв",
+  "word": "Слова",
+  "phrase": "Переходы",
+  "accent": "Акценты"
+ },
+ "categories": {
+  "keys": "Клавиатура",
+  "click": "Клики",
+  "pop": "Пузыри и капли",
+  "whoosh": "Взмахи",
+  "riser": "Нарастание",
+  "hit": "Удары",
+  "bell": "Звонки",
+  "magic": "Волшебство",
+  "notes": "Ноты",
+  "digital": "Цифровые",
+  "cartoon": "Мультяшные",
+  "foley": "Предметы",
+  "mine": "Мои звуки"
+ },
+ "targets": {
+  "typing": -20.98,
+  "word": -18.0,
+  "phrase": -17.0,
+  "accent": -15.0
+ },
+ "moods": {
+  "soft": "Мягкие",
+  "melodic": "Мелодичные",
+  "tactile": "Живые",
+  "cinema": "Кино",
+  "magic": "Волшебные",
+  "tech": "Цифровые",
+  "retro": "Игровые",
+  "metal": "Металл и стекло",
+  "fun": "Весёлые"
+ },
+ "credits": {
+  "freesound": "Записи с Freesound (freesound.org) — лицензия CC0 1.0, свободны для любых роликов. Авторы указаны у каждого звука.",
+  "kenney": "Звуки Kenney (kenney.nl) — лицензия CC0 1.0, свободны для любых роликов.",
+  "synth": "Синтез Reel Lab — собственные звуки студии."
+ },
+ "aliases": {
+  "type_soft": "fs_laptop",
+  "type_mech": "keys4",
+  "type_machine": "fs_typewriter",
+  "type_bubble": "fs_bubble_type",
+  "type_drop": "fs_drop_type",
+  "pop": "fs_pop",
+  "bubble": "fs_bubble",
+  "tick": "k_click_soft",
+  "drop": "fs_drop",
+  "wood": "wood_knock",
+  "glass": "k_glass_tap",
+  "snap": "fs_snap",
+  "digital_tick": "k_toggle",
+  "pop_cork": "fs_cork",
+  "swish": "fs_whoosh",
+  "whoosh": "fs_whoosh",
+  "air": "k_air_out",
+  "shimmer": "fs_gleam",
+  "neon": "fs_electric",
+  "whoosh_deep": "fs_wind",
+  "whoosh_fast": "fs_quick_whoosh",
+  "pass_by": "fs_space_swoosh",
+  "swipe": "fs_whoosh",
+  "glitch_transition": "fs_glitch",
+  "sparkle_sweep": "fs_wind_chimes",
+  "bubble_rise": "fs_bubbling",
+  "paper_slide": "fs_page",
+  "sparkle": "fs_sparkle",
+  "chime": "fs_ding",
+  "ding": "fs_ding",
+  "metal": "metal_hit",
+  "bass": "fs_thud",
+  "cinema_hit": "fs_cinema_hit",
+  "boom": "fs_boom",
+  "riser_hit": "fs_swell_hit",
+  "shutter": "fs_camera",
+  "magic_wand": "fs_magic",
+  "gold_shine": "fs_coin_shimmer",
+  "glitch_hit": "fs_glitch",
+  "heartbeat": "thump",
+  "boing": "fs_boing",
+  "clap": "wood_clap",
+  "blade_draw": "blade"
+ },
+ "sounds": [
+  {
+   "id": "typewriter",
+   "label": "Печатная машинка",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/keys/typewriter/k01.wav",
+    "/sounds/keys/typewriter/k02.wav",
+    "/sounds/keys/typewriter/k03.wav",
+    "/sounds/keys/typewriter/k04.wav",
+    "/sounds/keys/typewriter/k05.wav",
+    "/sounds/keys/typewriter/k06.wav",
+    "/sounds/keys/typewriter/k07.wav",
+    "/sounds/keys/typewriter/k08.wav",
+    "/sounds/keys/typewriter/k09.wav",
+    "/sounds/keys/typewriter/k10.wav",
+    "/sounds/keys/typewriter/k11.wav",
+    "/sounds/keys/typewriter/k12.wav",
+    "/sounds/keys/typewriter/k13.wav",
+    "/sounds/keys/typewriter/k14.wav",
+    "/sounds/keys/typewriter/k15.wav",
+    "/sounds/keys/typewriter/k16.wav"
+   ],
+   "natural_interval_ms": 94,
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "source": "Ваша запись",
+   "license": "неизвестна — запись из интернета, перед публикацией лучше заменить",
+   "own": true
+  },
+  {
+   "id": "iphone",
+   "label": "Клавиатура iPhone",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/keys/iphone/k01.wav",
+    "/sounds/keys/iphone/k02.wav",
+    "/sounds/keys/iphone/k03.wav",
+    "/sounds/keys/iphone/k04.wav",
+    "/sounds/keys/iphone/k05.wav",
+    "/sounds/keys/iphone/k06.wav",
+    "/sounds/keys/iphone/k07.wav",
+    "/sounds/keys/iphone/k08.wav",
+    "/sounds/keys/iphone/k09.wav",
+    "/sounds/keys/iphone/k10.wav",
+    "/sounds/keys/iphone/k11.wav",
+    "/sounds/keys/iphone/k12.wav",
+    "/sounds/keys/iphone/k13.wav",
+    "/sounds/keys/iphone/k14.wav",
+    "/sounds/keys/iphone/k15.wav",
+    "/sounds/keys/iphone/k16.wav"
+   ],
+   "natural_interval_ms": 116,
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "source": "Ваша запись",
+   "license": "неизвестна — запись из интернета, перед публикацией лучше заменить",
+   "own": true
+  },
+  {
+   "id": "keys4",
+   "label": "Механическая клавиатура",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/keys/keys4/k01.wav",
+    "/sounds/keys/keys4/k02.wav",
+    "/sounds/keys/keys4/k03.wav",
+    "/sounds/keys/keys4/k04.wav",
+    "/sounds/keys/keys4/k05.wav",
+    "/sounds/keys/keys4/k06.wav",
+    "/sounds/keys/keys4/k07.wav",
+    "/sounds/keys/keys4/k08.wav",
+    "/sounds/keys/keys4/k09.wav",
+    "/sounds/keys/keys4/k10.wav",
+    "/sounds/keys/keys4/k11.wav",
+    "/sounds/keys/keys4/k12.wav",
+    "/sounds/keys/keys4/k13.wav",
+    "/sounds/keys/keys4/k14.wav",
+    "/sounds/keys/keys4/k15.wav",
+    "/sounds/keys/keys4/k16.wav"
+   ],
+   "natural_interval_ms": 42,
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "source": "Ваша запись",
+   "license": "неизвестна — запись из интернета, перед публикацией лучше заменить",
+   "own": true
+  },
+  {
+   "id": "keys5",
+   "label": "Тихая клавиатура",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/keys/keys5/k01.wav",
+    "/sounds/keys/keys5/k02.wav",
+    "/sounds/keys/keys5/k03.wav",
+    "/sounds/keys/keys5/k04.wav",
+    "/sounds/keys/keys5/k05.wav",
+    "/sounds/keys/keys5/k06.wav",
+    "/sounds/keys/keys5/k07.wav",
+    "/sounds/keys/keys5/k08.wav",
+    "/sounds/keys/keys5/k09.wav",
+    "/sounds/keys/keys5/k10.wav",
+    "/sounds/keys/keys5/k11.wav",
+    "/sounds/keys/keys5/k12.wav",
+    "/sounds/keys/keys5/k13.wav",
+    "/sounds/keys/keys5/k14.wav",
+    "/sounds/keys/keys5/k15.wav",
+    "/sounds/keys/keys5/k16.wav"
+   ],
+   "natural_interval_ms": 46,
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "source": "Ваша запись",
+   "license": "неизвестна — запись из интернета, перед публикацией лучше заменить",
+   "own": true
+  },
+  {
+   "id": "joystick",
+   "label": "Кнопки джойстика",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/keys/joystick/k01.wav",
+    "/sounds/keys/joystick/k02.wav",
+    "/sounds/keys/joystick/k03.wav",
+    "/sounds/keys/joystick/k04.wav",
+    "/sounds/keys/joystick/k05.wav",
+    "/sounds/keys/joystick/k06.wav",
+    "/sounds/keys/joystick/k07.wav",
+    "/sounds/keys/joystick/k08.wav",
+    "/sounds/keys/joystick/k09.wav",
+    "/sounds/keys/joystick/k10.wav",
+    "/sounds/keys/joystick/k11.wav",
+    "/sounds/keys/joystick/k12.wav",
+    "/sounds/keys/joystick/k13.wav",
+    "/sounds/keys/joystick/k14.wav",
+    "/sounds/keys/joystick/k15.wav",
+    "/sounds/keys/joystick/k16.wav"
+   ],
+   "natural_interval_ms": 54,
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "source": "Ваша запись",
+   "license": "неизвестна — запись из интернета, перед публикацией лучше заменить",
+   "own": true
+  },
+  {
+   "id": "fs_typewriter",
+   "label": "Пишущая машинка",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/fs_typewriter/v01.flac",
+    "/sounds/sfx/fs_typewriter/v02.flac",
+    "/sounds/sfx/fs_typewriter/v03.flac",
+    "/sounds/sfx/fs_typewriter/v04.flac",
+    "/sounds/sfx/fs_typewriter/v05.flac",
+    "/sounds/sfx/fs_typewriter/v06.flac",
+    "/sounds/sfx/fs_typewriter/v07.flac",
+    "/sounds/sfx/fs_typewriter/v08.flac",
+    "/sounds/sfx/fs_typewriter/v09.flac"
+   ],
+   "pitch_spread": 0.02,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.231,
+   "natural_interval_ms": 110,
+   "note": "Настоящая машинка: удар литеры и механизм",
+   "source": "Freesound · mlekoman",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/mlekoman/sounds/320571/",
+   "credits": [
+    {
+     "author": "mlekoman",
+     "title": "type writing",
+     "url": "https://freesound.org/people/mlekoman/sounds/320571/"
+    }
+   ]
+  },
+  {
+   "id": "fs_phone_keys",
+   "label": "Клавиатура телефона",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/fs_phone_keys/v01.flac",
+    "/sounds/sfx/fs_phone_keys/v02.flac",
+    "/sounds/sfx/fs_phone_keys/v03.flac",
+    "/sounds/sfx/fs_phone_keys/v04.flac",
+    "/sounds/sfx/fs_phone_keys/v05.flac",
+    "/sounds/sfx/fs_phone_keys/v06.flac",
+    "/sounds/sfx/fs_phone_keys/v07.flac",
+    "/sounds/sfx/fs_phone_keys/v08.flac",
+    "/sounds/sfx/fs_phone_keys/v09.flac",
+    "/sounds/sfx/fs_phone_keys/v10.flac",
+    "/sounds/sfx/fs_phone_keys/v11.flac",
+    "/sounds/sfx/fs_phone_keys/v12.flac"
+   ],
+   "pitch_spread": 0.02,
+   "moods": [
+    "soft",
+    "tactile"
+   ],
+   "seconds": 0.062,
+   "natural_interval_ms": 95,
+   "note": "Щелчки экранной клавиатуры",
+   "source": "Freesound · jordanielmills",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/jordanielmills/sounds/640365/",
+   "credits": [
+    {
+     "author": "jordanielmills",
+     "title": "iPhone text type keypress keyboard",
+     "url": "https://freesound.org/people/jordanielmills/sounds/640365/"
+    }
+   ]
+  },
+  {
+   "id": "fs_screen_tap",
+   "label": "Тапы по экрану",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/fs_screen_tap/v01.flac",
+    "/sounds/sfx/fs_screen_tap/v02.flac",
+    "/sounds/sfx/fs_screen_tap/v03.flac",
+    "/sounds/sfx/fs_screen_tap/v04.flac",
+    "/sounds/sfx/fs_screen_tap/v05.flac",
+    "/sounds/sfx/fs_screen_tap/v06.flac",
+    "/sounds/sfx/fs_screen_tap/v07.flac",
+    "/sounds/sfx/fs_screen_tap/v08.flac",
+    "/sounds/sfx/fs_screen_tap/v09.flac",
+    "/sounds/sfx/fs_screen_tap/v10.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft"
+   ],
+   "seconds": 0.09,
+   "natural_interval_ms": 90,
+   "note": "Мягкое постукивание пальцем по стеклу",
+   "source": "Freesound · melliug",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/melliug/sounds/176066/",
+   "credits": [
+    {
+     "author": "melliug",
+     "title": "typing_phone_02.mp3",
+     "url": "https://freesound.org/people/melliug/sounds/176066/"
+    }
+   ]
+  },
+  {
+   "id": "fs_laptop",
+   "label": "Ноутбук",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/fs_laptop/v01.flac",
+    "/sounds/sfx/fs_laptop/v02.flac",
+    "/sounds/sfx/fs_laptop/v03.flac",
+    "/sounds/sfx/fs_laptop/v04.flac",
+    "/sounds/sfx/fs_laptop/v05.flac",
+    "/sounds/sfx/fs_laptop/v06.flac",
+    "/sounds/sfx/fs_laptop/v07.flac",
+    "/sounds/sfx/fs_laptop/v08.flac",
+    "/sounds/sfx/fs_laptop/v09.flac",
+    "/sounds/sfx/fs_laptop/v10.flac",
+    "/sounds/sfx/fs_laptop/v11.flac",
+    "/sounds/sfx/fs_laptop/v12.flac"
+   ],
+   "pitch_spread": 0.02,
+   "moods": [
+    "soft",
+    "tactile"
+   ],
+   "seconds": 0.154,
+   "natural_interval_ms": 70,
+   "source": "Freesound · bassboybg",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/bassboybg/sounds/346589/",
+   "credits": [
+    {
+     "author": "bassboybg",
+     "title": "Laptop Keyboard",
+     "url": "https://freesound.org/people/bassboybg/sounds/346589/"
+    }
+   ]
+  },
+  {
+   "id": "fs_office_keys",
+   "label": "Офисная клавиатура",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/fs_office_keys/v01.flac",
+    "/sounds/sfx/fs_office_keys/v02.flac",
+    "/sounds/sfx/fs_office_keys/v03.flac",
+    "/sounds/sfx/fs_office_keys/v04.flac",
+    "/sounds/sfx/fs_office_keys/v05.flac",
+    "/sounds/sfx/fs_office_keys/v06.flac",
+    "/sounds/sfx/fs_office_keys/v07.flac",
+    "/sounds/sfx/fs_office_keys/v08.flac",
+    "/sounds/sfx/fs_office_keys/v09.flac",
+    "/sounds/sfx/fs_office_keys/v10.flac",
+    "/sounds/sfx/fs_office_keys/v11.flac",
+    "/sounds/sfx/fs_office_keys/v12.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.069,
+   "natural_interval_ms": 55,
+   "source": "Freesound · Trollarch2",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Trollarch2/sounds/331656/",
+   "credits": [
+    {
+     "author": "Trollarch2",
+     "title": "Keyboard Typing",
+     "url": "https://freesound.org/people/Trollarch2/sounds/331656/"
+    }
+   ]
+  },
+  {
+   "id": "fs_mech_key",
+   "label": "Механическая клавиша",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/fs_mech_key/v01.flac",
+    "/sounds/sfx/fs_mech_key/v02.flac",
+    "/sounds/sfx/fs_mech_key/v03.flac",
+    "/sounds/sfx/fs_mech_key/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.12,
+   "natural_interval_ms": 60,
+   "source": "Freesound · newagesoup",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/newagesoup/sounds/348239/",
+   "credits": [
+    {
+     "author": "newagesoup",
+     "title": "MECH-KEYBOARD-01.wav",
+     "url": "https://freesound.org/people/newagesoup/sounds/348239/"
+    }
+   ]
+  },
+  {
+   "id": "k_switch_click",
+   "label": "Щелчки кнопок",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/k_switch_click/v01.flac",
+    "/sounds/sfx/k_switch_click/v02.flac",
+    "/sounds/sfx/k_switch_click/v03.flac",
+    "/sounds/sfx/k_switch_click/v04.flac",
+    "/sounds/sfx/k_switch_click/v05.flac",
+    "/sounds/sfx/k_switch_click/v06.flac",
+    "/sounds/sfx/k_switch_click/v07.flac",
+    "/sounds/sfx/k_switch_click/v08.flac",
+    "/sounds/sfx/k_switch_click/v09.flac",
+    "/sounds/sfx/k_switch_click/v10.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft",
+    "tactile"
+   ],
+   "seconds": 0.04,
+   "natural_interval_ms": 52,
+   "note": "Короткие пластиковые щелчки, как у хорошей клавиатуры",
+   "source": "Kenney · UI Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/ui-audio"
+  },
+  {
+   "id": "k_tiny_click",
+   "label": "Крошечные щелчки",
+   "group": "typing",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/k_tiny_click/v01.flac",
+    "/sounds/sfx/k_tiny_click/v02.flac",
+    "/sounds/sfx/k_tiny_click/v03.flac",
+    "/sounds/sfx/k_tiny_click/v04.flac",
+    "/sounds/sfx/k_tiny_click/v05.flac",
+    "/sounds/sfx/k_tiny_click/v06.flac",
+    "/sounds/sfx/k_tiny_click/v07.flac",
+    "/sounds/sfx/k_tiny_click/v08.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft"
+   ],
+   "seconds": 0.02,
+   "natural_interval_ms": 46,
+   "note": "Еле слышные тики — печать, которая не мешает голосу",
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "fs_carriage",
+   "label": "Возврат каретки",
+   "group": "phrase",
+   "category": "keys",
+   "files": [
+    "/sounds/sfx/fs_carriage/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 1.411,
+   "offset": -1.0,
+   "note": "Каретка едет на новую строку и встаёт на место ровно на ней",
+   "source": "Freesound · knufds",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/knufds/sounds/345955/",
+   "credits": [
+    {
+     "author": "knufds",
+     "title": "Typewriter bell & carriage reset",
+     "url": "https://freesound.org/people/knufds/sounds/345955/"
+    }
+   ]
+  },
+  {
+   "id": "fs_snap",
+   "label": "Щелчок пальцами",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/fs_snap/v01.flac",
+    "/sounds/sfx/fs_snap/v02.flac",
+    "/sounds/sfx/fs_snap/v03.flac",
+    "/sounds/sfx/fs_snap/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.273,
+   "source": "Freesound · vckhaze, dastudiospr, SoundCollectah, OwlStorm",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/vckhaze/sounds/332604/",
+   "credits": [
+    {
+     "author": "vckhaze",
+     "title": "Single Finger Snap",
+     "url": "https://freesound.org/people/vckhaze/sounds/332604/"
+    },
+    {
+     "author": "dastudiospr",
+     "title": "Finger Snap",
+     "url": "https://freesound.org/people/dastudiospr/sounds/496088/"
+    },
+    {
+     "author": "SoundCollectah",
+     "title": "finger snap 02.aiff",
+     "url": "https://freesound.org/people/SoundCollectah/sounds/109400/"
+    },
+    {
+     "author": "OwlStorm",
+     "title": "Click / Finger Snap",
+     "url": "https://freesound.org/people/OwlStorm/sounds/151214/"
+    }
+   ]
+  },
+  {
+   "id": "fs_mouse",
+   "label": "Мышка",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/fs_mouse/v01.flac",
+    "/sounds/sfx/fs_mouse/v02.flac",
+    "/sounds/sfx/fs_mouse/v03.flac",
+    "/sounds/sfx/fs_mouse/v04.flac",
+    "/sounds/sfx/fs_mouse/v05.flac",
+    "/sounds/sfx/fs_mouse/v06.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile",
+    "soft"
+   ],
+   "seconds": 0.047,
+   "source": "Freesound · Pixeliota, pbimal",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Pixeliota/sounds/678248/",
+   "credits": [
+    {
+     "author": "Pixeliota",
+     "title": "Mouse Click Sound.mp3",
+     "url": "https://freesound.org/people/Pixeliota/sounds/678248/"
+    },
+    {
+     "author": "pbimal",
+     "title": "mouse-click-double-00.flac",
+     "url": "https://freesound.org/people/pbimal/sounds/534104/"
+    }
+   ]
+  },
+  {
+   "id": "fs_pen",
+   "label": "Ручка",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/fs_pen/v01.flac",
+    "/sounds/sfx/fs_pen/v02.flac",
+    "/sounds/sfx/fs_pen/v03.flac",
+    "/sounds/sfx/fs_pen/v04.flac",
+    "/sounds/sfx/fs_pen/v05.flac",
+    "/sounds/sfx/fs_pen/v06.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.076,
+   "note": "Кнопка шариковой ручки",
+   "source": "Freesound · LexzachGames",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/LexzachGames/sounds/431492/",
+   "credits": [
+    {
+     "author": "LexzachGames",
+     "title": "Pen Click",
+     "url": "https://freesound.org/people/LexzachGames/sounds/431492/"
+    }
+   ]
+  },
+  {
+   "id": "fs_switch",
+   "label": "Выключатель",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/fs_switch/v01.flac",
+    "/sounds/sfx/fs_switch/v02.flac",
+    "/sounds/sfx/fs_switch/v03.flac",
+    "/sounds/sfx/fs_switch/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.05,
+   "source": "Freesound · njjjjjjjjjjjjjjjjjjjjjjjj",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/njjjjjjjjjjjjjjjjjjjjjjjj/sounds/566176/",
+   "credits": [
+    {
+     "author": "njjjjjjjjjjjjjjjjjjjjjjjj",
+     "title": "Flicking a Switch",
+     "url": "https://freesound.org/people/njjjjjjjjjjjjjjjjjjjjjjjj/sounds/566176/"
+    }
+   ]
+  },
+  {
+   "id": "fs_menu_click",
+   "label": "Клик меню",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/fs_menu_click/v01.flac",
+    "/sounds/sfx/fs_menu_click/v02.flac",
+    "/sounds/sfx/fs_menu_click/v03.flac",
+    "/sounds/sfx/fs_menu_click/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft",
+    "tech"
+   ],
+   "seconds": 0.092,
+   "source": "Freesound · NenadSimic",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/NenadSimic/sounds/171697/",
+   "credits": [
+    {
+     "author": "NenadSimic",
+     "title": "Menu Selection Click",
+     "url": "https://freesound.org/people/NenadSimic/sounds/171697/"
+    }
+   ]
+  },
+  {
+   "id": "fs_knock",
+   "label": "Стук в дверь",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/fs_knock/v01.flac",
+    "/sounds/sfx/fs_knock/v02.flac",
+    "/sounds/sfx/fs_knock/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.143,
+   "source": "Freesound · Flem0527",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Flem0527/sounds/629987/",
+   "credits": [
+    {
+     "author": "Flem0527",
+     "title": "Knocking on Wood Door (1)",
+     "url": "https://freesound.org/people/Flem0527/sounds/629987/"
+    }
+   ]
+  },
+  {
+   "id": "fs_perc_click",
+   "label": "Перкуссия",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/fs_perc_click/v01.flac",
+    "/sounds/sfx/fs_perc_click/v02.flac",
+    "/sounds/sfx/fs_perc_click/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.055,
+   "source": "Freesound · waveplaySFX",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/waveplaySFX/sounds/399934/",
+   "credits": [
+    {
+     "author": "waveplaySFX",
+     "title": "[Perc] Short Click/Snap Perc",
+     "url": "https://freesound.org/people/waveplaySFX/sounds/399934/"
+    }
+   ]
+  },
+  {
+   "id": "fs_tongue",
+   "label": "Цоканье",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/fs_tongue/v01.flac",
+    "/sounds/sfx/fs_tongue/v02.flac",
+    "/sounds/sfx/fs_tongue/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun",
+    "tactile"
+   ],
+   "seconds": 0.125,
+   "source": "Freesound · boulderbuff64",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/boulderbuff64/sounds/262301/",
+   "credits": [
+    {
+     "author": "boulderbuff64",
+     "title": "tongue_click.wav",
+     "url": "https://freesound.org/people/boulderbuff64/sounds/262301/"
+    }
+   ]
+  },
+  {
+   "id": "k_click_soft",
+   "label": "Мягкий клик",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/k_click_soft/v01.flac",
+    "/sounds/sfx/k_click_soft/v02.flac",
+    "/sounds/sfx/k_click_soft/v03.flac",
+    "/sounds/sfx/k_click_soft/v04.flac",
+    "/sounds/sfx/k_click_soft/v05.flac",
+    "/sounds/sfx/k_click_soft/v06.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft"
+   ],
+   "seconds": 0.074,
+   "source": "Kenney · Interface Sounds, UI Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "k_click_bright",
+   "label": "Звонкий клик",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/k_click_bright/v01.flac",
+    "/sounds/sfx/k_click_bright/v02.flac",
+    "/sounds/sfx/k_click_bright/v03.flac",
+    "/sounds/sfx/k_click_bright/v04.flac",
+    "/sounds/sfx/k_click_bright/v05.flac",
+    "/sounds/sfx/k_click_bright/v06.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft",
+    "tech"
+   ],
+   "seconds": 0.047,
+   "source": "Kenney · Interface Sounds, UI Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "wood_knock",
+   "label": "Стук по дереву",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/wood_knock/v01.flac",
+    "/sounds/sfx/wood_knock/v02.flac",
+    "/sounds/sfx/wood_knock/v03.flac",
+    "/sounds/sfx/wood_knock/v04.flac",
+    "/sounds/sfx/wood_knock/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.13,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "generic_tap",
+   "label": "Лёгкий тап",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/generic_tap/v01.flac",
+    "/sounds/sfx/generic_tap/v02.flac",
+    "/sounds/sfx/generic_tap/v03.flac",
+    "/sounds/sfx/generic_tap/v04.flac",
+    "/sounds/sfx/generic_tap/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft",
+    "tactile"
+   ],
+   "seconds": 0.124,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "wood_clap",
+   "label": "Деревянный хлоп",
+   "group": "word",
+   "category": "click",
+   "files": [
+    "/sounds/sfx/wood_clap/v01.flac",
+    "/sounds/sfx/wood_clap/v02.flac",
+    "/sounds/sfx/wood_clap/v03.flac",
+    "/sounds/sfx/wood_clap/v04.flac",
+    "/sounds/sfx/wood_clap/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.228,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "fs_pop",
+   "label": "Поп",
+   "group": "word",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_pop/v01.flac",
+    "/sounds/sfx/fs_pop/v02.flac",
+    "/sounds/sfx/fs_pop/v03.flac",
+    "/sounds/sfx/fs_pop/v04.flac",
+    "/sounds/sfx/fs_pop/v05.flac",
+    "/sounds/sfx/fs_pop/v06.flac"
+   ],
+   "pitch_spread": 0.04,
+   "moods": [
+    "soft",
+    "fun"
+   ],
+   "seconds": 0.119,
+   "source": "Freesound · deraj, ConarB13, LilMati",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/deraj/sounds/202230/",
+   "credits": [
+    {
+     "author": "deraj",
+     "title": "Pop sound",
+     "url": "https://freesound.org/people/deraj/sounds/202230/"
+    },
+    {
+     "author": "ConarB13",
+     "title": "Pop Sound",
+     "url": "https://freesound.org/people/ConarB13/sounds/401542/"
+    },
+    {
+     "author": "LilMati",
+     "title": "Pop 01",
+     "url": "https://freesound.org/people/LilMati/sounds/506546/"
+    }
+   ]
+  },
+  {
+   "id": "fs_pops",
+   "label": "Хлопки пузырей",
+   "group": "word",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_pops/v01.flac",
+    "/sounds/sfx/fs_pops/v02.flac",
+    "/sounds/sfx/fs_pops/v03.flac",
+    "/sounds/sfx/fs_pops/v04.flac",
+    "/sounds/sfx/fs_pops/v05.flac",
+    "/sounds/sfx/fs_pops/v06.flac",
+    "/sounds/sfx/fs_pops/v07.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 0.383,
+   "source": "Freesound · oldedgar, wubitog",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/oldedgar/sounds/97978/",
+   "credits": [
+    {
+     "author": "oldedgar",
+     "title": "Pop!.aif",
+     "url": "https://freesound.org/people/oldedgar/sounds/97978/"
+    },
+    {
+     "author": "wubitog",
+     "title": "3 Popping Pops",
+     "url": "https://freesound.org/people/wubitog/sounds/188381/"
+    }
+   ]
+  },
+  {
+   "id": "fs_mouth_pop",
+   "label": "Поп губами",
+   "group": "word",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_mouth_pop/v01.flac",
+    "/sounds/sfx/fs_mouth_pop/v02.flac",
+    "/sounds/sfx/fs_mouth_pop/v03.flac",
+    "/sounds/sfx/fs_mouth_pop/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun",
+    "soft"
+   ],
+   "seconds": 0.14,
+   "source": "Freesound · carlSablowEdwards",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/carlSablowEdwards/sounds/47498/",
+   "credits": [
+    {
+     "author": "carlSablowEdwards",
+     "title": "mouthPop_02.wav",
+     "url": "https://freesound.org/people/carlSablowEdwards/sounds/47498/"
+    }
+   ]
+  },
+  {
+   "id": "fs_bubble",
+   "label": "Пузырёк",
+   "group": "word",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_bubble/v01.flac",
+    "/sounds/sfx/fs_bubble/v02.flac",
+    "/sounds/sfx/fs_bubble/v03.flac",
+    "/sounds/sfx/fs_bubble/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft",
+    "fun"
+   ],
+   "seconds": 0.361,
+   "source": "Freesound · Godowan",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Godowan/sounds/235264/",
+   "credits": [
+    {
+     "author": "Godowan",
+     "title": "bubble1.wav",
+     "url": "https://freesound.org/people/Godowan/sounds/235264/"
+    }
+   ]
+  },
+  {
+   "id": "fs_drop",
+   "label": "Капля",
+   "group": "word",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_drop/v01.flac",
+    "/sounds/sfx/fs_drop/v02.flac",
+    "/sounds/sfx/fs_drop/v03.flac",
+    "/sounds/sfx/fs_drop/v04.flac",
+    "/sounds/sfx/fs_drop/v05.flac"
+   ],
+   "pitch_spread": 0.04,
+   "moods": [
+    "soft"
+   ],
+   "seconds": 0.224,
+   "source": "Freesound · paespedro, AlaskaRobotics",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/paespedro/sounds/174718/",
+   "credits": [
+    {
+     "author": "paespedro",
+     "title": "Single Water Drop",
+     "url": "https://freesound.org/people/paespedro/sounds/174718/"
+    },
+    {
+     "author": "AlaskaRobotics",
+     "title": "cartoon pop or drip",
+     "url": "https://freesound.org/people/AlaskaRobotics/sounds/221091/"
+    }
+   ]
+  },
+  {
+   "id": "fs_plop",
+   "label": "Плюх",
+   "group": "word",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_plop/v01.flac",
+    "/sounds/sfx/fs_plop/v02.flac",
+    "/sounds/sfx/fs_plop/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 0.13,
+   "source": "Freesound · Breviceps",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Breviceps/sounds/447910/",
+   "credits": [
+    {
+     "author": "Breviceps",
+     "title": "Plop!",
+     "url": "https://freesound.org/people/Breviceps/sounds/447910/"
+    }
+   ]
+  },
+  {
+   "id": "fs_bubble_type",
+   "label": "Пузырьки на буквы",
+   "group": "typing",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_bubble_type/v01.flac",
+    "/sounds/sfx/fs_bubble_type/v02.flac",
+    "/sounds/sfx/fs_bubble_type/v03.flac",
+    "/sounds/sfx/fs_bubble_type/v04.flac",
+    "/sounds/sfx/fs_bubble_type/v05.flac",
+    "/sounds/sfx/fs_bubble_type/v06.flac",
+    "/sounds/sfx/fs_bubble_type/v07.flac",
+    "/sounds/sfx/fs_bubble_type/v08.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "soft",
+    "fun"
+   ],
+   "seconds": 0.04,
+   "natural_interval_ms": 55,
+   "note": "Каждая буква — пузырёк своей высоты",
+   "source": "Freesound · ImAFoley",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/ImAFoley/sounds/537061/",
+   "credits": [
+    {
+     "author": "ImAFoley",
+     "title": "Message Pop Sound",
+     "url": "https://freesound.org/people/ImAFoley/sounds/537061/"
+    }
+   ]
+  },
+  {
+   "id": "fs_drop_type",
+   "label": "Капельки на буквы",
+   "group": "typing",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_drop_type/v01.flac",
+    "/sounds/sfx/fs_drop_type/v02.flac",
+    "/sounds/sfx/fs_drop_type/v03.flac",
+    "/sounds/sfx/fs_drop_type/v04.flac",
+    "/sounds/sfx/fs_drop_type/v05.flac",
+    "/sounds/sfx/fs_drop_type/v06.flac",
+    "/sounds/sfx/fs_drop_type/v07.flac",
+    "/sounds/sfx/fs_drop_type/v08.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "soft"
+   ],
+   "seconds": 0.095,
+   "natural_interval_ms": 60,
+   "source": "Freesound · AlaskaRobotics",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/AlaskaRobotics/sounds/221091/",
+   "credits": [
+    {
+     "author": "AlaskaRobotics",
+     "title": "cartoon pop or drip",
+     "url": "https://freesound.org/people/AlaskaRobotics/sounds/221091/"
+    }
+   ]
+  },
+  {
+   "id": "fs_bubbling",
+   "label": "Бульканье",
+   "group": "phrase",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_bubbling/v01.flac",
+    "/sounds/sfx/fs_bubbling/v02.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun",
+    "soft"
+   ],
+   "seconds": 0.9,
+   "offset": -0.14,
+   "source": "Freesound · erkanozan",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/erkanozan/sounds/51745/",
+   "credits": [
+    {
+     "author": "erkanozan",
+     "title": "Bubbles.wav",
+     "url": "https://freesound.org/people/erkanozan/sounds/51745/"
+    }
+   ]
+  },
+  {
+   "id": "fs_cork",
+   "label": "Пробка",
+   "group": "accent",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_cork/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 0.51,
+   "source": "Freesound · KenRT",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/KenRT/sounds/392624/",
+   "credits": [
+    {
+     "author": "KenRT",
+     "title": "Champagne Cork",
+     "url": "https://freesound.org/people/KenRT/sounds/392624/"
+    }
+   ]
+  },
+  {
+   "id": "fs_balloon",
+   "label": "Лопнул шарик",
+   "group": "accent",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/fs_balloon/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun",
+    "cinema"
+   ],
+   "seconds": 0.199,
+   "stereo": true,
+   "source": "Freesound · Breviceps",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Breviceps/sounds/458398/",
+   "credits": [
+    {
+     "author": "Breviceps",
+     "title": "Balloon Pop / Christmas cracker / Confetti Canno",
+     "url": "https://freesound.org/people/Breviceps/sounds/458398/"
+    }
+   ]
+  },
+  {
+   "id": "k_water",
+   "label": "Водяной блюп",
+   "group": "word",
+   "category": "pop",
+   "files": [
+    "/sounds/sfx/k_water/v01.flac",
+    "/sounds/sfx/k_water/v02.flac",
+    "/sounds/sfx/k_water/v03.flac",
+    "/sounds/sfx/k_water/v04.flac",
+    "/sounds/sfx/k_water/v05.flac",
+    "/sounds/sfx/k_water/v06.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile",
+    "fun"
+   ],
+   "seconds": 0.184,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "fs_whoosh",
+   "label": "Вжух",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/fs_whoosh/v01.flac",
+    "/sounds/sfx/fs_whoosh/v02.flac",
+    "/sounds/sfx/fs_whoosh/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 0.243,
+   "stereo": true,
+   "source": "Freesound · qubodup",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/qubodup/sounds/60013/",
+   "credits": [
+    {
+     "author": "qubodup",
+     "title": "Whoosh",
+     "url": "https://freesound.org/people/qubodup/sounds/60013/"
+    },
+    {
+     "author": "qubodup",
+     "title": "Swipe Whoosh",
+     "url": "https://freesound.org/people/qubodup/sounds/60007/"
+    },
+    {
+     "author": "qubodup",
+     "title": "SWOSH-01 44.1kHz",
+     "url": "https://freesound.org/people/qubodup/sounds/59988/"
+    }
+   ]
+  },
+  {
+   "id": "fs_quick_whoosh",
+   "label": "Резкий взмах",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/fs_quick_whoosh/v01.flac",
+    "/sounds/sfx/fs_quick_whoosh/v02.flac",
+    "/sounds/sfx/fs_quick_whoosh/v03.flac",
+    "/sounds/sfx/fs_quick_whoosh/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 0.362,
+   "stereo": true,
+   "source": "Freesound · florianreichelt, Dalesome, denao270, dave.des",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/florianreichelt/sounds/683101/",
+   "credits": [
+    {
+     "author": "florianreichelt",
+     "title": "quick woosh",
+     "url": "https://freesound.org/people/florianreichelt/sounds/683101/"
+    },
+    {
+     "author": "Dalesome",
+     "title": "Woosh (stick swung in the air)",
+     "url": "https://freesound.org/people/Dalesome/sounds/352719/"
+    },
+    {
+     "author": "denao270",
+     "title": "Throwing / Whip Effect",
+     "url": "https://freesound.org/people/denao270/sounds/346373/"
+    },
+    {
+     "author": "dave.des",
+     "title": "fast simple chop 5.aif",
+     "url": "https://freesound.org/people/dave.des/sounds/127197/"
+    }
+   ]
+  },
+  {
+   "id": "fs_whip",
+   "label": "Хлыст",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/fs_whip/v01.flac",
+    "/sounds/sfx/fs_whip/v02.flac",
+    "/sounds/sfx/fs_whip/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema",
+    "tactile"
+   ],
+   "seconds": 0.433,
+   "source": "Freesound · snowflakes",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/snowflakes/sounds/72189/",
+   "credits": [
+    {
+     "author": "snowflakes",
+     "title": "whip01.wav",
+     "url": "https://freesound.org/people/snowflakes/sounds/72189/"
+    },
+    {
+     "author": "snowflakes",
+     "title": "whip02.wav",
+     "url": "https://freesound.org/people/snowflakes/sounds/72190/"
+    },
+    {
+     "author": "snowflakes",
+     "title": "whip03.wav",
+     "url": "https://freesound.org/people/snowflakes/sounds/72191/"
+    }
+   ]
+  },
+  {
+   "id": "fs_swoosh",
+   "label": "Свист",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/fs_swoosh/v01.flac",
+    "/sounds/sfx/fs_swoosh/v02.flac",
+    "/sounds/sfx/fs_swoosh/v03.flac",
+    "/sounds/sfx/fs_swoosh/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema",
+    "soft"
+   ],
+   "seconds": 0.235,
+   "offset": -0.045,
+   "source": "Freesound · PorkMuncher",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/PorkMuncher/sounds/263595/",
+   "credits": [
+    {
+     "author": "PorkMuncher",
+     "title": "swoosh.wav",
+     "url": "https://freesound.org/people/PorkMuncher/sounds/263595/"
+    }
+   ]
+  },
+  {
+   "id": "fs_double_whoosh",
+   "label": "Двойной вжух",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/fs_double_whoosh/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 0.475,
+   "offset": -0.055,
+   "source": "Freesound · martian",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/martian/sounds/19312/",
+   "credits": [
+    {
+     "author": "martian",
+     "title": "classic double swwosh .wav",
+     "url": "https://freesound.org/people/martian/sounds/19312/"
+    }
+   ]
+  },
+  {
+   "id": "fs_space_swoosh",
+   "label": "Космический пролёт",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/fs_space_swoosh/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech",
+    "cinema"
+   ],
+   "seconds": 0.871,
+   "stereo": true,
+   "offset": -0.125,
+   "source": "Freesound · GameAudio",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/GameAudio/sounds/220191/",
+   "credits": [
+    {
+     "author": "GameAudio",
+     "title": "Space Swoosh - brighter",
+     "url": "https://freesound.org/people/GameAudio/sounds/220191/"
+    }
+   ]
+  },
+  {
+   "id": "fs_wind",
+   "label": "Мягкий ветер",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/fs_wind/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft"
+   ],
+   "seconds": 1.503,
+   "offset": -0.245,
+   "source": "Freesound · Halgrimm",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Halgrimm/sounds/169867/",
+   "credits": [
+    {
+     "author": "Halgrimm",
+     "title": "swoosh",
+     "url": "https://freesound.org/people/Halgrimm/sounds/169867/"
+    }
+   ]
+  },
+  {
+   "id": "fs_metal_whoosh",
+   "label": "Металлический свист",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/fs_metal_whoosh/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal"
+   ],
+   "seconds": 0.277,
+   "offset": -0.045,
+   "source": "Freesound · MissCellany",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/MissCellany/sounds/240640/",
+   "credits": [
+    {
+     "author": "MissCellany",
+     "title": "Metallic Whoosh.wav",
+     "url": "https://freesound.org/people/MissCellany/sounds/240640/"
+    }
+   ]
+  },
+  {
+   "id": "k_air_in",
+   "label": "Шорох-вдох",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/k_air_in/v01.flac",
+    "/sounds/sfx/k_air_in/v02.flac",
+    "/sounds/sfx/k_air_in/v03.flac",
+    "/sounds/sfx/k_air_in/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft"
+   ],
+   "seconds": 0.236,
+   "offset": -0.075,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "k_air_out",
+   "label": "Шорох-выдох",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/k_air_out/v01.flac",
+    "/sounds/sfx/k_air_out/v02.flac",
+    "/sounds/sfx/k_air_out/v03.flac",
+    "/sounds/sfx/k_air_out/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft"
+   ],
+   "seconds": 0.232,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "cloth",
+   "label": "Взмах ткани",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/cloth/v01.flac",
+    "/sounds/sfx/cloth/v02.flac",
+    "/sounds/sfx/cloth/v03.flac",
+    "/sounds/sfx/cloth/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile",
+    "soft"
+   ],
+   "seconds": 0.428,
+   "offset": -0.045,
+   "source": "Kenney · RPG Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/rpg-audio"
+  },
+  {
+   "id": "blade",
+   "label": "Вжик клинка",
+   "group": "phrase",
+   "category": "whoosh",
+   "files": [
+    "/sounds/sfx/blade/v01.flac",
+    "/sounds/sfx/blade/v02.flac",
+    "/sounds/sfx/blade/v03.flac",
+    "/sounds/sfx/blade/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal",
+    "cinema"
+   ],
+   "seconds": 0.437,
+   "source": "Kenney · RPG Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/rpg-audio"
+  },
+  {
+   "id": "fs_reverse_cymbal",
+   "label": "Обратная тарелка",
+   "group": "phrase",
+   "category": "riser",
+   "files": [
+    "/sounds/sfx/fs_reverse_cymbal/v01.flac",
+    "/sounds/sfx/fs_reverse_cymbal/v02.flac",
+    "/sounds/sfx/fs_reverse_cymbal/v03.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 1.6,
+   "stereo": true,
+   "offset": -1.6,
+   "note": "Тарелка наоборот: растёт и обрывается ровно на новой фразе",
+   "source": "Freesound · genocidalguitar, deleted_user_7146007, John Rayson",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/genocidalguitar/sounds/110218/",
+   "credits": [
+    {
+     "author": "genocidalguitar",
+     "title": "reverse crash.wav",
+     "url": "https://freesound.org/people/genocidalguitar/sounds/110218/"
+    },
+    {
+     "author": "deleted_user_7146007",
+     "title": "Reverse Crash Cymbal Projection",
+     "url": "https://freesound.org/people/deleted_user_7146007/sounds/383903/"
+    },
+    {
+     "author": "John Rayson",
+     "title": "reverse cymbal.wav",
+     "url": "https://freesound.org/people/John Rayson/sounds/23127/"
+    }
+   ]
+  },
+  {
+   "id": "fs_noise_riser",
+   "label": "Нарастание шума",
+   "group": "phrase",
+   "category": "riser",
+   "files": [
+    "/sounds/sfx/fs_noise_riser/v01.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema",
+    "tech"
+   ],
+   "seconds": 1.6,
+   "stereo": true,
+   "offset": -1.6,
+   "source": "Freesound · syntheffects",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/syntheffects/sounds/685256/",
+   "credits": [
+    {
+     "author": "syntheffects",
+     "title": "Riser sound effect short.wav",
+     "url": "https://freesound.org/people/syntheffects/sounds/685256/"
+    }
+   ]
+  },
+  {
+   "id": "riser",
+   "label": "Короткое нарастание",
+   "group": "phrase",
+   "category": "riser",
+   "files": [
+    "/sounds/sfx/riser/v01.flac",
+    "/sounds/sfx/riser/v02.flac",
+    "/sounds/sfx/riser/v03.flac",
+    "/sounds/sfx/riser/v04.flac",
+    "/sounds/sfx/riser/v05.flac",
+    "/sounds/sfx/riser/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 0.6,
+   "stereo": true,
+   "offset": -0.6,
+   "note": "Синтез: короткий подъём, обрывается в момент новой фразы",
+   "source": "Синтез Reel Lab",
+   "license": "собственный синтез"
+  },
+  {
+   "id": "fs_swell_hit",
+   "label": "Нарастание и удар",
+   "group": "accent",
+   "category": "riser",
+   "files": [
+    "/sounds/sfx/fs_swell_hit/v01.flac",
+    "/sounds/sfx/fs_swell_hit/v02.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 3.149,
+   "stereo": true,
+   "offset": -1.0,
+   "note": "Подъём перед словом и удар точно на нём",
+   "source": "Freesound · jordivburgel",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/jordivburgel/sounds/218524/",
+   "credits": [
+    {
+     "author": "jordivburgel",
+     "title": "Movie Swell 2",
+     "url": "https://freesound.org/people/jordivburgel/sounds/218524/"
+    },
+    {
+     "author": "jordivburgel",
+     "title": "Movie Short Swell",
+     "url": "https://freesound.org/people/jordivburgel/sounds/218354/"
+    }
+   ]
+  },
+  {
+   "id": "fs_cinema_rise",
+   "label": "Подъём и кино-удар",
+   "group": "accent",
+   "category": "riser",
+   "files": [
+    "/sounds/sfx/fs_cinema_rise/v01.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 3.4,
+   "stereo": true,
+   "offset": -1.0,
+   "source": "Freesound · deleted_user_3277771",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/deleted_user_3277771/sounds/177242/",
+   "credits": [
+    {
+     "author": "deleted_user_3277771",
+     "title": "Cinematic Impact",
+     "url": "https://freesound.org/people/deleted_user_3277771/sounds/177242/"
+    }
+   ]
+  },
+  {
+   "id": "fs_cinema_hit",
+   "label": "Кино-удар",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/fs_cinema_hit/v01.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 2.4,
+   "stereo": true,
+   "note": "Большой удар как в трейлере",
+   "source": "Freesound · deleted_user_3277771",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/deleted_user_3277771/sounds/177242/",
+   "credits": [
+    {
+     "author": "deleted_user_3277771",
+     "title": "Cinematic Impact",
+     "url": "https://freesound.org/people/deleted_user_3277771/sounds/177242/"
+    }
+   ]
+  },
+  {
+   "id": "fs_braam",
+   "label": "Брааам",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/fs_braam/v01.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 3.0,
+   "stereo": true,
+   "offset": -0.055,
+   "source": "Freesound · DeVern",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/DeVern/sounds/427803/",
+   "credits": [
+    {
+     "author": "DeVern",
+     "title": "Cinematic Hit With Horns.wav",
+     "url": "https://freesound.org/people/DeVern/sounds/427803/"
+    }
+   ]
+  },
+  {
+   "id": "fs_boom",
+   "label": "Бум",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/fs_boom/v01.flac"
+   ],
+   "pitch_spread": 0.02,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 2.4,
+   "stereo": true,
+   "source": "Freesound · Julien_Matthey",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Julien_Matthey/sounds/201571/",
+   "credits": [
+    {
+     "author": "Julien_Matthey",
+     "title": "JM_FX_Boom 01a.wav",
+     "url": "https://freesound.org/people/Julien_Matthey/sounds/201571/"
+    }
+   ]
+  },
+  {
+   "id": "fs_punch",
+   "label": "Удар кулаком",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/fs_punch/v01.flac",
+    "/sounds/sfx/fs_punch/v02.flac",
+    "/sounds/sfx/fs_punch/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 0.553,
+   "source": "Freesound · thefsoundman, Ekokubza123, Huminaatio",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/thefsoundman/sounds/118513/",
+   "credits": [
+    {
+     "author": "thefsoundman",
+     "title": "Punch_02.wav",
+     "url": "https://freesound.org/people/thefsoundman/sounds/118513/"
+    },
+    {
+     "author": "Ekokubza123",
+     "title": "punch.wav",
+     "url": "https://freesound.org/people/Ekokubza123/sounds/104183/"
+    },
+    {
+     "author": "Huminaatio",
+     "title": "Punch in the face",
+     "url": "https://freesound.org/people/Huminaatio/sounds/390462/"
+    }
+   ]
+  },
+  {
+   "id": "fs_thud",
+   "label": "Глухой удар",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/fs_thud/v01.flac",
+    "/sounds/sfx/fs_thud/v02.flac",
+    "/sounds/sfx/fs_thud/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema",
+    "soft"
+   ],
+   "seconds": 0.165,
+   "source": "Freesound · OtisJames",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/OtisJames/sounds/215162/",
+   "credits": [
+    {
+     "author": "OtisJames",
+     "title": "thud.wav",
+     "url": "https://freesound.org/people/OtisJames/sounds/215162/"
+    }
+   ]
+  },
+  {
+   "id": "fs_dramatic_hit",
+   "label": "Драматичный удар",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/fs_dramatic_hit/v01.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 2.4,
+   "offset": -0.095,
+   "source": "Freesound · qubodup",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/qubodup/sounds/222517/",
+   "credits": [
+    {
+     "author": "qubodup",
+     "title": "Dramatic Hit",
+     "url": "https://freesound.org/people/qubodup/sounds/222517/"
+    }
+   ]
+  },
+  {
+   "id": "soft_thud",
+   "label": "Мягкий удар",
+   "group": "word",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/soft_thud/v01.flac",
+    "/sounds/sfx/soft_thud/v02.flac",
+    "/sounds/sfx/soft_thud/v03.flac",
+    "/sounds/sfx/soft_thud/v04.flac",
+    "/sounds/sfx/soft_thud/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft",
+    "cinema"
+   ],
+   "seconds": 0.126,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "punch",
+   "label": "Удар",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/punch/v01.flac",
+    "/sounds/sfx/punch/v02.flac",
+    "/sounds/sfx/punch/v03.flac",
+    "/sounds/sfx/punch/v04.flac",
+    "/sounds/sfx/punch/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 0.418,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "punch_snap",
+   "label": "Хлёсткий удар",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/punch_snap/v01.flac",
+    "/sounds/sfx/punch_snap/v02.flac",
+    "/sounds/sfx/punch_snap/v03.flac",
+    "/sounds/sfx/punch_snap/v04.flac",
+    "/sounds/sfx/punch_snap/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 0.318,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "thump",
+   "label": "Глухой стук",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/thump/v01.flac",
+    "/sounds/sfx/thump/v02.flac",
+    "/sounds/sfx/thump/v03.flac",
+    "/sounds/sfx/thump/v04.flac",
+    "/sounds/sfx/thump/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema",
+    "soft"
+   ],
+   "seconds": 0.43,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "glass_hit",
+   "label": "Звон стекла",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/glass_hit/v01.flac",
+    "/sounds/sfx/glass_hit/v02.flac",
+    "/sounds/sfx/glass_hit/v03.flac",
+    "/sounds/sfx/glass_hit/v04.flac",
+    "/sounds/sfx/glass_hit/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal"
+   ],
+   "seconds": 0.164,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "metal_hit",
+   "label": "Металл",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/metal_hit/v01.flac",
+    "/sounds/sfx/metal_hit/v02.flac",
+    "/sounds/sfx/metal_hit/v03.flac",
+    "/sounds/sfx/metal_hit/v04.flac",
+    "/sounds/sfx/metal_hit/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal"
+   ],
+   "seconds": 0.128,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "wood_hit",
+   "label": "Деревянный удар",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/wood_hit/v01.flac",
+    "/sounds/sfx/wood_hit/v02.flac",
+    "/sounds/sfx/wood_hit/v03.flac",
+    "/sounds/sfx/wood_hit/v04.flac",
+    "/sounds/sfx/wood_hit/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.226,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "heavy_metal",
+   "label": "Тяжёлый металл",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/heavy_metal/v01.flac",
+    "/sounds/sfx/heavy_metal/v02.flac",
+    "/sounds/sfx/heavy_metal/v03.flac",
+    "/sounds/sfx/heavy_metal/v04.flac",
+    "/sounds/sfx/heavy_metal/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal",
+    "cinema"
+   ],
+   "seconds": 0.395,
+   "source": "Kenney · Sci-Fi Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/sci-fi-sounds"
+  },
+  {
+   "id": "sub_drop",
+   "label": "Бас-дроп",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/sub_drop/v01.flac",
+    "/sounds/sfx/sub_drop/v02.flac",
+    "/sounds/sfx/sub_drop/v03.flac",
+    "/sounds/sfx/sub_drop/v04.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 1.095,
+   "offset": -0.05,
+   "source": "Kenney · Sci-Fi Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/sci-fi-sounds"
+  },
+  {
+   "id": "explosion",
+   "label": "Взрыв",
+   "group": "accent",
+   "category": "hit",
+   "files": [
+    "/sounds/sfx/explosion/v01.flac",
+    "/sounds/sfx/explosion/v02.flac",
+    "/sounds/sfx/explosion/v03.flac",
+    "/sounds/sfx/explosion/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 1.059,
+   "source": "Kenney · Sci-Fi Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/sci-fi-sounds"
+  },
+  {
+   "id": "fs_ding",
+   "label": "Динь",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_ding/v01.flac",
+    "/sounds/sfx/fs_ding/v02.flac",
+    "/sounds/sfx/fs_ding/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "melodic"
+   ],
+   "seconds": 0.861,
+   "source": "Freesound · Daphne_in_Wonderland, MashedTatoes2, 5ro4",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Daphne_in_Wonderland/sounds/127149/",
+   "credits": [
+    {
+     "author": "Daphne_in_Wonderland",
+     "title": "ding.wav",
+     "url": "https://freesound.org/people/Daphne_in_Wonderland/sounds/127149/"
+    },
+    {
+     "author": "MashedTatoes2",
+     "title": "ding2.wav",
+     "url": "https://freesound.org/people/MashedTatoes2/sounds/515643/"
+    },
+    {
+     "author": "5ro4",
+     "title": "bell ding 1.wav",
+     "url": "https://freesound.org/people/5ro4/sounds/611113/"
+    }
+   ]
+  },
+  {
+   "id": "fs_ding_long",
+   "label": "Долгий звон",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_ding_long/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "melodic",
+    "metal"
+   ],
+   "seconds": 2.6,
+   "stereo": true,
+   "source": "Freesound · organicmanpl",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/organicmanpl/sounds/149268/",
+   "credits": [
+    {
+     "author": "organicmanpl",
+     "title": "ding 3.wav",
+     "url": "https://freesound.org/people/organicmanpl/sounds/149268/"
+    }
+   ]
+  },
+  {
+   "id": "fs_type_bell",
+   "label": "Звонок машинки",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_type_bell/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile",
+    "melodic"
+   ],
+   "seconds": 0.855,
+   "source": "Freesound · knufds",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/knufds/sounds/345955/",
+   "credits": [
+    {
+     "author": "knufds",
+     "title": "Typewriter bell & carriage reset",
+     "url": "https://freesound.org/people/knufds/sounds/345955/"
+    }
+   ]
+  },
+  {
+   "id": "fs_idea",
+   "label": "Идея!",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_idea/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "melodic",
+    "fun"
+   ],
+   "seconds": 2.0,
+   "source": "Freesound · Saya13",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Saya13/sounds/407258/",
+   "credits": [
+    {
+     "author": "Saya13",
+     "title": "Ding! idea.mp3",
+     "url": "https://freesound.org/people/Saya13/sounds/407258/"
+    }
+   ]
+  },
+  {
+   "id": "fs_correct",
+   "label": "Правильно",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_correct/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "melodic"
+   ],
+   "seconds": 0.756,
+   "source": "Freesound · LittleRainySeasons",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/LittleRainySeasons/sounds/335908/",
+   "credits": [
+    {
+     "author": "LittleRainySeasons",
+     "title": "Correct.mp3",
+     "url": "https://freesound.org/people/LittleRainySeasons/sounds/335908/"
+    }
+   ]
+  },
+  {
+   "id": "fs_cash",
+   "label": "Касса",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_cash/v01.flac",
+    "/sounds/sfx/fs_cash/v02.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun",
+    "metal"
+   ],
+   "seconds": 1.615,
+   "offset": -0.145,
+   "source": "Freesound · Zott820, CapsLok",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Zott820/sounds/209578/",
+   "credits": [
+    {
+     "author": "Zott820",
+     "title": "Cash Register Purchase",
+     "url": "https://freesound.org/people/Zott820/sounds/209578/"
+    },
+    {
+     "author": "CapsLok",
+     "title": "Cash Register Fake.wav",
+     "url": "https://freesound.org/people/CapsLok/sounds/184438/"
+    }
+   ]
+  },
+  {
+   "id": "fs_notify",
+   "label": "Уведомление",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_notify/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "soft",
+    "melodic"
+   ],
+   "seconds": 0.468,
+   "source": "Freesound · yfjesse",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/yfjesse/sounds/235911/",
+   "credits": [
+    {
+     "author": "yfjesse",
+     "title": "Notification Sound",
+     "url": "https://freesound.org/people/yfjesse/sounds/235911/"
+    }
+   ]
+  },
+  {
+   "id": "fs_success",
+   "label": "Успех",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_success/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "melodic",
+    "magic"
+   ],
+   "seconds": 1.544,
+   "source": "Freesound · FunWithSound",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/FunWithSound/sounds/456965/",
+   "credits": [
+    {
+     "author": "FunWithSound",
+     "title": "Short Success Sound Glockenspiel Treasure Video ",
+     "url": "https://freesound.org/people/FunWithSound/sounds/456965/"
+    }
+   ]
+  },
+  {
+   "id": "fs_desk_bell",
+   "label": "Звонок на стойке",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_desk_bell/v01.flac",
+    "/sounds/sfx/fs_desk_bell/v02.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal",
+    "melodic"
+   ],
+   "seconds": 1.938,
+   "source": "Freesound · iwanPlays, tonmayster",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/iwanPlays/sounds/532751/",
+   "credits": [
+    {
+     "author": "iwanPlays",
+     "title": "hotel bell",
+     "url": "https://freesound.org/people/iwanPlays/sounds/532751/"
+    },
+    {
+     "author": "tonmayster",
+     "title": "desk bell center.mp3",
+     "url": "https://freesound.org/people/tonmayster/sounds/685111/"
+    }
+   ]
+  },
+  {
+   "id": "fs_wind_chimes",
+   "label": "Колокольчики ветра",
+   "group": "phrase",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_wind_chimes/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic",
+    "soft"
+   ],
+   "seconds": 2.4,
+   "stereo": true,
+   "offset": -0.195,
+   "source": "Freesound · djlprojects",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/djlprojects/sounds/419594/",
+   "credits": [
+    {
+     "author": "djlprojects",
+     "title": "Mystical Wind Chimes Transition FX",
+     "url": "https://freesound.org/people/djlprojects/sounds/419594/"
+    }
+   ]
+  },
+  {
+   "id": "fs_pling",
+   "label": "Плинь",
+   "group": "word",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/fs_pling/v01.flac",
+    "/sounds/sfx/fs_pling/v02.flac",
+    "/sounds/sfx/fs_pling/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "melodic",
+    "soft"
+   ],
+   "seconds": 0.423,
+   "source": "Freesound · Leonardmedia.nl",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Leonardmedia.nl/sounds/627794/",
+   "credits": [
+    {
+     "author": "Leonardmedia.nl",
+     "title": "pling sound effect ui interface ding ting sound.",
+     "url": "https://freesound.org/people/Leonardmedia.nl/sounds/627794/"
+    }
+   ]
+  },
+  {
+   "id": "k_glass_tap",
+   "label": "Стеклянный тап",
+   "group": "word",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/k_glass_tap/v01.flac",
+    "/sounds/sfx/k_glass_tap/v02.flac",
+    "/sounds/sfx/k_glass_tap/v03.flac",
+    "/sounds/sfx/k_glass_tap/v04.flac",
+    "/sounds/sfx/k_glass_tap/v05.flac",
+    "/sounds/sfx/k_glass_tap/v06.flac"
+   ],
+   "pitch_spread": 0.02,
+   "moods": [
+    "metal",
+    "soft"
+   ],
+   "seconds": 0.095,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "glass_clink",
+   "label": "Звон бокала",
+   "group": "word",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/glass_clink/v01.flac",
+    "/sounds/sfx/glass_clink/v02.flac",
+    "/sounds/sfx/glass_clink/v03.flac",
+    "/sounds/sfx/glass_clink/v04.flac",
+    "/sounds/sfx/glass_clink/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal"
+   ],
+   "seconds": 0.163,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "metal_ping",
+   "label": "Металлический пинг",
+   "group": "word",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/metal_ping/v01.flac",
+    "/sounds/sfx/metal_ping/v02.flac",
+    "/sounds/sfx/metal_ping/v03.flac",
+    "/sounds/sfx/metal_ping/v04.flac",
+    "/sounds/sfx/metal_ping/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal"
+   ],
+   "seconds": 0.233,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "k_confirm",
+   "label": "Подтверждение",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/k_confirm/v01.flac",
+    "/sounds/sfx/k_confirm/v02.flac",
+    "/sounds/sfx/k_confirm/v03.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "melodic",
+    "soft"
+   ],
+   "seconds": 0.306,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "bell_hit",
+   "label": "Удар колокола",
+   "group": "accent",
+   "category": "bell",
+   "files": [
+    "/sounds/sfx/bell_hit/v01.flac",
+    "/sounds/sfx/bell_hit/v02.flac",
+    "/sounds/sfx/bell_hit/v03.flac",
+    "/sounds/sfx/bell_hit/v04.flac",
+    "/sounds/sfx/bell_hit/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal",
+    "melodic"
+   ],
+   "seconds": 0.765,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "fs_magic",
+   "label": "Волшебство",
+   "group": "accent",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_magic/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic",
+    "melodic"
+   ],
+   "seconds": 1.551,
+   "stereo": true,
+   "source": "Freesound · renatalmar",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/renatalmar/sounds/264981/",
+   "credits": [
+    {
+     "author": "renatalmar",
+     "title": "SFX Magic",
+     "url": "https://freesound.org/people/renatalmar/sounds/264981/"
+    }
+   ]
+  },
+  {
+   "id": "fs_wink",
+   "label": "Подмигивание",
+   "group": "accent",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_wink/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic",
+    "fun"
+   ],
+   "seconds": 0.955,
+   "stereo": true,
+   "source": "Freesound · MLaudio",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/MLaudio/sounds/511485/",
+   "credits": [
+    {
+     "author": "MLaudio",
+     "title": "cartoon_wink_magic_sparkle.wav",
+     "url": "https://freesound.org/people/MLaudio/sounds/511485/"
+    }
+   ]
+  },
+  {
+   "id": "fs_sparkle",
+   "label": "Искорка",
+   "group": "accent",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_sparkle/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic"
+   ],
+   "seconds": 0.467,
+   "source": "Freesound · Mr._Fritz_",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Mr._Fritz_/sounds/545238/",
+   "credits": [
+    {
+     "author": "Mr._Fritz_",
+     "title": "Item Sparkle",
+     "url": "https://freesound.org/people/Mr._Fritz_/sounds/545238/"
+    }
+   ]
+  },
+  {
+   "id": "fs_crystal",
+   "label": "Кристалл",
+   "group": "accent",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_crystal/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic",
+    "metal"
+   ],
+   "seconds": 2.4,
+   "source": "Freesound · LaurenPonder",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/LaurenPonder/sounds/639429/",
+   "credits": [
+    {
+     "author": "LaurenPonder",
+     "title": "Crystal Twinkle",
+     "url": "https://freesound.org/people/LaurenPonder/sounds/639429/"
+    }
+   ]
+  },
+  {
+   "id": "fs_heal",
+   "label": "Исцеление",
+   "group": "accent",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_heal/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic",
+    "retro"
+   ],
+   "seconds": 0.981,
+   "stereo": true,
+   "source": "Freesound · colorsCrimsonTears",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/colorsCrimsonTears/sounds/562292/",
+   "credits": [
+    {
+     "author": "colorsCrimsonTears",
+     "title": "Heal - Rpg",
+     "url": "https://freesound.org/people/colorsCrimsonTears/sounds/562292/"
+    }
+   ]
+  },
+  {
+   "id": "fs_success_bells",
+   "label": "Колокольчики успеха",
+   "group": "accent",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_success_bells/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic",
+    "melodic"
+   ],
+   "seconds": 2.225,
+   "stereo": true,
+   "source": "Freesound · MLaudio",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/MLaudio/sounds/511484/",
+   "credits": [
+    {
+     "author": "MLaudio",
+     "title": "success_bell",
+     "url": "https://freesound.org/people/MLaudio/sounds/511484/"
+    }
+   ]
+  },
+  {
+   "id": "fs_coin_shimmer",
+   "label": "Блеск монетки",
+   "group": "accent",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_coin_shimmer/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic",
+    "metal"
+   ],
+   "seconds": 0.573,
+   "stereo": true,
+   "source": "Freesound · dpren",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/dpren/sounds/248143/",
+   "credits": [
+    {
+     "author": "dpren",
+     "title": "Coin Flip Shimmer",
+     "url": "https://freesound.org/people/dpren/sounds/248143/"
+    }
+   ]
+  },
+  {
+   "id": "fs_shimmer",
+   "label": "Мерцание",
+   "group": "accent",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_shimmer/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic",
+    "soft"
+   ],
+   "seconds": 2.4,
+   "stereo": true,
+   "source": "Freesound · Philip_Berger",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Philip_Berger/sounds/648212/",
+   "credits": [
+    {
+     "author": "Philip_Berger",
+     "title": "Ui sounds - Shimmering success",
+     "url": "https://freesound.org/people/Philip_Berger/sounds/648212/"
+    }
+   ]
+  },
+  {
+   "id": "fs_gleam",
+   "label": "Сияние",
+   "group": "phrase",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_gleam/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic"
+   ],
+   "seconds": 2.4,
+   "stereo": true,
+   "offset": -0.275,
+   "source": "Freesound · newagesoup",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/newagesoup/sounds/351408/",
+   "credits": [
+    {
+     "author": "newagesoup",
+     "title": "GLEAM-GLOW-SFX-CHIME.wav",
+     "url": "https://freesound.org/people/newagesoup/sounds/351408/"
+    }
+   ]
+  },
+  {
+   "id": "fs_spell",
+   "label": "Заклинание",
+   "group": "phrase",
+   "category": "magic",
+   "files": [
+    "/sounds/sfx/fs_spell/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "magic"
+   ],
+   "seconds": 2.0,
+   "stereo": true,
+   "offset": -0.225,
+   "source": "Freesound · Nakhas",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Nakhas/sounds/506939/",
+   "credits": [
+    {
+     "author": "Nakhas",
+     "title": "Magic spell (small positive)",
+     "url": "https://freesound.org/people/Nakhas/sounds/506939/"
+    }
+   ]
+  },
+  {
+   "id": "kalimba",
+   "label": "Калимба",
+   "group": "word",
+   "category": "notes",
+   "files": [
+    "/sounds/sfx/kalimba/v01.flac",
+    "/sounds/sfx/kalimba/v02.flac",
+    "/sounds/sfx/kalimba/v03.flac",
+    "/sounds/sfx/kalimba/v04.flac",
+    "/sounds/sfx/kalimba/v05.flac",
+    "/sounds/sfx/kalimba/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "melodic",
+    "soft"
+   ],
+   "seconds": 0.9,
+   "note": "Каждое слово — нота пентатоники, складывается в мелодию",
+   "source": "Синтез Reel Lab",
+   "license": "собственный синтез"
+  },
+  {
+   "id": "marimba",
+   "label": "Маримба",
+   "group": "word",
+   "category": "notes",
+   "files": [
+    "/sounds/sfx/marimba/v01.flac",
+    "/sounds/sfx/marimba/v02.flac",
+    "/sounds/sfx/marimba/v03.flac",
+    "/sounds/sfx/marimba/v04.flac",
+    "/sounds/sfx/marimba/v05.flac",
+    "/sounds/sfx/marimba/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "melodic",
+    "tactile"
+   ],
+   "seconds": 0.9,
+   "source": "Синтез Reel Lab",
+   "license": "собственный синтез"
+  },
+  {
+   "id": "music_box",
+   "label": "Шкатулка",
+   "group": "word",
+   "category": "notes",
+   "files": [
+    "/sounds/sfx/music_box/v01.flac",
+    "/sounds/sfx/music_box/v02.flac",
+    "/sounds/sfx/music_box/v03.flac",
+    "/sounds/sfx/music_box/v04.flac",
+    "/sounds/sfx/music_box/v05.flac",
+    "/sounds/sfx/music_box/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "melodic",
+    "magic"
+   ],
+   "seconds": 0.9,
+   "source": "Синтез Reel Lab",
+   "license": "собственный синтез"
+  },
+  {
+   "id": "felt_key",
+   "label": "Мягкое пианино",
+   "group": "word",
+   "category": "notes",
+   "files": [
+    "/sounds/sfx/felt_key/v01.flac",
+    "/sounds/sfx/felt_key/v02.flac",
+    "/sounds/sfx/felt_key/v03.flac",
+    "/sounds/sfx/felt_key/v04.flac",
+    "/sounds/sfx/felt_key/v05.flac",
+    "/sounds/sfx/felt_key/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "melodic",
+    "soft"
+   ],
+   "seconds": 0.9,
+   "source": "Синтез Reel Lab",
+   "license": "собственный синтез"
+  },
+  {
+   "id": "k_pluck",
+   "label": "Щипок струны",
+   "group": "word",
+   "category": "notes",
+   "files": [
+    "/sounds/sfx/k_pluck/v01.flac",
+    "/sounds/sfx/k_pluck/v02.flac",
+    "/sounds/sfx/k_pluck/v03.flac",
+    "/sounds/sfx/k_pluck/v04.flac",
+    "/sounds/sfx/k_pluck/v05.flac",
+    "/sounds/sfx/k_pluck/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "melodic"
+   ],
+   "seconds": 0.124,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "k_select",
+   "label": "Тон выбора",
+   "group": "word",
+   "category": "notes",
+   "files": [
+    "/sounds/sfx/k_select/v01.flac",
+    "/sounds/sfx/k_select/v02.flac",
+    "/sounds/sfx/k_select/v03.flac",
+    "/sounds/sfx/k_select/v04.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "soft",
+    "melodic"
+   ],
+   "seconds": 0.228,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "k_bong",
+   "label": "Бонг",
+   "group": "word",
+   "category": "notes",
+   "files": [
+    "/sounds/sfx/k_bong/v01.flac",
+    "/sounds/sfx/k_bong/v02.flac",
+    "/sounds/sfx/k_bong/v03.flac",
+    "/sounds/sfx/k_bong/v04.flac",
+    "/sounds/sfx/k_bong/v05.flac",
+    "/sounds/sfx/k_bong/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "melodic",
+    "soft"
+   ],
+   "seconds": 0.095,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "fs_spark",
+   "label": "Искра",
+   "group": "word",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_spark/v01.flac",
+    "/sounds/sfx/fs_spark/v02.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech"
+   ],
+   "seconds": 0.162,
+   "source": "Freesound · elliott.klein, michael_grinnell",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/elliott.klein/sounds/189630/",
+   "credits": [
+    {
+     "author": "elliott.klein",
+     "title": "Spark",
+     "url": "https://freesound.org/people/elliott.klein/sounds/189630/"
+    },
+    {
+     "author": "michael_grinnell",
+     "title": "Electric zap.wav",
+     "url": "https://freesound.org/people/michael_grinnell/sounds/512471/"
+    }
+   ]
+  },
+  {
+   "id": "fs_glitch",
+   "label": "Глитч",
+   "group": "word",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_glitch/v01.flac",
+    "/sounds/sfx/fs_glitch/v02.flac",
+    "/sounds/sfx/fs_glitch/v03.flac",
+    "/sounds/sfx/fs_glitch/v04.flac",
+    "/sounds/sfx/fs_glitch/v05.flac",
+    "/sounds/sfx/fs_glitch/v06.flac",
+    "/sounds/sfx/fs_glitch/v07.flac",
+    "/sounds/sfx/fs_glitch/v08.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech"
+   ],
+   "seconds": 0.163,
+   "source": "Freesound · sandufi",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/sandufi/sounds/350614/",
+   "credits": [
+    {
+     "author": "sandufi",
+     "title": "glitch1.wav",
+     "url": "https://freesound.org/people/sandufi/sounds/350614/"
+    }
+   ]
+  },
+  {
+   "id": "fs_electric",
+   "label": "Электрический разряд",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_electric/v01.flac",
+    "/sounds/sfx/fs_electric/v02.flac",
+    "/sounds/sfx/fs_electric/v03.flac",
+    "/sounds/sfx/fs_electric/v04.flac",
+    "/sounds/sfx/fs_electric/v05.flac",
+    "/sounds/sfx/fs_electric/v06.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech"
+   ],
+   "seconds": 0.189,
+   "source": "Freesound · NachtmahrTV",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/NachtmahrTV/sounds/556717/",
+   "credits": [
+    {
+     "author": "NachtmahrTV",
+     "title": "Electricity Sound",
+     "url": "https://freesound.org/people/NachtmahrTV/sounds/556717/"
+    }
+   ]
+  },
+  {
+   "id": "fs_buzz",
+   "label": "Электричество",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_buzz/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech"
+   ],
+   "seconds": 0.655,
+   "source": "Freesound · JoelAudio",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/JoelAudio/sounds/136542/",
+   "credits": [
+    {
+     "author": "JoelAudio",
+     "title": "ELECTRIC_ZAP_001.wav",
+     "url": "https://freesound.org/people/JoelAudio/sounds/136542/"
+    }
+   ]
+  },
+  {
+   "id": "fs_data",
+   "label": "Расшифровка",
+   "group": "phrase",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_data/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech"
+   ],
+   "seconds": 1.6,
+   "stereo": true,
+   "offset": -0.225,
+   "source": "Freesound · Sky_Motion",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Sky_Motion/sounds/511418/",
+   "credits": [
+    {
+     "author": "Sky_Motion",
+     "title": "Data Reveal Sound",
+     "url": "https://freesound.org/people/Sky_Motion/sounds/511418/"
+    }
+   ]
+  },
+  {
+   "id": "fs_alert",
+   "label": "Тревога «!»",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_alert/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "retro",
+    "fun"
+   ],
+   "seconds": 1.258,
+   "offset": -0.085,
+   "source": "Freesound · djlprojects",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/djlprojects/sounds/413641/",
+   "credits": [
+    {
+     "author": "djlprojects",
+     "title": "Metal Gear Solid Inspired Alert Surprise SFX",
+     "url": "https://freesound.org/people/djlprojects/sounds/413641/"
+    }
+   ]
+  },
+  {
+   "id": "fs_wrong",
+   "label": "Ошибка",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_wrong/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "retro",
+    "fun"
+   ],
+   "seconds": 1.003,
+   "source": "Freesound · themusicalnomad",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/themusicalnomad/sounds/253886/",
+   "credits": [
+    {
+     "author": "themusicalnomad",
+     "title": "negative_beeps.wav",
+     "url": "https://freesound.org/people/themusicalnomad/sounds/253886/"
+    }
+   ]
+  },
+  {
+   "id": "fs_game_start",
+   "label": "Старт игры",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_game_start/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "retro"
+   ],
+   "seconds": 2.0,
+   "stereo": true,
+   "source": "Freesound · plasterbrain",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/plasterbrain/sounds/243020/",
+   "credits": [
+    {
+     "author": "plasterbrain",
+     "title": "Game Start",
+     "url": "https://freesound.org/people/plasterbrain/sounds/243020/"
+    }
+   ]
+  },
+  {
+   "id": "fs_bleep",
+   "label": "Цензура «бип»",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/fs_bleep/v01.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "tech",
+    "fun"
+   ],
+   "seconds": 0.45,
+   "note": "Запикать слово",
+   "source": "Freesound · austin1234575",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/austin1234575/sounds/213795/",
+   "credits": [
+    {
+     "author": "austin1234575",
+     "title": "Beep 1 sec.wav",
+     "url": "https://freesound.org/people/austin1234575/sounds/213795/"
+    }
+   ]
+  },
+  {
+   "id": "neonflick",
+   "label": "Неон: электрический треск",
+   "group": "word",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/neonflick/v01.flac",
+    "/sounds/sfx/neonflick/v02.flac",
+    "/sounds/sfx/neonflick/v03.flac",
+    "/sounds/sfx/neonflick/v04.flac",
+    "/sounds/sfx/neonflick/v05.flac",
+    "/sounds/sfx/neonflick/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "tech"
+   ],
+   "seconds": 0.417,
+   "offset": -0.035,
+   "note": "Повторяет мигание слова в стиле «Неоновая вывеска»",
+   "source": "Синтез Reel Lab",
+   "license": "собственный синтез"
+  },
+  {
+   "id": "type_blip",
+   "label": "Игровой текст",
+   "group": "typing",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/type_blip/v01.flac",
+    "/sounds/sfx/type_blip/v02.flac",
+    "/sounds/sfx/type_blip/v03.flac",
+    "/sounds/sfx/type_blip/v04.flac",
+    "/sounds/sfx/type_blip/v05.flac",
+    "/sounds/sfx/type_blip/v06.flac",
+    "/sounds/sfx/type_blip/v07.flac",
+    "/sounds/sfx/type_blip/v08.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "retro",
+    "fun"
+   ],
+   "seconds": 0.04,
+   "natural_interval_ms": 48,
+   "note": "Писк букв, как в диалогах из игр — каждая буква своей нотой",
+   "source": "Синтез Reel Lab",
+   "license": "собственный синтез"
+  },
+  {
+   "id": "k_blip",
+   "label": "Блип",
+   "group": "word",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/k_blip/v01.flac",
+    "/sounds/sfx/k_blip/v02.flac",
+    "/sounds/sfx/k_blip/v03.flac",
+    "/sounds/sfx/k_blip/v04.flac",
+    "/sounds/sfx/k_blip/v05.flac",
+    "/sounds/sfx/k_blip/v06.flac"
+   ],
+   "pitch_spread": 0.02,
+   "moods": [
+    "soft",
+    "tech"
+   ],
+   "seconds": 0.075,
+   "source": "Kenney · UI Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/ui-audio"
+  },
+  {
+   "id": "k_toggle",
+   "label": "Короткий бип",
+   "group": "word",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/k_toggle/v01.flac",
+    "/sounds/sfx/k_toggle/v02.flac",
+    "/sounds/sfx/k_toggle/v03.flac",
+    "/sounds/sfx/k_toggle/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech",
+    "soft"
+   ],
+   "seconds": 0.111,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "laser_pew",
+   "label": "Пиу",
+   "group": "word",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/laser_pew/v01.flac",
+    "/sounds/sfx/laser_pew/v02.flac",
+    "/sounds/sfx/laser_pew/v03.flac",
+    "/sounds/sfx/laser_pew/v04.flac",
+    "/sounds/sfx/laser_pew/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "retro",
+    "tech"
+   ],
+   "seconds": 0.205,
+   "source": "Kenney · Sci-Fi Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/sci-fi-sounds"
+  },
+  {
+   "id": "k_rise",
+   "label": "Взлёт",
+   "group": "phrase",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/k_rise/v01.flac",
+    "/sounds/sfx/k_rise/v02.flac",
+    "/sounds/sfx/k_rise/v03.flac",
+    "/sounds/sfx/k_rise/v04.flac"
+   ],
+   "pitch_spread": 0.02,
+   "moods": [
+    "tech",
+    "soft"
+   ],
+   "seconds": 0.231,
+   "offset": -0.08,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "k_fall",
+   "label": "Спуск",
+   "group": "phrase",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/k_fall/v01.flac",
+    "/sounds/sfx/k_fall/v02.flac",
+    "/sounds/sfx/k_fall/v03.flac",
+    "/sounds/sfx/k_fall/v04.flac"
+   ],
+   "pitch_spread": 0.02,
+   "moods": [
+    "tech",
+    "soft"
+   ],
+   "seconds": 0.213,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "force_field",
+   "label": "Силовое поле",
+   "group": "phrase",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/force_field/v01.flac",
+    "/sounds/sfx/force_field/v02.flac",
+    "/sounds/sfx/force_field/v03.flac",
+    "/sounds/sfx/force_field/v04.flac",
+    "/sounds/sfx/force_field/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech",
+    "magic"
+   ],
+   "seconds": 0.767,
+   "offset": -0.065,
+   "source": "Kenney · Sci-Fi Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/sci-fi-sounds"
+  },
+  {
+   "id": "phaser",
+   "label": "Фазер",
+   "group": "phrase",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/phaser/v01.flac",
+    "/sounds/sfx/phaser/v02.flac",
+    "/sounds/sfx/phaser/v03.flac",
+    "/sounds/sfx/phaser/v04.flac",
+    "/sounds/sfx/phaser/v05.flac",
+    "/sounds/sfx/phaser/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "retro",
+    "tech"
+   ],
+   "seconds": 0.342,
+   "source": "Kenney · Digital Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/digital-audio"
+  },
+  {
+   "id": "phaser_down",
+   "label": "Фазер вниз",
+   "group": "phrase",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/phaser_down/v01.flac",
+    "/sounds/sfx/phaser_down/v02.flac",
+    "/sounds/sfx/phaser_down/v03.flac",
+    "/sounds/sfx/phaser_down/v04.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "retro",
+    "tech"
+   ],
+   "seconds": 0.358,
+   "source": "Kenney · Digital Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/digital-audio"
+  },
+  {
+   "id": "powerup",
+   "label": "Бонус",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/powerup/v01.flac",
+    "/sounds/sfx/powerup/v02.flac",
+    "/sounds/sfx/powerup/v03.flac",
+    "/sounds/sfx/powerup/v04.flac",
+    "/sounds/sfx/powerup/v05.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "retro",
+    "fun"
+   ],
+   "seconds": 0.304,
+   "source": "Kenney · Digital Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/digital-audio"
+  },
+  {
+   "id": "zap",
+   "label": "Зап",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/zap/v01.flac",
+    "/sounds/sfx/zap/v02.flac",
+    "/sounds/sfx/zap/v03.flac",
+    "/sounds/sfx/zap/v04.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "retro",
+    "tech"
+   ],
+   "seconds": 0.7,
+   "source": "Kenney · Digital Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/digital-audio"
+  },
+  {
+   "id": "signal",
+   "label": "Сигнал",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/signal/v01.flac",
+    "/sounds/sfx/signal/v02.flac",
+    "/sounds/sfx/signal/v03.flac",
+    "/sounds/sfx/signal/v04.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "retro",
+    "melodic"
+   ],
+   "seconds": 0.482,
+   "source": "Kenney · Digital Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/digital-audio"
+  },
+  {
+   "id": "laser",
+   "label": "Лазер",
+   "group": "accent",
+   "category": "digital",
+   "files": [
+    "/sounds/sfx/laser/v01.flac",
+    "/sounds/sfx/laser/v02.flac",
+    "/sounds/sfx/laser/v03.flac",
+    "/sounds/sfx/laser/v04.flac",
+    "/sounds/sfx/laser/v05.flac",
+    "/sounds/sfx/laser/v06.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "retro",
+    "tech"
+   ],
+   "seconds": 0.3,
+   "source": "Kenney · Digital Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/digital-audio"
+  },
+  {
+   "id": "fs_boing",
+   "label": "Боинг",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_boing/v01.flac",
+    "/sounds/sfx/fs_boing/v02.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 0.709,
+   "source": "Freesound · magnuswaker, simon.rue",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/magnuswaker/sounds/540790/",
+   "credits": [
+    {
+     "author": "magnuswaker",
+     "title": "Boing 2",
+     "url": "https://freesound.org/people/magnuswaker/sounds/540790/"
+    },
+    {
+     "author": "simon.rue",
+     "title": "Boink_v3.wav",
+     "url": "https://freesound.org/people/simon.rue/sounds/61847/"
+    }
+   ]
+  },
+  {
+   "id": "fs_whistle_up",
+   "label": "Свисток вверх",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_whistle_up/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 1.079,
+   "offset": -0.35,
+   "source": "Freesound · v0idation",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/v0idation/sounds/497092/",
+   "credits": [
+    {
+     "author": "v0idation",
+     "title": "FX swanee whistle up.wav",
+     "url": "https://freesound.org/people/v0idation/sounds/497092/"
+    }
+   ]
+  },
+  {
+   "id": "fs_cartoon_fall",
+   "label": "Мультяшное падение",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_cartoon_fall/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 1.681,
+   "offset": -0.115,
+   "source": "Freesound · plasterbrain",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/plasterbrain/sounds/395443/",
+   "credits": [
+    {
+     "author": "plasterbrain",
+     "title": "Cartoon Fall",
+     "url": "https://freesound.org/people/plasterbrain/sounds/395443/"
+    }
+   ]
+  },
+  {
+   "id": "fs_jump",
+   "label": "Прыжок",
+   "group": "word",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_jump/v01.flac",
+    "/sounds/sfx/fs_jump/v02.flac",
+    "/sounds/sfx/fs_jump/v03.flac",
+    "/sounds/sfx/fs_jump/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun",
+    "retro"
+   ],
+   "seconds": 0.237,
+   "source": "Freesound · plasterbrain",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/plasterbrain/sounds/396196/",
+   "credits": [
+    {
+     "author": "plasterbrain",
+     "title": "Cute Anime Jumps",
+     "url": "https://freesound.org/people/plasterbrain/sounds/396196/"
+    }
+   ]
+  },
+  {
+   "id": "fs_slide_whistle",
+   "label": "Свисток-горка",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_slide_whistle/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 0.892,
+   "offset": -0.35,
+   "source": "Freesound · martian",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/martian/sounds/403002/",
+   "credits": [
+    {
+     "author": "martian",
+     "title": "classic dizzy take slide whistle.wav",
+     "url": "https://freesound.org/people/martian/sounds/403002/"
+    }
+   ]
+  },
+  {
+   "id": "fs_scratch",
+   "label": "Скретч пластинки",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_scratch/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun",
+    "retro"
+   ],
+   "seconds": 0.373,
+   "source": "Freesound · ludvique",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/ludvique/sounds/71853/",
+   "credits": [
+    {
+     "author": "ludvique",
+     "title": "record_scratch.wav",
+     "url": "https://freesound.org/people/ludvique/sounds/71853/"
+    }
+   ]
+  },
+  {
+   "id": "fs_rimshot",
+   "label": "Ба-дум-тсс",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_rimshot/v01.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 2.4,
+   "stereo": true,
+   "source": "Freesound · tlwmdbt",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/tlwmdbt/sounds/440829/",
+   "credits": [
+    {
+     "author": "tlwmdbt",
+     "title": "Sting, rimshot, drum roll (smooth)",
+     "url": "https://freesound.org/people/tlwmdbt/sounds/440829/"
+    }
+   ]
+  },
+  {
+   "id": "fs_clang",
+   "label": "Бамс",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_clang/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun",
+    "metal"
+   ],
+   "seconds": 0.861,
+   "source": "Freesound · Johnnyfarmer",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Johnnyfarmer/sounds/209771/",
+   "credits": [
+    {
+     "author": "Johnnyfarmer",
+     "title": "Metal Hit Cartoon",
+     "url": "https://freesound.org/people/Johnnyfarmer/sounds/209771/"
+    }
+   ]
+  },
+  {
+   "id": "fs_popup",
+   "label": "Появление",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/fs_popup/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 0.449,
+   "source": "Freesound · martian",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/martian/sounds/19284/",
+   "credits": [
+    {
+     "author": "martian",
+     "title": "cartoon poppyup appearances -0001.aiff",
+     "url": "https://freesound.org/people/martian/sounds/19284/"
+    }
+   ]
+  },
+  {
+   "id": "k_scratch",
+   "label": "Скретч",
+   "group": "phrase",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/k_scratch/v01.flac",
+    "/sounds/sfx/k_scratch/v02.flac",
+    "/sounds/sfx/k_scratch/v03.flac",
+    "/sounds/sfx/k_scratch/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "fun"
+   ],
+   "seconds": 0.232,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "phase_jump",
+   "label": "Прыжок (игра)",
+   "group": "phrase",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/phase_jump/v01.flac",
+    "/sounds/sfx/phase_jump/v02.flac",
+    "/sounds/sfx/phase_jump/v03.flac",
+    "/sounds/sfx/phase_jump/v04.flac",
+    "/sounds/sfx/phase_jump/v05.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "retro",
+    "fun"
+   ],
+   "seconds": 0.343,
+   "source": "Kenney · Digital Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/digital-audio"
+  },
+  {
+   "id": "k_question",
+   "label": "Вопросик",
+   "group": "accent",
+   "category": "cartoon",
+   "files": [
+    "/sounds/sfx/k_question/v01.flac",
+    "/sounds/sfx/k_question/v02.flac",
+    "/sounds/sfx/k_question/v03.flac"
+   ],
+   "pitch_spread": 0.0,
+   "moods": [
+    "melodic",
+    "fun"
+   ],
+   "seconds": 0.264,
+   "source": "Kenney · Interface Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/interface-sounds"
+  },
+  {
+   "id": "fs_page",
+   "label": "Перелистывание",
+   "group": "phrase",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_page/v01.flac",
+    "/sounds/sfx/fs_page/v02.flac",
+    "/sounds/sfx/fs_page/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile",
+    "soft"
+   ],
+   "seconds": 0.607,
+   "offset": -0.155,
+   "source": "Freesound · LilMati, partheeban, davidbain",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/LilMati/sounds/397548/",
+   "credits": [
+    {
+     "author": "LilMati",
+     "title": "Page Turn 01",
+     "url": "https://freesound.org/people/LilMati/sounds/397548/"
+    },
+    {
+     "author": "partheeban",
+     "title": "turnPage.mp3",
+     "url": "https://freesound.org/people/partheeban/sounds/457767/"
+    },
+    {
+     "author": "davidbain",
+     "title": "Page Turn",
+     "url": "https://freesound.org/people/davidbain/sounds/136778/"
+    }
+   ]
+  },
+  {
+   "id": "fs_pencil",
+   "label": "Карандаш",
+   "group": "phrase",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_pencil/v01.flac",
+    "/sounds/sfx/fs_pencil/v02.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile",
+    "soft"
+   ],
+   "seconds": 1.137,
+   "offset": -0.175,
+   "source": "Freesound · Tomoyo Ichijouji, waldram",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Tomoyo Ichijouji/sounds/211247/",
+   "credits": [
+    {
+     "author": "Tomoyo Ichijouji",
+     "title": "Scribble",
+     "url": "https://freesound.org/people/Tomoyo Ichijouji/sounds/211247/"
+    },
+    {
+     "author": "waldram",
+     "title": "Scribble_short.wav",
+     "url": "https://freesound.org/people/waldram/sounds/257518/"
+    }
+   ]
+  },
+  {
+   "id": "fs_zipper",
+   "label": "Молния",
+   "group": "phrase",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_zipper/v01.flac",
+    "/sounds/sfx/fs_zipper/v02.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.673,
+   "offset": -0.13,
+   "source": "Freesound · AntumDeluge, tmkappelt",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/AntumDeluge/sounds/188044/",
+   "credits": [
+    {
+     "author": "AntumDeluge",
+     "title": "Zipper",
+     "url": "https://freesound.org/people/AntumDeluge/sounds/188044/"
+    },
+    {
+     "author": "tmkappelt",
+     "title": "Double_Zipper_fast.aif",
+     "url": "https://freesound.org/people/tmkappelt/sounds/85679/"
+    }
+   ]
+  },
+  {
+   "id": "fs_camera",
+   "label": "Затвор камеры",
+   "group": "accent",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_camera/v01.flac",
+    "/sounds/sfx/fs_camera/v02.flac",
+    "/sounds/sfx/fs_camera/v03.flac",
+    "/sounds/sfx/fs_camera/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.201,
+   "source": "Freesound · akonze",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/akonze/sounds/157812/",
+   "credits": [
+    {
+     "author": "akonze",
+     "title": "DSLR Camera Click",
+     "url": "https://freesound.org/people/akonze/sounds/157812/"
+    }
+   ]
+  },
+  {
+   "id": "fs_phone_photo",
+   "label": "Фото на телефон",
+   "group": "accent",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_phone_photo/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech",
+    "soft"
+   ],
+   "seconds": 0.362,
+   "offset": -0.085,
+   "source": "Freesound · pooky1",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/pooky1/sounds/431588/",
+   "credits": [
+    {
+     "author": "pooky1",
+     "title": "iPhone Camera Capture.wav",
+     "url": "https://freesound.org/people/pooky1/sounds/431588/"
+    }
+   ]
+  },
+  {
+   "id": "fs_flash",
+   "label": "Вспышка",
+   "group": "accent",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_flash/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "cinema"
+   ],
+   "seconds": 1.594,
+   "stereo": true,
+   "offset": -0.085,
+   "source": "Freesound · Werra",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Werra/sounds/232130/",
+   "credits": [
+    {
+     "author": "Werra",
+     "title": "Vintage Camera Flash Powder and Shutter",
+     "url": "https://freesound.org/people/Werra/sounds/232130/"
+    }
+   ]
+  },
+  {
+   "id": "fs_shutter_flash",
+   "label": "Затвор и вспышка",
+   "group": "accent",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_shutter_flash/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tech"
+   ],
+   "seconds": 1.709,
+   "offset": -0.095,
+   "source": "Freesound · montclairguy",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/montclairguy/sounds/353044/",
+   "credits": [
+    {
+     "author": "montclairguy",
+     "title": "Camera shutter and flash combined",
+     "url": "https://freesound.org/people/montclairguy/sounds/353044/"
+    }
+   ]
+  },
+  {
+   "id": "fs_coins",
+   "label": "Монеты",
+   "group": "accent",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_coins/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal",
+    "fun"
+   ],
+   "seconds": 1.748,
+   "source": "Freesound · Jace",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Jace/sounds/17502/",
+   "credits": [
+    {
+     "author": "Jace",
+     "title": "Coin dropping.wav",
+     "url": "https://freesound.org/people/Jace/sounds/17502/"
+    }
+   ]
+  },
+  {
+   "id": "fs_coin",
+   "label": "Монетка",
+   "group": "word",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_coin/v01.flac",
+    "/sounds/sfx/fs_coin/v02.flac",
+    "/sounds/sfx/fs_coin/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal"
+   ],
+   "seconds": 0.102,
+   "source": "Freesound · Leszek_Szary",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/Leszek_Szary/sounds/146723/",
+   "credits": [
+    {
+     "author": "Leszek_Szary",
+     "title": "coin object",
+     "url": "https://freesound.org/people/Leszek_Szary/sounds/146723/"
+    }
+   ]
+  },
+  {
+   "id": "fs_money_bag",
+   "label": "Мешок денег",
+   "group": "accent",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/fs_money_bag/v01.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal",
+    "fun"
+   ],
+   "seconds": 0.482,
+   "offset": -0.195,
+   "source": "Freesound · PhilSavlem",
+   "license": "CC0 1.0",
+   "url": "https://freesound.org/people/PhilSavlem/sounds/338260/",
+   "credits": [
+    {
+     "author": "PhilSavlem",
+     "title": "Money Bag",
+     "url": "https://freesound.org/people/PhilSavlem/sounds/338260/"
+    }
+   ]
+  },
+  {
+   "id": "book_place",
+   "label": "Книга на стол",
+   "group": "word",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/book_place/v01.flac",
+    "/sounds/sfx/book_place/v02.flac",
+    "/sounds/sfx/book_place/v03.flac",
+    "/sounds/sfx/book_place/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.203,
+   "source": "Kenney · RPG Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/rpg-audio"
+  },
+  {
+   "id": "latch",
+   "label": "Защёлка",
+   "group": "word",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/latch/v01.flac",
+    "/sounds/sfx/latch/v02.flac",
+    "/sounds/sfx/latch/v03.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal",
+    "tactile"
+   ],
+   "seconds": 0.183,
+   "source": "Kenney · RPG Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/rpg-audio"
+  },
+  {
+   "id": "page_flip",
+   "label": "Страница",
+   "group": "phrase",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/page_flip/v01.flac",
+    "/sounds/sfx/page_flip/v02.flac",
+    "/sounds/sfx/page_flip/v03.flac",
+    "/sounds/sfx/page_flip/v04.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "tactile"
+   ],
+   "seconds": 0.367,
+   "source": "Kenney · RPG Audio",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/rpg-audio"
+  },
+  {
+   "id": "tin_tap",
+   "label": "Жестянка",
+   "group": "word",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/tin_tap/v01.flac",
+    "/sounds/sfx/tin_tap/v02.flac",
+    "/sounds/sfx/tin_tap/v03.flac",
+    "/sounds/sfx/tin_tap/v04.flac",
+    "/sounds/sfx/tin_tap/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal",
+    "fun"
+   ],
+   "seconds": 0.134,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  },
+  {
+   "id": "metal_knock",
+   "label": "Металлический стук",
+   "group": "word",
+   "category": "foley",
+   "files": [
+    "/sounds/sfx/metal_knock/v01.flac",
+    "/sounds/sfx/metal_knock/v02.flac",
+    "/sounds/sfx/metal_knock/v03.flac",
+    "/sounds/sfx/metal_knock/v04.flac",
+    "/sounds/sfx/metal_knock/v05.flac"
+   ],
+   "pitch_spread": 0.03,
+   "moods": [
+    "metal"
+   ],
+   "seconds": 0.136,
+   "source": "Kenney · Impact Sounds",
+   "license": "CC0 1.0",
+   "url": "https://kenney.nl/assets/impact-sounds"
+  }
+ ],
+ "styles": {
+  "typewriter-547": {
+   "sounds": {
+    "typing": [
+     "typewriter",
+     "fs_typewriter",
+     "fs_phone_keys",
+     "iphone",
+     "fs_laptop",
+     "keys4",
+     "keys5",
+     "fs_office_keys",
+     "fs_screen_tap",
+     "fs_mech_key",
+     "k_switch_click",
+     "type_blip",
+     "fs_bubble_type"
+    ],
+    "word": [
+     "fs_knock",
+     "fs_pen",
+     "fs_switch",
+     "book_place",
+     "wood_knock",
+     "fs_mouse",
+     "fs_snap"
+    ],
+    "phrase": [
+     "fs_carriage",
+     "fs_page",
+     "fs_pencil",
+     "fs_whoosh"
+    ],
+    "accent": [
+     "fs_type_bell",
+     "fs_ding",
+     "fs_camera",
+     "fs_correct",
+     "fs_desk_bell"
+    ]
+   },
+   "kits": [
+    {
+     "id": "typewriter-547-1",
+     "label": "Машинка",
+     "layers": {
+      "typing": [
+       "typewriter",
+       0.7
+      ]
+     }
+    },
+    {
+     "id": "typewriter-547-2",
+     "label": "Машинка и каретка",
+     "layers": {
+      "typing": [
+       "typewriter",
+       0.65
+      ],
+      "phrase": [
+       "fs_carriage",
+       0.4
+      ]
+     }
+    },
+    {
+     "id": "typewriter-547-3",
+     "label": "Живая машинка",
+     "layers": {
+      "typing": [
+       "fs_typewriter",
+       0.65
+      ],
+      "accent": [
+       "fs_type_bell",
+       0.4
+      ]
+     }
+    },
+    {
+     "id": "typewriter-547-4",
+     "label": "Телефон",
+     "layers": {
+      "typing": [
+       "fs_phone_keys",
+       0.6
+      ]
+     }
+    },
+    {
+     "id": "typewriter-547-5",
+     "label": "Ноутбук",
+     "layers": {
+      "typing": [
+       "fs_laptop",
+       0.6
+      ]
+     }
+    }
+   ]
+  },
+  "pictures": {
+   "sounds": {
+    "typing": [
+     "fs_bubble_type",
+     "fs_drop_type",
+     "k_tiny_click"
+    ],
+    "word": [
+     "fs_pop",
+     "fs_mouth_pop",
+     "fs_bubble",
+     "fs_drop",
+     "fs_pling",
+     "fs_menu_click",
+     "fs_snap",
+     "k_click_soft",
+     "kalimba",
+     "fs_plop"
+    ],
+    "phrase": [
+     "fs_whoosh",
+     "fs_quick_whoosh",
+     "fs_swoosh",
+     "fs_space_swoosh",
+     "fs_page",
+     "fs_wind"
+    ],
+    "accent": [
+     "fs_whoosh",
+     "fs_pop",
+     "fs_cork",
+     "fs_wink",
+     "fs_magic",
+     "fs_sparkle",
+     "fs_popup",
+     "fs_boing",
+     "fs_cinema_hit",
+     "fs_camera"
+    ]
+   },
+   "kits": [
+    {
+     "id": "pictures-1",
+     "label": "Мягко",
+     "layers": {
+      "word": [
+       "fs_pop",
+       0.25
+      ],
+      "accent": [
+       "fs_whoosh",
+       0.5
+      ]
+     }
+    },
+    {
+     "id": "pictures-2",
+     "label": "Пузыри",
+     "layers": {
+      "word": [
+       "fs_bubble",
+       0.3
+      ],
+      "accent": [
+       "fs_cork",
+       0.45
+      ]
+     }
+    },
+    {
+     "id": "pictures-3",
+     "label": "Волшебно",
+     "layers": {
+      "word": [
+       "fs_pling",
+       0.25
+      ],
+      "accent": [
+       "fs_wink",
+       0.45
+      ]
+     }
+    },
+    {
+     "id": "pictures-4",
+     "label": "Кино",
+     "layers": {
+      "word": [
+       "fs_thud",
+       0.25
+      ],
+      "accent": [
+       "fs_cinema_hit",
+       0.45
+      ]
+     }
+    }
+   ]
+  },
+  "gild": {
+   "sounds": {
+    "typing": [
+     "k_tiny_click",
+     "fs_phone_keys"
+    ],
+    "word": [
+     "fs_pling",
+     "fs_coin",
+     "k_glass_tap",
+     "music_box",
+     "kalimba",
+     "fs_sparkle",
+     "glass_clink",
+     "metal_ping",
+     "fs_menu_click"
+    ],
+    "phrase": [
+     "fs_gleam",
+     "fs_wind_chimes",
+     "fs_wind",
+     "fs_whoosh",
+     "fs_spell"
+    ],
+    "accent": [
+     "fs_coin_shimmer",
+     "fs_ding",
+     "fs_crystal",
+     "fs_success",
+     "fs_success_bells",
+     "fs_cash",
+     "fs_magic",
+     "bell_hit"
+    ]
+   },
+   "kits": [
+    {
+     "id": "gild-1",
+     "label": "Золото",
+     "layers": {
+      "word": [
+       "fs_coin",
+       0.25
+      ],
+      "accent": [
+       "fs_coin_shimmer",
+       0.45
+      ]
+     }
+    },
+    {
+     "id": "gild-2",
+     "label": "Хрусталь",
+     "layers": {
+      "word": [
+       "fs_pling",
+       0.25
+      ],
+      "phrase": [
+       "fs_gleam",
+       0.35
+      ],
+      "accent": [
+       "fs_crystal",
+       0.4
+      ]
+     }
+    },
+    {
+     "id": "gild-3",
+     "label": "Шкатулка",
+     "layers": {
+      "word": [
+       "music_box",
+       0.3
+      ],
+      "accent": [
+       "fs_success_bells",
+       0.4
+      ]
+     }
+    }
+   ]
+  },
+  "rush": {
+   "sounds": {
+    "typing": [
+     "fs_office_keys"
+    ],
+    "word": [
+     "fs_thud",
+     "fs_snap",
+     "fs_knock",
+     "fs_perc_click",
+     "fs_pop",
+     "fs_switch",
+     "soft_thud"
+    ],
+    "phrase": [
+     "fs_quick_whoosh",
+     "fs_whoosh",
+     "fs_whip",
+     "fs_double_whoosh",
+     "fs_swoosh",
+     "fs_reverse_cymbal",
+     "fs_noise_riser",
+     "fs_space_swoosh"
+    ],
+    "accent": [
+     "fs_cinema_hit",
+     "fs_boom",
+     "fs_braam",
+     "fs_punch",
+     "fs_swell_hit",
+     "fs_cinema_rise",
+     "fs_dramatic_hit",
+     "punch",
+     "sub_drop"
+    ]
+   },
+   "kits": [
+    {
+     "id": "rush-1",
+     "label": "Вжух",
+     "layers": {
+      "word": [
+       "fs_snap",
+       0.25
+      ],
+      "phrase": [
+       "fs_whoosh",
+       0.55
+      ]
+     }
+    },
+    {
+     "id": "rush-2",
+     "label": "Кино",
+     "layers": {
+      "word": [
+       "fs_thud",
+       0.3
+      ],
+      "phrase": [
+       "fs_quick_whoosh",
+       0.5
+      ],
+      "accent": [
+       "fs_cinema_hit",
+       0.5
+      ]
+     }
+    },
+    {
+     "id": "rush-3",
+     "label": "Трейлер",
+     "layers": {
+      "phrase": [
+       "fs_reverse_cymbal",
+       0.45
+      ],
+      "accent": [
+       "fs_braam",
+       0.5
+      ]
+     }
+    }
+   ]
+  },
+  "stardust": {
+   "sounds": {
+    "typing": [
+     "fs_bubble_type",
+     "fs_drop_type",
+     "type_blip"
+    ],
+    "word": [
+     "fs_sparkle",
+     "fs_pling",
+     "music_box",
+     "kalimba",
+     "fs_bubble",
+     "k_glass_tap",
+     "fs_drop",
+     "felt_key"
+    ],
+    "phrase": [
+     "fs_gleam",
+     "fs_wind_chimes",
+     "fs_spell",
+     "fs_bubbling",
+     "fs_space_swoosh",
+     "fs_whoosh"
+    ],
+    "accent": [
+     "fs_magic",
+     "fs_wink",
+     "fs_crystal",
+     "fs_shimmer",
+     "fs_success_bells",
+     "fs_heal",
+     "fs_coin_shimmer"
+    ]
+   },
+   "kits": [
+    {
+     "id": "stardust-1",
+     "label": "Звёзды",
+     "layers": {
+      "word": [
+       "fs_sparkle",
+       0.3
+      ],
+      "phrase": [
+       "fs_gleam",
+       0.35
+      ]
+     }
+    },
+    {
+     "id": "stardust-2",
+     "label": "Волшебство",
+     "layers": {
+      "word": [
+       "music_box",
+       0.28
+      ],
+      "phrase": [
+       "fs_wind_chimes",
+       0.4
+      ],
+      "accent": [
+       "fs_magic",
+       0.45
+      ]
+     }
+    },
+    {
+     "id": "stardust-3",
+     "label": "Пузырьки",
+     "layers": {
+      "word": [
+       "fs_bubble",
+       0.3
+      ],
+      "phrase": [
+       "fs_bubbling",
+       0.35
+      ]
+     }
+    }
+   ]
+  },
+  "neon": {
+   "sounds": {
+    "typing": [
+     "type_blip",
+     "k_switch_click",
+     "fs_office_keys"
+    ],
+    "word": [
+     "neonflick",
+     "fs_spark",
+     "fs_glitch",
+     "k_toggle",
+     "laser_pew",
+     "fs_menu_click",
+     "k_blip"
+    ],
+    "phrase": [
+     "fs_data",
+     "fs_space_swoosh",
+     "phaser",
+     "phaser_down",
+     "force_field",
+     "fs_noise_riser",
+     "fs_reverse_cymbal"
+    ],
+    "accent": [
+     "fs_electric",
+     "fs_buzz",
+     "fs_alert",
+     "zap",
+     "laser",
+     "powerup",
+     "fs_game_start",
+     "sub_drop"
+    ]
+   },
+   "kits": [
+    {
+     "id": "neon-1",
+     "label": "Неон",
+     "layers": {
+      "word": [
+       "neonflick",
+       0.6
+      ]
+     }
+    },
+    {
+     "id": "neon-2",
+     "label": "Цифровой",
+     "layers": {
+      "word": [
+       "fs_glitch",
+       0.3
+      ],
+      "phrase": [
+       "fs_data",
+       0.4
+      ],
+      "accent": [
+       "fs_electric",
+       0.45
+      ]
+     }
+    },
+    {
+     "id": "neon-3",
+     "label": "Ретро-игра",
+     "layers": {
+      "word": [
+       "laser_pew",
+       0.25
+      ],
+      "accent": [
+       "powerup",
+       0.4
+      ]
+     }
+    }
+   ]
+  },
+  "chrome": {
+   "sounds": {
+    "typing": [
+     "fs_office_keys",
+     "keys4",
+     "k_switch_click"
+    ],
+    "word": [
+     "metal_knock",
+     "metal_ping",
+     "fs_coin",
+     "fs_switch",
+     "tin_tap",
+     "glass_clink",
+     "latch",
+     "fs_pen"
+    ],
+    "phrase": [
+     "fs_metal_whoosh",
+     "fs_whip",
+     "fs_quick_whoosh",
+     "blade",
+     "fs_whoosh",
+     "fs_reverse_cymbal"
+    ],
+    "accent": [
+     "metal_hit",
+     "heavy_metal",
+     "fs_clang",
+     "fs_ding_long",
+     "fs_cinema_hit",
+     "bell_hit",
+     "fs_braam",
+     "fs_punch"
+    ]
+   },
+   "kits": [
+    {
+     "id": "chrome-1",
+     "label": "Хром",
+     "layers": {
+      "word": [
+       "metal_ping",
+       0.25
+      ],
+      "phrase": [
+       "fs_metal_whoosh",
+       0.45
+      ],
+      "accent": [
+       "metal_hit",
+       0.5
+      ]
+     }
+    },
+    {
+     "id": "chrome-2",
+     "label": "Сталь",
+     "layers": {
+      "word": [
+       "metal_knock",
+       0.3
+      ],
+      "phrase": [
+       "blade",
+       0.45
+      ],
+      "accent": [
+       "heavy_metal",
+       0.5
+      ]
+     }
+    },
+    {
+     "id": "chrome-3",
+     "label": "Блеск",
+     "layers": {
+      "word": [
+       "fs_coin",
+       0.25
+      ],
+      "phrase": [
+       "fs_whip",
+       0.45
+      ],
+      "accent": [
+       "fs_ding_long",
+       0.45
+      ]
+     }
+    }
+   ]
+  },
+  "enzo": {
+   "sounds": {
+    "typing": [
+     "fs_laptop",
+     "fs_phone_keys",
+     "keys5"
+    ],
+    "word": [
+     "fs_pop",
+     "fs_snap",
+     "fs_knock",
+     "fs_mouse",
+     "fs_pen",
+     "book_place",
+     "fs_perc_click",
+     "fs_mouth_pop"
+    ],
+    "phrase": [
+     "fs_page",
+     "fs_whoosh",
+     "fs_quick_whoosh",
+     "fs_swoosh",
+     "cloth",
+     "fs_pencil"
+    ],
+    "accent": [
+     "fs_punch",
+     "fs_thud",
+     "fs_camera",
+     "fs_phone_photo",
+     "fs_ding",
+     "fs_correct",
+     "fs_cinema_hit",
+     "fs_rimshot"
+    ]
+   },
+   "kits": [
+    {
+     "id": "enzo-1",
+     "label": "Чётко",
+     "layers": {
+      "word": [
+       "fs_pop",
+       0.35
+      ]
+     }
+    },
+    {
+     "id": "enzo-2",
+     "label": "Журнал",
+     "layers": {
+      "word": [
+       "fs_knock",
+       0.3
+      ],
+      "phrase": [
+       "fs_page",
+       0.35
+      ],
+      "accent": [
+       "fs_camera",
+       0.4
+      ]
+     }
+    },
+    {
+     "id": "enzo-3",
+     "label": "Щелчки",
+     "layers": {
+      "word": [
+       "fs_snap",
+       0.3
+      ],
+      "accent": [
+       "fs_punch",
+       0.4
+      ]
+     }
+    }
+   ]
+  },
+  "selene": {
+   "sounds": {
+    "typing": [
+     "fs_drop_type",
+     "fs_bubble_type",
+     "k_tiny_click"
+    ],
+    "word": [
+     "fs_drop",
+     "fs_bubble",
+     "k_glass_tap",
+     "glass_clink",
+     "k_water",
+     "fs_pling",
+     "kalimba",
+     "music_box"
+    ],
+    "phrase": [
+     "fs_wind",
+     "fs_wind_chimes",
+     "k_air_in",
+     "fs_gleam",
+     "fs_bubbling",
+     "fs_whoosh"
+    ],
+    "accent": [
+     "fs_crystal",
+     "fs_ding",
+     "fs_shimmer",
+     "fs_success_bells",
+     "fs_sparkle",
+     "fs_notify"
+    ]
+   },
+   "kits": [
+    {
+     "id": "selene-1",
+     "label": "Вода",
+     "layers": {
+      "word": [
+       "fs_drop",
+       0.3
+      ],
+      "phrase": [
+       "fs_wind",
+       0.35
+      ]
+     }
+    },
+    {
+     "id": "selene-2",
+     "label": "Стекло",
+     "layers": {
+      "word": [
+       "k_glass_tap",
+       0.25
+      ],
+      "accent": [
+       "fs_crystal",
+       0.4
+      ]
+     }
+    },
+    {
+     "id": "selene-3",
+     "label": "Колокольчики",
+     "layers": {
+      "word": [
+       "fs_pling",
+       0.25
+      ],
+      "phrase": [
+       "fs_wind_chimes",
+       0.4
+      ]
+     }
+    }
+   ]
+  },
+  "custom": {
+   "sounds": {
+    "typing": [
+     "fs_phone_keys",
+     "typewriter",
+     "fs_typewriter",
+     "fs_laptop"
+    ],
+    "word": [
+     "fs_pop",
+     "fs_snap",
+     "fs_bubble",
+     "fs_drop",
+     "fs_knock",
+     "fs_pling",
+     "fs_mouse",
+     "kalimba",
+     "fs_mouth_pop",
+     "fs_switch"
+    ],
+    "phrase": [
+     "fs_whoosh",
+     "fs_quick_whoosh",
+     "fs_swoosh",
+     "fs_page",
+     "fs_reverse_cymbal",
+     "fs_space_swoosh",
+     "fs_wind"
+    ],
+    "accent": [
+     "fs_cinema_hit",
+     "fs_boom",
+     "fs_ding",
+     "fs_magic",
+     "fs_sparkle",
+     "fs_punch",
+     "fs_camera",
+     "fs_cash",
+     "fs_boing",
+     "fs_rimshot"
+    ]
+   },
+   "kits": [
+    {
+     "id": "custom-1",
+     "label": "Мягко",
+     "layers": {
+      "word": [
+       "fs_pop",
+       0.35
+      ]
+     }
+    },
+    {
+     "id": "custom-2",
+     "label": "Кино",
+     "layers": {
+      "word": [
+       "fs_thud",
+       0.3
+      ],
+      "phrase": [
+       "fs_whoosh",
+       0.5
+      ],
+      "accent": [
+       "fs_cinema_hit",
+       0.5
+      ]
+     }
+    },
+    {
+     "id": "custom-3",
+     "label": "Мелодия",
+     "layers": {
+      "word": [
+       "kalimba",
+       0.3
+      ],
+      "phrase": [
+       "fs_wind",
+       0.35
+      ],
+      "accent": [
+       "fs_ding",
+       0.4
+      ]
+     }
+    },
+    {
+     "id": "custom-4",
+     "label": "Весело",
+     "layers": {
+      "word": [
+       "fs_mouth_pop",
+       0.3
+      ],
+      "accent": [
+       "fs_boing",
+       0.45
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

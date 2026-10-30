@@ -1,0 +1,371 @@
+{
+  "format": 1,
+  "sample_rate": 48000,
+  "banks": [
+    {
+      "id": "typewriter",
+      "label": "Печатная машинка",
+      "source_file": "zvuk-pishuschey-mashinki-1.mp3",
+      "strikes_found": 371,
+      "samples": [
+        {
+          "file": "typewriter/k01.wav",
+          "ms": 43.1
+        },
+        {
+          "file": "typewriter/k02.wav",
+          "ms": 200.0
+        },
+        {
+          "file": "typewriter/k03.wav",
+          "ms": 50.9
+        },
+        {
+          "file": "typewriter/k04.wav",
+          "ms": 130.2
+        },
+        {
+          "file": "typewriter/k05.wav",
+          "ms": 89.6
+        },
+        {
+          "file": "typewriter/k06.wav",
+          "ms": 147.5
+        },
+        {
+          "file": "typewriter/k07.wav",
+          "ms": 114.8
+        },
+        {
+          "file": "typewriter/k08.wav",
+          "ms": 200.0
+        },
+        {
+          "file": "typewriter/k09.wav",
+          "ms": 46.6
+        },
+        {
+          "file": "typewriter/k10.wav",
+          "ms": 200.0
+        },
+        {
+          "file": "typewriter/k11.wav",
+          "ms": 127.2
+        },
+        {
+          "file": "typewriter/k12.wav",
+          "ms": 79.2
+        },
+        {
+          "file": "typewriter/k13.wav",
+          "ms": 115.8
+        },
+        {
+          "file": "typewriter/k14.wav",
+          "ms": 115.2
+        },
+        {
+          "file": "typewriter/k15.wav",
+          "ms": 109.5
+        },
+        {
+          "file": "typewriter/k16.wav",
+          "ms": 99.1
+        }
+      ],
+      "natural_interval_ms": 94
+    },
+    {
+      "id": "iphone",
+      "label": "Клавиатура iPhone",
+      "source_file": "z_uk-kla_iatura-iphone.mp3",
+      "strikes_found": 69,
+      "samples": [
+        {
+          "file": "iphone/k01.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k02.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k03.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k04.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k05.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k06.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k07.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k08.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k09.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k10.wav",
+          "ms": 76.1
+        },
+        {
+          "file": "iphone/k11.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k12.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k13.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k14.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k15.wav",
+          "ms": 90.0
+        },
+        {
+          "file": "iphone/k16.wav",
+          "ms": 90.0
+        }
+      ],
+      "natural_interval_ms": 116
+    },
+    {
+      "id": "keys4",
+      "label": "Клавиатура 1",
+      "source_file": "49ca99a309e2ef6.mp3",
+      "strikes_found": 406,
+      "samples": [
+        {
+          "file": "keys4/k01.wav",
+          "ms": 74.1
+        },
+        {
+          "file": "keys4/k02.wav",
+          "ms": 98.2
+        },
+        {
+          "file": "keys4/k03.wav",
+          "ms": 92.5
+        },
+        {
+          "file": "keys4/k04.wav",
+          "ms": 140.0
+        },
+        {
+          "file": "keys4/k05.wav",
+          "ms": 49.9
+        },
+        {
+          "file": "keys4/k06.wav",
+          "ms": 38.8
+        },
+        {
+          "file": "keys4/k07.wav",
+          "ms": 140.0
+        },
+        {
+          "file": "keys4/k08.wav",
+          "ms": 53.9
+        },
+        {
+          "file": "keys4/k09.wav",
+          "ms": 96.1
+        },
+        {
+          "file": "keys4/k10.wav",
+          "ms": 86.2
+        },
+        {
+          "file": "keys4/k11.wav",
+          "ms": 81.0
+        },
+        {
+          "file": "keys4/k12.wav",
+          "ms": 46.6
+        },
+        {
+          "file": "keys4/k13.wav",
+          "ms": 39.1
+        },
+        {
+          "file": "keys4/k14.wav",
+          "ms": 67.2
+        },
+        {
+          "file": "keys4/k15.wav",
+          "ms": 52.1
+        },
+        {
+          "file": "keys4/k16.wav",
+          "ms": 81.7
+        }
+      ],
+      "natural_interval_ms": 42
+    },
+    {
+      "id": "keys5",
+      "label": "Клавиатура 2",
+      "source_file": "cf9b99726102246.mp3",
+      "strikes_found": 276,
+      "samples": [
+        {
+          "file": "keys5/k01.wav",
+          "ms": 75.5
+        },
+        {
+          "file": "keys5/k02.wav",
+          "ms": 56.1
+        },
+        {
+          "file": "keys5/k03.wav",
+          "ms": 86.7
+        },
+        {
+          "file": "keys5/k04.wav",
+          "ms": 46.8
+        },
+        {
+          "file": "keys5/k05.wav",
+          "ms": 64.5
+        },
+        {
+          "file": "keys5/k06.wav",
+          "ms": 63.4
+        },
+        {
+          "file": "keys5/k07.wav",
+          "ms": 64.8
+        },
+        {
+          "file": "keys5/k08.wav",
+          "ms": 44.0
+        },
+        {
+          "file": "keys5/k09.wav",
+          "ms": 117.0
+        },
+        {
+          "file": "keys5/k10.wav",
+          "ms": 82.2
+        },
+        {
+          "file": "keys5/k11.wav",
+          "ms": 58.6
+        },
+        {
+          "file": "keys5/k12.wav",
+          "ms": 127.5
+        },
+        {
+          "file": "keys5/k13.wav",
+          "ms": 105.3
+        },
+        {
+          "file": "keys5/k14.wav",
+          "ms": 85.3
+        },
+        {
+          "file": "keys5/k15.wav",
+          "ms": 57.6
+        },
+        {
+          "file": "keys5/k16.wav",
+          "ms": 91.0
+        }
+      ],
+      "natural_interval_ms": 46
+    },
+    {
+      "id": "joystick",
+      "label": "Кнопки джойстика",
+      "source_file": "joystick-button-press-down-multiple-fast_fj1_9ond.mp3",
+      "strikes_found": 33,
+      "samples": [
+        {
+          "file": "joystick/k01.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k02.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k03.wav",
+          "ms": 83.0
+        },
+        {
+          "file": "joystick/k04.wav",
+          "ms": 78.2
+        },
+        {
+          "file": "joystick/k05.wav",
+          "ms": 84.6
+        },
+        {
+          "file": "joystick/k06.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k07.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k08.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k09.wav",
+          "ms": 83.6
+        },
+        {
+          "file": "joystick/k10.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k11.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k12.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k13.wav",
+          "ms": 82.2
+        },
+        {
+          "file": "joystick/k14.wav",
+          "ms": 76.1
+        },
+        {
+          "file": "joystick/k15.wav",
+          "ms": 85.0
+        },
+        {
+          "file": "joystick/k16.wav",
+          "ms": 85.0
+        }
+      ],
+      "natural_interval_ms": 54
+    }
+  ]
+}

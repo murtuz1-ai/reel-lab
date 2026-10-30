@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*
+ * «Звёздная пыль» — каждая буква прилетает из своей точки пространства,
+ * вращаясь и проявляясь из размытия, и собирается в слово точно в момент,
+ * когда слово звучит. Произносимое слово светится акцентным цветом.
+ */
+.segment {
+  font-family: var(--tscaps-font-family, "Unbounded");
+  font-weight: var(--tscaps-font-weight, 700);
+  font-size: calc(var(--tscaps-font-size, 4.1cqh) * var(--tscaps-font-size-scale, 1));
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--tscaps-primary-color, #ffffff);
+  filter:
+    drop-shadow(0 0 0.16em color-mix(in srgb, var(--tscaps-highlight-color, #8fd8ff) 55%, transparent))
+    drop-shadow(0 0.05em 0.12em rgba(0, 0, 0, 0.65));
+  animation: dust-out 0.45s calc(var(--on-segment-ends) - 0.45s) ease-in forwards;
+}
+
+@keyframes dust-out {
+  to { opacity: 0; transform: translateY(-0.25em) scale(1.06); }
+}
+
+.line { display: block; }
+
+.word {
+  display: inline-block;
+  margin: 0 0.14em;
+}
+
+/* Произносимое слово светится акцентным цветом. */
+.word-being-narrated {
+  color: var(--tscaps-highlight-color, #8fd8ff);
+  text-shadow: 0 0 0.35em color-mix(in srgb, var(--tscaps-highlight-color, #8fd8ff) 70%, transparent);
+}
+
+.emphasis { color: var(--tscaps-highlight-color, #8fd8ff); }
+
+.letter {
+  display: inline-block;
+  --seed: calc(var(--letter-index, 0) * 1.618 + var(--word-index, 0) * 2.39 + 0.7);
+  --dx: calc(sin(calc(var(--seed) * 1rad)) * 2.6em);
+  --dy: calc(cos(calc(var(--seed) * 1.37rad)) * 1.9em);
+  --spin: calc(sin(calc(var(--seed) * 2.13rad)) * 160deg);
+  animation: dust-in 0.78s calc(var(--on-word-being-narrated-starts) + var(--letter-index, 0) * 0.028s - 0.12s) cubic-bezier(0.12, 0.8, 0.2, 1) both;
+}
+
+@keyframes dust-in {
+  0% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(var(--spin)) scale(0.15); filter: blur(0.16em); }
+  45% { opacity: 1; filter: blur(0.02em); }
+  100% { opacity: 1; transform: none; filter: blur(0); }
+}

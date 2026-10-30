@@ -1,0 +1,1035 @@
+/* Дополнительные шрифты Reel Lab (Google Fonts, SIL OFL 1.1).
+ * Файлы скачаны tools/fetch_fonts.py, лицензии — в ./licenses.
+ * Переменные шрифты подключены одним файлом на диапазон начертаний. */
+@font-face {
+  font-family: "Poiret One";
+  src: url("./fonts/gf/poiret-one-400-cyrillic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Poiret One";
+  src: url("./fonts/gf/poiret-one-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Advent Pro";
+  src: url("./fonts/gf/advent-pro-300-cyrillic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Advent Pro";
+  src: url("./fonts/gf/advent-pro-300-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: url("./fonts/gf/sofia-sans-extra-condensed-300-cyrillic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: url("./fonts/gf/sofia-sans-extra-condensed-300-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/gf/jura-400-cyrillic.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/gf/jura-400-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("./fonts/gf/unbounded-400-cyrillic.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("./fonts/gf/unbounded-400-latin.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./fonts/gf/dela-gothic-one-400-cyrillic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./fonts/gf/dela-gothic-one-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Russo One";
+  src: url("./fonts/gf/russo-one-400-cyrillic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Russo One";
+  src: url("./fonts/gf/russo-one-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./fonts/gf/comfortaa-400-cyrillic.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./fonts/gf/comfortaa-400-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/gf/rubik-500-cyrillic.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/gf/rubik-500-latin.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("./fonts/gf/lobster-400-cyrillic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("./fonts/gf/lobster-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/gf/montserrat-400-cyrillic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/gf/montserrat-400-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Казахские буквы и палочка для шрифтов, где их нет, — из похожего шрифта.
+ * Свой набор шрифта (ниже) важнее: он объявлен позже. */
+@font-face {
+  font-family: "Unbounded";
+  src: url("./fonts/montserrat-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/gf/advent-pro-300-cyrillic-ext.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Poiret One";
+  src: url("./fonts/gf/advent-pro-300-cyrillic-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: url("./fonts/oswald-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./fonts/gf/rubik-900-cyrillic-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Russo One";
+  src: url("./fonts/gf/montserrat-700-cyrillic-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* Расширенная латиница и кириллица (турецкий, польский, казахский, чеченский). */
+@font-face {
+  font-family: "Poiret One";
+  src: url("./fonts/gf/poiret-one-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Advent Pro";
+  src: url("./fonts/gf/advent-pro-300-latin-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Advent Pro";
+  src: url("./fonts/gf/advent-pro-300-cyrillic-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: url("./fonts/gf/sofia-sans-extra-condensed-300-latin-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: url("./fonts/gf/sofia-sans-extra-condensed-300-cyrillic-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/gf/jura-400-latin-ext.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/gf/jura-400-cyrillic-ext.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("./fonts/gf/unbounded-400-latin-ext.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("./fonts/gf/unbounded-400-cyrillic-ext.woff2") format("woff2");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./fonts/gf/dela-gothic-one-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Russo One";
+  src: url("./fonts/gf/russo-one-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./fonts/gf/comfortaa-400-latin-ext.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./fonts/gf/comfortaa-400-cyrillic-ext.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/gf/rubik-500-latin-ext.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/gf/rubik-500-cyrillic-ext.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("./fonts/gf/lobster-400-latin-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("./fonts/gf/lobster-400-cyrillic-ext.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/montserrat-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/montserrat-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* >>> запасные буквы (make_fallback_faces.py) — не править руками */
+@font-face {
+  font-family: "Advent Pro";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB-02BC;
+}
+@font-face {
+  font-family: "Advent Pro";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Amiri";
+  src: url("./fonts/eb-garamond-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0102, U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Amiri";
+  src: url("./fonts/eb-garamond-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0101, U+0103-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Amiri";
+  src: url("./fonts/eb-garamond-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Amiri";
+  src: url("./fonts/eb-garamond-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Aref Ruqaa";
+  src: url("./fonts/eb-garamond-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0102, U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Aref Ruqaa";
+  src: url("./fonts/eb-garamond-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0101, U+0103-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Aref Ruqaa";
+  src: url("./fonts/eb-garamond-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Aref Ruqaa";
+  src: url("./fonts/eb-garamond-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Bungee";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+017F;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Cairo";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Changa";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Changa";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Changa";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Changa";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+04B2-04B3;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0108-0109, U+0114-0115, U+011C-011D, U+0124-0125, U+012C-012D, U+0132-0135, U+0138, U+013F-0140, U+014E-014F, U+015C-015D, U+016C-016D, U+017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+040E, U+045E, U+04B0-04B1;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+04B2-04B3;
+}
+@font-face {
+  font-family: "El Messiri";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "El Messiri";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "El Messiri";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "El Messiri";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB;
+}
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0132-0133, U+017F;
+}
+@font-face {
+  font-family: "Jura";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+040D, U+045D, U+04B0-04B1;
+}
+@font-face {
+  font-family: "Kalam";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB;
+}
+@font-face {
+  font-family: "Kalam";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0108-010B, U+0114-0115, U+011C-011D, U+0120-0121, U+0124-0129, U+012C-012D, U+0132-0135, U+0138, U+013F-0140, U+014A-014B, U+014E-014F, U+015C-015D, U+0166-0169, U+016C-016D, U+0174-0177, U+017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Katibeh";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Katibeh";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Katibeh";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Katibeh";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Lalezar";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Lalezar";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Lalezar";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Lalezar";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Lobster";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+04B2-04B3;
+}
+@font-face {
+  font-family: "Lora Variable";
+  src: url("./fonts/eb-garamond-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0138;
+}
+@font-face {
+  font-family: "Manrope Variable";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB-02BC;
+}
+@font-face {
+  font-family: "Manrope Variable";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0114-0115, U+012C-012D, U+0132-0133, U+0138, U+013F-0140, U+014E-014F, U+017F, U+018F;
+}
+@font-face {
+  font-family: "Manrope Variable";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+04B0-04B1;
+}
+@font-face {
+  font-family: "Mirza";
+  src: url("./fonts/eb-garamond-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0102, U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Mirza";
+  src: url("./fonts/eb-garamond-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0101, U+0103-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Mirza";
+  src: url("./fonts/eb-garamond-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Mirza";
+  src: url("./fonts/eb-garamond-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Poiret One";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB-02BC;
+}
+@font-face {
+  font-family: "Poiret One";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0132-0133, U+0138, U+014A-014B, U+017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Poiret One";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400, U+040D, U+0450, U+045D, U+04B0-04B1;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0108-0109, U+011C-011D, U+0124-0127, U+0132-0135, U+0138, U+014A-014B, U+015C-015D, U+0166-0167, U+017F;
+}
+@font-face {
+  font-family: "Qahiri";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+00C0-00D6, U+00D8-00F6, U+00F8-00FF, U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Qahiri";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Qahiri";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Qahiri";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Rakkas";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Rakkas";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Rakkas";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Rakkas";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Reem Kufi";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Reem Kufi";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Reem Kufi";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Reem Kufi";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0162-0163, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/inter-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+04B2-04B3;
+}
+@font-face {
+  font-family: "Russo One";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB-02BC;
+}
+@font-face {
+  font-family: "Russo One";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0108-010B, U+0114-0115, U+011C-011D, U+0120-0121, U+0124-0126, U+012C-012D, U+0132, U+013F, U+014A-014B, U+014E-014F, U+015C-015D, U+0166-0169, U+016C-016D, U+0174-0177, U+017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Russo One";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400, U+040D, U+0450, U+045D, U+04B0-04B1;
+}
+@font-face {
+  font-family: "Scheherazade New";
+  src: url("./fonts/eb-garamond-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0102, U+0131, U+0152-0153, U+02BB-02BC;
+}
+@font-face {
+  font-family: "Scheherazade New";
+  src: url("./fonts/eb-garamond-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-0101, U+0103-0130, U+0132-0148, U+014A-0151, U+0154-017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Scheherazade New";
+  src: url("./fonts/eb-garamond-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Scheherazade New";
+  src: url("./fonts/eb-garamond-cyrillic-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0492-0493, U+049A-049B, U+04A2-04A3, U+04AE-04AF, U+04B2-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF;
+}
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: url("./fonts/inter-latin-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+02BB;
+}
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: url("./fonts/inter-latin-ext-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0108-0109, U+0114-0115, U+011C-011D, U+0124-0125, U+0128-0129, U+012C-012D, U+0134-0135, U+013F-0140, U+014E-014F, U+015C-015D, U+0168-0169, U+016C-016D, U+017F, U+018F, U+0259;
+}
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+04B0-04B1;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("./fonts/inter-cyrillic-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+04B0-04B1;
+}
+/* <<< запасные буквы */

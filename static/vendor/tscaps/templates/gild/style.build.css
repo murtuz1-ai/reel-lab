@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/*
+ * «Золотой акцент» — стиль Reel Lab по главному референсу IMG_6068.
+ * Мелкий белый текст появляется слово за словом мягким проявлением,
+ * ключевое слово фразы — отдельной строкой, крупно, узким золотым
+ * шрифтом ар-деко (Poiret One, сжатый по ширине, как в референсе).
+ * Ключевые слова выбирает человек; если не выбрал — берётся самое
+ * длинное содержательное слово фразы.
+ */
+.segment {
+  font-family: var(--tscaps-font-family, "Montserrat");
+  font-weight: var(--tscaps-font-weight, 400);
+  font-size: calc(var(--tscaps-font-size, 3.3cqh) * var(--tscaps-font-size-scale, 1));
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: var(--tscaps-primary-color, #ffffff);
+  filter: drop-shadow(0 0.04em 0.12em rgba(0, 0, 0, 0.6));
+  animation: gild-out 0.32s calc(var(--on-segment-ends) - 0.32s) ease-in forwards;
+}
+
+@keyframes gild-out {
+  to { opacity: 0; transform: translateY(-0.15em); }
+}
+
+.line { display: block; }
+
+.word {
+  display: inline-block;
+  margin: 0 0.12em;
+  animation: gild-word-in 0.45s var(--on-word-being-narrated-starts) cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes gild-word-in {
+  0% { opacity: 0; transform: translateY(0.3em); filter: blur(0.12em); }
+  100% { opacity: 1; transform: none; filter: blur(0); }
+}
+
+.word.emphasis {
+  --sx: var(--tscaps-accent-scale-x, 0.78);
+  display: block;
+  margin: 0.03em auto 0.05em;
+  font-family: var(--tscaps-accent-font-family, "Poiret One");
+  font-weight: var(--tscaps-accent-font-weight, 400);
+  font-size: calc(2.7em * min(1, 10 / var(--word-char-count, 10)));
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--tscaps-highlight-color, #eddd55);
+  -webkit-text-stroke: 0.014em currentColor;
+  text-shadow: 0 0 0.22em color-mix(in srgb, var(--tscaps-highlight-color, #eddd55) 32%, transparent);
+  transform: scaleX(var(--sx));
+  animation: gild-key-in 0.62s var(--on-word-being-narrated-starts) cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes gild-key-in {
+  0% { opacity: 0; transform: scaleX(var(--sx)) scale(1.22); filter: blur(0.08em); letter-spacing: 0.22em; }
+  60% { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; transform: scaleX(var(--sx)); filter: blur(0); letter-spacing: 0.02em; }
+}

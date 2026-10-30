@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*
+ * «Неоновая вывеска» (шрифт Jura — тонкая ровная линия, как стеклянная трубка) — слова зажигаются как неоновые трубки: с мерцанием,
+ * в тот момент, когда звучат. Вывеска слегка «гудит», а в конце фразы
+ * гаснет. Ключевые слова светятся вторым цветом.
+ */
+.segment {
+  --glow: var(--tscaps-highlight-color, #ff3fc9);
+  --glow-2: #3ff2ff;
+  font-family: var(--tscaps-font-family, "Jura");
+  font-weight: var(--tscaps-font-weight, 600);
+  font-size: calc(var(--tscaps-font-size, 4.6cqh) * var(--tscaps-font-size-scale, 1));
+  line-height: 1.22;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--tscaps-primary-color, #ffffff);
+  animation:
+    neon-hum 2.6s var(--on-segment-starts) steps(1) infinite,
+    neon-off 0.38s calc(var(--on-segment-ends) - 0.38s) steps(5) forwards;
+}
+
+@keyframes neon-hum {
+  0%, 61%, 66%, 100% { opacity: 1; }
+  63% { opacity: 0.86; }
+}
+
+@keyframes neon-off {
+  0% { opacity: 1; }
+  30% { opacity: 0.25; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; }
+}
+
+.line { display: block; }
+
+.word {
+  display: inline-block;
+  margin: 0 0.14em;
+  color: color-mix(in srgb, #ffffff 80%, var(--glow));
+  text-shadow:
+    0 0 0.03em #ffffff,
+    0 0 0.1em var(--glow),
+    0 0 0.24em var(--glow),
+    0 0 0.5em var(--glow),
+    0 0 0.95em color-mix(in srgb, var(--glow) 65%, transparent);
+  animation: neon-on 0.6s var(--on-word-being-narrated-starts) linear both;
+}
+
+.emphasis {
+  --glow: var(--glow-2);
+}
+
+@keyframes neon-on {
+  0% { opacity: 0; }
+  6% { opacity: 0.9; }
+  11% { opacity: 0.12; }
+  17% { opacity: 1; }
+  22% { opacity: 0.35; }
+  30% { opacity: 1; }
+  100% { opacity: 1; }
+}

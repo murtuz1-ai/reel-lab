@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8f2e8">
+  <title>Reel Lab — субтитры</title>
+  <link rel="stylesheet" href="/bot.css">
+  <script defer src="/bot.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/bot" aria-label="Reel Lab">R<span>/</span></a>
+      <div>
+        <strong>Reel Lab</strong>
+        <small>Видео с субтитрами</small>
+      </div>
+      <span class="local"><i></i> на этом ПК</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Первый рабочий инструмент</p>
+      <h1>Красивые субтитры<br>за несколько шагов.</h1>
+      <p>Загрузи ролик, выбери оформление. Можно прикрепить готовые субтитры или поручить распознавание боту.</p>
+    </section>
+
+    <ol class="steps" aria-label="Шаги создания ролика">
+      <li class="active"><span>1</span> Видео</li>
+      <li><span>2</span> Стиль</li>
+      <li><span>3</span> Готово</li>
+    </ol>
+
+    <section class="card upload-card" id="upload-card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Шаг 1</p>
+          <h2>Добавь видео</h2>
+        </div>
+        <span class="format">MP4 · MOV · до 1 часа</span>
+      </div>
+      <label class="dropzone" id="dropzone" for="video-file">
+        <input id="video-file" type="file" accept="video/mp4,video/quicktime,video/x-m4v,video/webm,video/x-matroska,video/x-msvideo,.mp4,.mov,.m4v,.webm,.mkv,.avi">
+        <span class="upload-icon">↑</span>
+        <strong>Выбрать видео</strong>
+        <small>или перетащи файл сюда</small>
+      </label>
+      <div class="upload-info" id="upload-info" hidden></div>
+      <div class="caption-upload" id="caption-upload">
+        <div>
+          <strong>Уже есть субтитры?</strong>
+          <p>Добавь файл — бот сохранит его тайминги и красиво встроит текст в ролик.</p>
+        </div>
+        <label class="caption-pick" for="caption-file">
+          <input id="caption-file" type="file" accept=".srt,.vtt,.ass,text/plain,text/vtt">
+          <span>+ Добавить субтитры</span>
+          <small>SRT · VTT · ASS</small>
+        </label>
+      </div>
+      <div class="caption-info" id="caption-info" hidden></div>
+    </section>
+
+    <section class="card styles-card" id="styles-card" aria-labelledby="styles-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Шаг 2</p>
+          <h2 id="styles-title">Выбери настроение</h2>
+        </div>
+        <span class="format">10 оформлений</span>
+      </div>
+      <div class="style-grid" role="radiogroup" aria-label="Стиль субтитров">
+        <button class="style selected" type="button" data-style="luxe" role="radio" aria-checked="true">
+          <span class="sample sample-luxe"><i>была</i><b>ОКРАШЕНА</b></span>
+          <strong>Люкс-акцент</strong>
+          <small>Как в твоём примере</small>
+        </button>
+        <button class="style" type="button" data-style="punch" role="radio" aria-checked="false">
+          <span class="sample sample-punch">это<br><em>ВАЖНО</em></span>
+          <strong>Ритм фразы</strong>
+          <small>Плавно по смысловым частям</small>
+        </button>
+        <button class="style" type="button" data-style="kinetic_lime" role="radio" aria-checked="false">
+          <span class="sample sample-kinetic-lime">НОВЫЙ<br><b>РИТМ</b></span>
+          <strong>Лайм-кинетика</strong>
+          <small>Яркий живой акцент</small>
+        </button>
+        <button class="style" type="button" data-style="quick_type" role="radio" aria-checked="false">
+          <span class="sample sample-quick-type"><i>ТВОЯ</i><b>ИСТОРИЯ</b><em></em></span>
+          <strong>Печатная машинка</strong>
+          <small>Печатающийся текст</small>
+        </button>
+        <button class="style" type="button" data-style="accent" role="radio" aria-checked="false">
+          <span class="sample sample-accent">твоя<br><b>история</b></span>
+          <strong>Редакция</strong>
+          <small>Левый блок, как в журнале</small>
+        </button>
+        <button class="style" type="button" data-style="sticker" role="radio" aria-checked="false">
+          <span class="sample sample-sticker">НОВАЯ<br>ИСТОРИЯ</span>
+          <strong>Тёплый стикер</strong>
+          <small>Мягкий яркий постер</small>
+        </button>
+        <button class="style" type="button" data-style="neon" role="radio" aria-checked="false">
+          <span class="sample sample-neon">НОВОЕ<br>ЗВУЧАНИЕ</span>
+          <strong>Ночной свет</strong>
+          <small>Сияние над серединой кадра</small>
+        </button>
+        <button class="style" type="button" data-style="magazine" role="radio" aria-checked="false">
+          <span class="sample sample-magazine">REAL<br>STORY</span>
+          <strong>Обложка</strong>
+          <small>Верхний журнальный блок</small>
+        </button>
+        <button class="style" type="button" data-style="glass" role="radio" aria-checked="false">
+          <span class="sample sample-glass">Чистая<br>речь</span>
+          <strong>Мягкая карточка</strong>
+          <small>Спокойно и аккуратно</small>
+        </button>
+        <button class="style" type="button" data-style="cinema" role="radio" aria-checked="false">
+          <span class="sample sample-cinema">тихий<br>кадр</span>
+          <strong>Кино</strong>
+          <small>Тёплая лента внизу</small>
+        </button>
+      </div>
+      <div class="caption-position" aria-labelledby="caption-position-title">
+        <div class="position-head">
+          <div>
+            <strong id="caption-position-title">Где будут субтитры?</strong>
+            <small>Выбери место в кадре</small>
+          </div>
+        </div>
+        <div class="position-grid" role="radiogroup" aria-label="Положение субтитров">
+          <button class="position-choice selected" type="button" data-caption-position="bottom_center" role="radio" aria-checked="true">
+            <span class="position-preview bottom-center"><i></i></span>
+            <span>Снизу<br>по центру</span>
+          </button>
+          <button class="position-choice" type="button" data-caption-position="center" role="radio" aria-checked="false">
+            <span class="position-preview center"><i></i></span>
+            <span>По центру</span>
+          </button>
+          <button class="position-choice" type="button" data-caption-position="top_center" role="radio" aria-checked="false">
+            <span class="position-preview top-center"><i></i></span>
+            <span>Сверху<br>по центру</span>
+          </button>
+          <button class="position-choice" type="button" data-caption-position="bottom_left" role="radio" aria-checked="false">
+            <span class="position-preview bottom-left"><i></i></span>
+            <span>Слева<br>снизу</span>
+          </button>
+          <button class="position-choice" type="button" data-caption-position="bottom_right" role="radio" aria-checked="false">
+            <span class="position-preview bottom-right"><i></i></span>
+            <span>Справа<br>снизу</span>
+          </button>
+        </div>
+      </div>
+      <div class="caption-color" aria-labelledby="caption-color-title">
+        <div class="position-head">
+          <div>
+            <strong id="caption-color-title">Цвет текста</strong>
+            <small>Можно менять для каждого ролика</small>
+          </div>
+        </div>
+        <div class="color-grid" role="radiogroup" aria-label="Цвет текста субтитров">
+          <button class="color-choice selected" type="button" data-caption-color="#FFFFFF" role="radio" aria-checked="true">
+            <i class="color-dot white"></i><span>Белый</span>
+          </button>
+          <button class="color-choice" type="button" data-caption-color="#DFFB00" role="radio" aria-checked="false">
+            <i class="color-dot lime"></i><span>Лайм</span>
+          </button>
+          <button class="color-choice" type="button" data-caption-color="#F6BD50" role="radio" aria-checked="false">
+            <i class="color-dot gold"></i><span>Золото</span>
+          </button>
+          <button class="color-choice" type="button" data-caption-color="#FF7599" role="radio" aria-checked="false">
+            <i class="color-dot rose"></i><span>Розовый</span>
+          </button>
+          <button class="color-choice" type="button" data-caption-color="#8DE8FF" role="radio" aria-checked="false">
+            <i class="color-dot sky"></i><span>Голубой</span>
+          </button>
+          <label class="custom-color" id="custom-color-label">
+            <input id="caption-color-custom" type="color" value="#ffffff" aria-label="Выбрать свой цвет текста">
+            <i></i><span>Свой цвет</span>
+          </label>
+        </div>
+      </div>
+      <section class="quick-type-options" id="quick-type-options" hidden aria-labelledby="quick-type-options-title">
+        <div class="position-head">
+          <div>
+            <strong id="quick-type-options-title">Печатная машинка</strong>
+            <small>Настрой темп и звук набора</small>
+          </div>
+        </div>
+        <div class="type-speed-grid" role="radiogroup" aria-label="Темп печати">
+          <button class="type-speed-choice selected" type="button" data-quick-type-speed="soft" role="radio" aria-checked="true">
+            <strong>Мягко</strong><small>Живой, спокойный набор</small>
+          </button>
+          <button class="type-speed-choice" type="button" data-quick-type-speed="normal" role="radio" aria-checked="false">
+            <strong>Обычно</strong><small>Универсальный темп</small>
+          </button>
+          <button class="type-speed-choice" type="button" data-quick-type-speed="fast" role="radio" aria-checked="false">
+            <strong>Быстро</strong><small>Короткие динамичные фразы</small>
+          </button>
+        </div>
+        <label class="typing-sound-toggle" for="typing-sound-enabled">
+          <input id="typing-sound-enabled" type="checkbox" checked>
+          <span class="toggle-mark" aria-hidden="true"></span>
+          <span><strong>Звук клавиатуры</strong><small>Тихие щелчки во время набора текста</small></span>
+        </label>
+        <section class="typing-sound-presets" id="typing-sound-presets" aria-labelledby="typing-sound-presets-title">
+          <div class="sound-presets-head">
+            <div>
+              <strong id="typing-sound-presets-title">Выбери настоящий звук набора</strong>
+              <small>Нажми ▶, чтобы послушать. Повторный клик остановит звук.</small>
+            </div>
+          </div>
+          <div class="sound-preset-grid" role="radiogroup" aria-label="Звук набора текста">
+            <div class="sound-preset-card selected" data-sound-preset-card="iphone_keyboard">
+              <button class="sound-preset-choice" type="button" data-typing-sound-preset="iphone_keyboard" role="radio" aria-checked="true">
+                <span class="sound-preset-icon iphone" aria-hidden="true">⌨</span>
+                <span><strong>Клавиатура iPhone</strong><small>Лёгкие цифровые нажатия</small></span>
+              </button>
+              <button class="sound-preview" type="button" data-preview-sound="iphone_keyboard" aria-label="Прослушать клавиатуру iPhone">▶</button>
+            </div>
+            <div class="sound-preset-card" data-sound-preset-card="game_buttons">
+              <button class="sound-preset-choice" type="button" data-typing-sound-preset="game_buttons" role="radio" aria-checked="false">
+                <span class="sound-preset-icon game" aria-hidden="true">●</span>
+                <span><strong>Быстрые кнопки</strong><small>Чёткий игровой ритм</small></span>
+              </button>
+              <button class="sound-preview" type="button" data-preview-sound="game_buttons" aria-label="Прослушать быстрые кнопки">▶</button>
+            </div>
+            <div class="sound-preset-card" data-sound-preset-card="typewriter">
+              <button class="sound-preset-choice" type="button" data-typing-sound-preset="typewriter" role="radio" aria-checked="false">
+                <span class="sound-preset-icon typewriter" aria-hidden="true">✦</span>
+                <span><strong>Печатная машинка</strong><small>Винтажный металлический щелчок</small></span>
+              </button>
+              <button class="sound-preview" type="button" data-preview-sound="typewriter" aria-label="Прослушать печатную машинку">▶</button>
+            </div>
+            <div class="sound-preset-card" data-sound-preset-card="sound_four">
+              <button class="sound-preset-choice" type="button" data-typing-sound-preset="sound_four" role="radio" aria-checked="false">
+                <span class="sound-preset-icon extra-one" aria-hidden="true">◈</span>
+                <span><strong>Плотные клавиши</strong><small>Чёткие частые нажатия</small></span>
+              </button>
+              <button class="sound-preview" type="button" data-preview-sound="sound_four" aria-label="Прослушать плотные клавиши">▶</button>
+            </div>
+            <div class="sound-preset-card" data-sound-preset-card="sound_five">
+              <button class="sound-preset-choice" type="button" data-typing-sound-preset="sound_five" role="radio" aria-checked="false">
+                <span class="sound-preset-icon extra-two" aria-hidden="true">◇</span>
+                <span><strong>Сухие клавиши</strong><small>Редкие сухие щелчки</small></span>
+              </button>
+              <button class="sound-preview" type="button" data-preview-sound="sound_five" aria-label="Прослушать сухие клавиши">▶</button>
+            </div>
+          </div>
+        </section>
+        <label class="typing-volume" for="typing-sound-volume">
+          <span><strong>Громкость звука</strong><small id="typing-sound-volume-value">35%</small></span>
+          <input id="typing-sound-volume" type="range" min="0" max="100" value="35" step="1" aria-label="Громкость звука клавиатуры">
+        </label>
+      </section>
+    </section>
+
+    <section class="card ready-card">
+      <div>
+        <p class="eyebrow">Шаг 3</p>
+        <h2>Собрать ролик</h2>
+        <p id="action-note">Сначала выбери видео.</p>
+      </div>
+      <button id="make-video" class="primary" type="button" disabled>Сделать субтитры <span>→</span></button>
+    </section>
+
+    <section class="card status-card" id="status-card" hidden aria-live="polite">
+      <div class="status-top"><strong id="status-title">Готовим ролик…</strong><span id="status-percent">0%</span></div>
+      <div class="progress"><i id="status-progress"></i></div>
+      <p id="status-copy">Не закрывай страницу — видео обрабатывается на этом компьютере.</p>
+    </section>
+
+    <section class="result" id="result" hidden>
+      <p class="eyebrow">Готово</p>
+      <h2>Ролик можно посмотреть</h2>
+      <video id="result-video" controls playsinline></video>
+      <div class="result-actions">
+        <a id="download-video" class="primary link-button" download>Скачать видео</a>
+        <a id="download-srt" class="secondary" download>Скачать текст</a>
+      </div>
+    </section>
+
+    <p class="footnote">Если прикрепишь SRT, VTT или ASS, бот использует этот файл вместо распознавания речи.</p>
+  </main>
+</body>
+</html>
+
+
+
+

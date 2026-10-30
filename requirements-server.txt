@@ -1,0 +1,7 @@
+# Reel Lab — сервер (бот + мини-приложение). Ставится install-server.sh в /opt/reellab/venv.
+Flask>=3.1,<4
+waitress>=3.0,<4
+requests>=2.32,<3
+python-dotenv>=1.0,<2
+# Распознавание нерусской речи прямо на сервере (Whisper large-v3-turbo, int8 на процессоре)
+faster-whisper>=1.1,<2
